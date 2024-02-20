@@ -1,0 +1,40 @@
+---
+import '../styles/main.css';
+
+import Header from '@c/Header.astro';
+import Container from '@c/Container.astro';
+
+const objective =
+  "I am deeply passionate about the intersection of systems engineering and user delight. I'm a lifelong design thinker who’s dedicated the last 10 years of my career to producing world-class UI/UX experiences, building award-winning products from discovery, through development, release, and refinement.";
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Header />
+    <Container class='mx-auto px-4'>
+      <h1
+        class='text-5xl md:text-7xl lg:text-[112px] font-normal tracking-tight text-brand-grey pb-4 md:pb-8 2xl:pb-20'>
+        Jonathan Baruc
+      </h1>
+      <h2 class='text-5xl md:text-7xl lg:text-[112px] font-normal text-brand-pink pb-6'>Digital Product Designer</h2>
+      <p class='text-lg md:text-xl 2xl:text-3xl'>{objective}</p>
+    </Container>
+  </body>
+</html>

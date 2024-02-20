@@ -1,0 +1,18 @@
+---
+import Logo from '@c/Logo.astro';
+import Container from '@c/Container.astro';
+---
+
+<header>
+  <Container class='mx-auto pt-6 flex flex-col justify-between items-center gap-4 pb-8 md:pb-12 lg:pb-[90px]'>
+    <Logo class='h-[2.875rem] w-[2.875rem] fill-black text-white' />
+    <ul class='flex md:gap-12 flex-col gap-2 md:flex-row text-sm/[1] items-center'>
+      <li>
+        <a href='/'>HOME</a>
+      </li>
+      <li>
+        <a href='/resume'>RESUME</a>
+      </li>
+    </ul>
+  </Container>
+</header>
