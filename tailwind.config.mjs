@@ -3,6 +3,9 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+            screens: {
+                laptop: '1440px',
+            },
             fontFamily: {
                 sans: ['Helvetica Neue', 'sans-serif'],
                 mono: ['Helvetica Neue', 'sans-serif'],

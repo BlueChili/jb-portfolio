@@ -1,19 +1,18 @@
 ---
 interface Props {
-	class?: string;
-	icon: string | null;
+        class?: string;
+        icon: string | null;
 }
 ---
 
 {
-	Astro.props.icon ? (
-		<svg
-			width='20'
-			height='20'
-			class={Astro.props.class}
-			viewBox='0 0 25 25'>
-			<use href={`/icons-sprite.svg#${Astro.props.icon}`} />
-		</svg>
-	) : null
+        Astro.props.icon ? (
+                <svg
+                        width='20'
+                        height='20'
+                        class={Astro.props.class}
+                        viewBox='0 0 25 25'>
+                        <use href={`/icons-sprite.svg#${Astro.props.icon}`} />
+                </svg>
+        ) : null
 }
-
