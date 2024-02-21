@@ -1,0 +1,33 @@
+---
+import Icon from '@c/Icon.astro';
+
+const tagData = Astro.props.data === 'deep_dive' ? { icon: 'heart', text: 'DEEP DIVE' } : null;
+---
+
+<style>
+        .tagShadow {
+                box-shadow:
+                        -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset,
+                        1px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
+                filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.09))
+                        drop-shadow(7px 7px 6px rgba(0, 0, 0, 0.05)) drop-shadow(19px 18px 7px rgba(0, 0, 0, 0));
+        }
+</style>
+
+{
+        tagData ? (
+                <>
+                        <div class='flex p-2.5 gap-2.5 tagShadow bg-white rounded-[4rem] items-center pr-5'>
+                                {tagData && (
+                                        <div class='bg-brand-pink grid place-items-center w-8 h-8 rounded-full'>
+                                                <Icon
+                                                        icon={tagData.icon}
+                                                        class='h-6 w-6 text-white'
+                                                />
+                                        </div>
+                                )}
+                                <span class='text-sm font-bold text-brand-grey'>{tagData.text}</span>
+                        </div>
+                </>
+        ) : null
+}

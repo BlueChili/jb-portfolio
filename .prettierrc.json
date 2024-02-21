@@ -5,8 +5,8 @@
 	"trailingComma": "all",
 	"singleQuote": true,
 	"jsxSingleQuote": true,
-	"printWidth": 120,
-	"tabWidth": 2,
+	"printWidth": 150,
+	"tabWidth": 8,
 	"plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
 	"overrides": [
 		{
