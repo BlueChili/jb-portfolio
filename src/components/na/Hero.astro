@@ -1,0 +1,110 @@
+---
+import Container from '@c/Container.astro';
+import { marked } from 'marked';
+
+const context = {
+        heading: 'Context',
+        text: 'Native Instruments offers a catalog of over 200 products with many different Bundle offerings. Additionally, NI is an eco-system company which provides the frameworks for other virtual instruments companies to build their products. In order to compliment this we wanted to offer download-portal-as-a-service to third party companies. Finally, there was an incoming company rebrand. A revamp of the download portal was overdue.',
+};
+
+const approach = {
+        heading: 'My Approach',
+        text: `I embarked on this project with a list of <u>refined pain points</u> from Customer Support and a cry from our new Director of Web & Services; to rebuild the age-old download portal in order to <u>engage users more</u> and funnel users them to the webshop. Planted with seemingly impossible challenges, this project required skill beyond my usual UX role. Both the tooling and [then] the requirement of <u>subscription</u> demanded cross-team and cross-department communication. An interactive visual source of truth was what the company needed to float this project to the public in time...and I had just <u>the trick</u>.`,
+};
+
+const outcomes = {
+        heading: 'Outcomes',
+        text: `**Increased** Monthly Active Users **by 300% Resolved** 8 of the top 20 **company pain points** [across all teams and products] Today, **7.5% of attributed revenue** comes from Native Access’s touchpoint`,
+};
+
+const TOC = `
+1. 01 [Pains, Requirements & My Solutions](#pains)        
+1. 02 [Overcoming Cahllenges](#overcoming)        
+1. 03 [Building Wireframes](#building)        
+1. 04 [One Feedback Solution to Rule Them All](#one)        
+1. 05 [Design Patterns and artifacts](#design)        
+`;
+---
+
+<style>
+        .outcomes {
+                @apply text-lg tracking-[-0.0225rem] text-brand-grey;
+                strong {
+                        @apply text-black;
+                }
+        }
+        .toc {
+                li { @apply line-clamp-1; }
+                a {
+                        @apply text-brand-pink;
+
+                }
+        }
+</style>
+<section>
+        <Container class='mx-auto pb-14 2xl:pb-20 md:pb-14 lg:pb-16'>
+                <h1 class='text-5xl/[1.3] md:text-7xl/[1.3] xl:text-[112px]/[1.3] font-normal tracking-tight text-black pb-12 xl:pb-8 2xl:pb-14'>
+                        <span>Native Access</span>
+                </h1>
+                <div class='flex flex-col leading-normal md:flex-row gap-7 pb-14'>
+                        <div>
+                                <h2 class='text-brand-grey text-xs pb-1'>Task</h2>
+                                <p class='text-xs'>
+                                        Design and build a product portal allowing users to download and install products the users own, and explore
+                                        new products.
+                                </p>
+                        </div>
+                        <div>
+                                <h2 class='text-brand-grey text-xs pb-1'>Company</h2>
+                                <p class='text-xs'>Native Instruments - Soundwide</p>
+                        </div>
+                        <div>
+                                <h2 class='text-xs text-brand-grey pb-1'>What I did</h2>
+                                <div class='flex'>
+                                        <p class='text-xs flex-1'>
+                                                Entity Maps<br />Wireframes<br />Prototypes<br />User Tests<br />UI Design
+                                        </p>
+                                        <p class='text-xs flex-1'>
+                                                In-app Feedback<br /> Alpha / Beta Community<br /> B2B Design SDK<br /> Spec Writing
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+                <div class='pb-14'>
+                        <img
+                                src='/img/na/hero.png'
+                                alt='Native Access window thumbnail'
+                        />
+                </div>
+                <div class='flex flex-col gap-10 pb-10'>
+                        <div>
+                                <h2 class='text-brand-pink text-xs'>{context.heading}</h2>
+                                <div
+                                        set:html={marked.parse(context.text)}
+                                        class='text-xs leading-normal tracking-[-0.015rem]'
+                                />
+                        </div>
+                        <div>
+                                <h2 class='text-brand-pink text-xs'>{approach.heading}</h2>
+                                <div
+                                        set:html={marked.parse(approach.text)}
+                                        class='text-xs leading-normal tracking-[-0.015rem]'
+                                />
+                        </div>
+                </div>
+                <div class='pb-10'>
+                        <h2 class='text-brand-pink text-xs tracking-[-0.015rem]'>{outcomes.heading}</h2>
+                        <div
+                                set:html={marked.parse(outcomes.text)}
+                                class='outcomes'
+                        />
+                </div>
+                <div class='pb-20'>
+                        <h2 class='text-bran-pink text-xs tracking-[-0.015rem] text-brand-pink pb-3'>Content</h2>
+                        <div
+                                set:html={marked.parse(TOC)}
+                                class='toc text-xl'
+                        />
+                </div>
+        </Container>
+</section>
