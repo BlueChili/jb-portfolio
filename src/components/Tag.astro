@@ -21,7 +21,7 @@ const tagData = Astro.props.data === 'deep_dive' ? { icon: 'heart', text: 'DEEP 
                                 {tagData && (
                                         <div class='bg-brand-pink grid place-items-center w-8 h-8 rounded-full'>
                                                 <Icon
-                                                        icon={tagData.icon}
+                                                        name={tagData.icon}
                                                         class='h-6 w-6 text-white'
                                                 />
                                         </div>

@@ -1,0 +1,11 @@
+---
+interface Props {
+        class?: string;
+}
+---
+
+<span
+        class='inline-flex h-[30px] w-[30px] flex-shrink-0 bg-brand-red rounded-full text-white justify-center items-center'
+        class:list={[Astro.props.class]}
+        ><slot /></span
+>

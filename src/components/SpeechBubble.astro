@@ -1,0 +1,57 @@
+---
+import Icon from '@c/Icon.astro';
+import type { ThemeConfig } from 'tailwindcss/types/config';
+
+interface Props {
+        iconBg: string;
+        icon: string;
+        direction: 'left' | 'right';
+        bubble: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | null;
+        class?: string;
+}
+
+const iconBg = Astro.props.iconBg || 'bg-brand-emerald';
+---
+
+<style>
+        .pod {
+                box-shadow:
+                        -0.5px 0.5px 0px 0px rgba(255, 255, 255, 0.34) inset,
+                        0.5px -0.5px 0px 0px rgba(255, 255, 255, 0.2) inset;
+                filter: drop-shadow(-2px 2px 19px rgba(0, 0, 0, 0.12));
+        }
+        .content {
+                @apply text-[#313131];
+        }
+</style>
+<div class:list={[Astro.props.class]}>
+        <div
+                class='flex relative bg-white/60 min-h-10 rounded-[2rem] p-[9px] w-fit text-[8px] gap-2 items-center backdrop-blur-md pod'
+                class:list={[Astro.props.direction === 'right' && 'flex-row-reverse']}>
+                <div
+                        class='h-6 w-6 flex justify-center items-center rounded-full flex-shrink-0'
+                        class:list={[iconBg]}>
+                        <Icon
+                                name={Astro.props.icon}
+                                class='text-white'
+                        />
+                </div>
+                <div
+                        class='content'
+                        class:list={[Astro.props?.direction === 'left' && 'pr-1', Astro.props?.direction === 'right' && 'pl-3']}>
+                        <slot />
+                </div>
+
+                {Astro.props.bubble ?
+                <div
+                class='absolute bg-white/60 h-2 w-2 rounded-full backdrop-blur-md pod'
+                                class:list={[
+                                Astro.props.bubble === 'top-left' && 'top-0 -translate-y-1/2 left-0 -translate-x-1/2', 
+                                Astro.props.bubble === 'top-right' && 'top-0 -translate-y-1/2 right-0 translate-x-1/2',
+                                Astro.props.bubble === 'bottom-right' && 'bottom-0 translate-y-1/2 right-0 translate-x-1/2',
+                                Astro.props.bubble === 'bottom-left' && 'left-0 -translate-x-1/2 bottom-0 translate-y-1/2',
+                                ]}
+                                />
+                        : null }
+        </div>
+</div>
