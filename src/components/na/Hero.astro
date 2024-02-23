@@ -49,22 +49,22 @@ const TOC = `
                 <div class='flex flex-col leading-normal md:flex-row gap-7 pb-14'>
                         <div>
                                 <h2 class='text-brand-grey text-xs pb-1'>Task</h2>
-                                <p class='text-xs'>
+                                <p class='text-xs font-light'>
                                         Design and build a product portal allowing users to download and install products the users own, and explore
                                         new products.
                                 </p>
                         </div>
                         <div>
-                                <h2 class='text-brand-grey text-xs pb-1'>Company</h2>
-                                <p class='text-xs'>Native Instruments - Soundwide</p>
+                                <h2 class='text-brand-grey text-xs pb-1 font-light'>Company</h2>
+                                <p class='text-xs font-light'>Native Instruments - Soundwide</p>
                         </div>
                         <div>
-                                <h2 class='text-xs text-brand-grey pb-1'>What I did</h2>
+                                <h2 class='text-xs text-brand-grey pb-1 font-light'>What I did</h2>
                                 <div class='flex'>
-                                        <p class='text-xs flex-1'>
+                                        <p class='text-xs flex-1 font-light'>
                                                 Entity Maps<br />Wireframes<br />Prototypes<br />User Tests<br />UI Design
                                         </p>
-                                        <p class='text-xs flex-1'>
+                                        <p class='text-xs flex-1 font-light'>
                                                 In-app Feedback<br /> Alpha / Beta Community<br /> B2B Design SDK<br /> Spec Writing
                                         </p>
                                 </div>
@@ -78,10 +78,10 @@ const TOC = `
                 </div>
                 <div class='flex flex-col gap-10 pb-10'>
                         <div>
-                                <h2 class='text-brand-pink text-xs'>{context.heading}</h2>
+                                <h2 class='text-brand-pink text-xs font-light'>{context.heading}</h2>
                                 <div
                                         set:html={marked.parse(context.text)}
-                                        class='text-xs leading-normal tracking-[-0.015rem]'
+                                        class='text-xs leading-normal tracking-[-0.015rem] font-light'
                                 />
                         </div>
                         <div>
