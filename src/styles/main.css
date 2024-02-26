@@ -27,3 +27,11 @@
         font-weight: 900;
         src: url('/fonts/HelveticaNeue-Black.otf') format('opentype');
 }
+
+@tailwind base;
+
+@layer base {
+    h1, h2, h3, p, span, div, a {
+        @apply font-light;
+    }
+}
