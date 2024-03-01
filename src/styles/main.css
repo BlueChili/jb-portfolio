@@ -32,6 +32,7 @@
 
 @layer base {
     h1, h2, h3, p, span, div, a {
-        @apply font-light;
+        @apply font-light tracking-[-0.015rem];
+            
     }
 }
