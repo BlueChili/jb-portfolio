@@ -83,7 +83,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Icon** indicating **dependency**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2'
+                                        class='absolute left-1 -bottom-2.5 -translate-y-12'
                                         icon='bulb'
                                         direction='left'
                                         bubble='top-right'
@@ -128,7 +128,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                                 class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%]'
                                                 icon='bulb'
                                                 direction='left'
-                                                bubble='bottom-right'
+                                                bubble={null}
                                                 iconBg='bg-brand-emerald'>
                                                 <div
                                                         set:html={marked.parse(
@@ -182,7 +182,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         class='absolute left-1.5 top-0 -translate-y-[65%] w-[60%]'
                                         icon='bulb'
                                         direction='left'
-                                        bubble='bottom-right'
+                                        bubble={null}
                                         iconBg='bg-brand-emerald'>
                                         <div set:html={marked.parse(`**Exploration** page with swim lanes containing intelligent suggestions`)} />
                                 </SpeechBubble>
@@ -203,7 +203,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
                                 <SpeechBubble
-                                        class='absolute left-1.5 top-0 -translate-y-[65%]'
+                                        class='absolute left-9 top-0 -translate-y-[20%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='bottom-right'
@@ -211,7 +211,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Onboarding**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-1.5 bottom-0 -translate-y-[65%]'
+                                        class='absolute right-1.5 bottom-2 -translate-y-[65%]'
                                         icon='bulb'
                                         direction='right'
                                         bubble='top-left'
@@ -236,15 +236,15 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
                                 <SpeechBubble
-                                        class='absolute left-1.5 top-0 -translate-y-[25%]'
+                                        class='absolute left-1.5 top-0 -translate-y-[10%]'
                                         icon='bulb'
                                         direction='left'
-                                        bubble='bottom-right'
+                                        bubble={null}
                                         iconBg='bg-brand-emerald'>
                                         <div set:html={marked.parse(`A **Product Detail page** with...`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-2.5 top-[24%]'
+                                        class='absolute right-2.5 top-[29%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='bottom-left'
@@ -252,7 +252,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Audio Previews**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-5 top-[36.5%]'
+                                        class='absolute left-5 top-[46.5%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='bottom-right'
@@ -260,7 +260,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**GUI Screenshots**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-9 top-[52%]'
+                                        class='absolute right-11 top-[60%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='top-right'
@@ -268,7 +268,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Resources**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-[46.5%] top-[69%]'
+                                        class='absolute left-[46.5%] top-[75%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='bottom-left'
@@ -293,15 +293,15 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
                                 <SpeechBubble
-                                        class='absolute right-2 top-0 -translate-y-[25%]'
+                                        class='absolute right-60 top-0 -translate-y-[25%]'
                                         icon='bulb'
-                                        direction='right'
-                                        bubble='bottom-left'
+                                        direction='left'
+                                        bubble={null}
                                         iconBg='bg-brand-emerald'>
                                         <div set:html={marked.parse(`**Download Manager**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-0 top-[41%]'
+                                        class='absolute right-0 top-[60%]'
                                         icon='bulb'
                                         direction='right'
                                         bubble='bottom-left'
@@ -347,7 +347,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Upsell notifications** for new releases and suggested content `)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-[6%] top-[31.5%]'
+                                        class='absolute right-[17%] top-[41.5%]'
                                         icon='bulb'
                                         direction='right'
                                         bubble='bottom-left'
