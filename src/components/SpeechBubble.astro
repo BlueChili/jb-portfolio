@@ -25,25 +25,25 @@ const iconBg = Astro.props.iconBg || 'bg-brand-emerald';
 </style>
 <div class:list={[Astro.props.class]}>
         <div
-                class='flex relative bg-white/60 min-h-10 rounded-[2rem] p-[9px] w-fit text-[8px] gap-2 items-center backdrop-blur-md pod sm:text-[9px] md:text-[11px]'
+                class='flex relative bg-white/60 min-h-10 rounded-[2rem] p-[9px] w-fit text-[8px] gap-2 2xl:gap-4 items-center backdrop-blur-md pod sm:text-[9px] md:text-[11px] lg:text-sm xl:text-base lg:h-15 xl:h-20 xl:rounded-[4rem]'
                 class:list={[Astro.props.direction === 'right' && 'flex-row-reverse']}>
                 <div
-                        class='h-6 w-6 flex justify-center items-center rounded-full flex-shrink-0'
-                        class:list={[iconBg]}>
+                        class='h-6 w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 laptop:h-12 laptop:w-12 flex justify-center items-center rounded-full flex-shrink-0'
+                                class:list={[iconBg, Astro.props.direction === 'left' ? 'lg:ml-1 xl:ml-3' : 'lg:mr-1 xl:mr-3']}>
                         <Icon
                                 name={Astro.props.icon}
-                                class='text-white'
+                                class='text-white h-auto lg:w-6 xl:w-7'
                         />
                 </div>
                 <div
-                        class='content'
-                        class:list={[Astro.props?.direction === 'left' && 'pr-1', Astro.props?.direction === 'right' && 'pl-3']}>
+                        class='content w-max'
+                                class:list={[Astro.props?.direction === 'left' && 'pr-1', Astro.props?.direction === 'right' && 'pl-3 lg:pl-[18px]']}>
                         <slot />
                 </div>
 
                 {Astro.props.bubble ?
                 <div
-                class='absolute bg-white/60 h-2 w-2 rounded-full backdrop-blur-md pod'
+                class='absolute bg-white/60 h-2 w-2 rounded-full backdrop-blur-md pod lg:h-3 lg:w-3 xl:h-4 xl:w-4'
                                 class:list={[
                                 Astro.props.bubble === 'top-left' && 'top-0 -translate-y-1/2 left-0 -translate-x-1/2', 
                                 Astro.props.bubble === 'top-right' && 'top-0 -translate-y-1/2 right-0 translate-x-1/2',

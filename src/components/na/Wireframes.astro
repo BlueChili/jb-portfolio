@@ -1,6 +1,7 @@
 ---
 import Container from '@c/Container.astro';
 import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
 ---
 
 <style>
@@ -15,16 +16,15 @@ import Em from '@c/Em.astro';
 </style>
 <section class='overflow-x-hidden'>
         <Container class='py-20'>
-                <h2 class='text-brand-pink text-4xl pb-10 relative'>
-                        Building Wireframes
-                        <span class='absolute italic left-0 top-0 -translate-y-full text-base text-black'>3</span>
-                </h2>
+                <SectionHeading number='3'>Building Wireframes</SectionHeading>
+
                 <p class='text-brand-grey text-2xl pb-12'>
                         With clear pain points and stakeholder requirements, it was easy to mock an <Em>MVP for the developers</Em> to start building.
                         Meanwhile the <Em>Alpha Group and I continued to explore features and refine solutions</Em>. And finally, <Em
                                 >I put on my Design System hat and began culling Components and Patterns</Em
                         > we’d need to add to Lumen.
                 </p>
+
                 <div class='text-[0.8125rem] pb-16 md:text-sm'>
                         <h3 class='text-brand-grey'>Elements</h3>
                         <div class='flex'>
@@ -34,6 +34,7 @@ import Em from '@c/Em.astro';
                                         <li>Tiles / List</li>
                                         <li>Filters</li>
                                 </ul>
+
                                 <ul class='flex-1'>
                                         <li>Preferences</li>
                                         <li>Dialogs</li>

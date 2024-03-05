@@ -2,14 +2,12 @@
 import Container from '@c/Container.astro';
 import Box from '@c/na/Box.astro';
 import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
 ---
 
 <section class='pt-20 pb-16 [background:linear-gradient(180deg,#DADADA_0%,#EBEAEA_54%,#D1D1D1_100%)]'>
         <Container>
-                <h2 class='text-brand-pink text-4xl pb-10 relative'>
-                        Overcoming Challenges
-                        <span class='absolute italic left-0 top-0 -translate-y-full text-base text-black'>2</span>
-                </h2>
+                <SectionHeading number='2'>Overcoming Challenges</SectionHeading>
                 <p class='text-brand-grey text-2xl pb-12'>
                         Native Access is <Em>the client <span class='italic'>all</span> Native Instruments products depend on.</Em> This proved to be one
                         the <Em>most challenging projects in my design career. Here’s why...</Em>
@@ -37,22 +35,22 @@ import Em from '@c/Em.astro';
                         />
                 </Box>
 
-<Box class='mb-2.5'>
+                <Box class='mb-2.5'>
                         <div class='px-2.5 pt-2.5 pb-6'>
                                 <h3 class='text-brand-pink text-[0.8125rem] text-sm'>Design System Conundrum</h3>
                                 <p class='text-brand-grey text-[0.8125rem] tracking-[-0.0075rem] text-sm'>
                                         There was much debate over whether Native Access was part of the web experience or product experience. I was
-                                        one of three designers who built the design system we implemented for Native Access. <Em><u>Lumen</u></Em>, our product design
-                                        system, won out given it was more <Em>modern, more versatile, offered more components and was better documented.</Em>
+                                        one of three designers who built the design system we implemented for Native Access. <Em><u>Lumen</u></Em>,
+                                        our product design system, won out given it was more <Em
+                                                >modern, more versatile, offered more components and was better documented.</Em
+                                        >
                                 </p>
                         </div>
-                        <div class="px-2.5">
+                        <div class='px-2.5'>
                                 <span class='text-brand-grey font-[Roboto] text-[9px] w-[53%] inline-block md:text-[11px]'>
                                         Lumen Design System
                                 </span>
-                                <span class='text-brand-grey font-[Roboto] text-[9px] md:text-[11px]'>
-                                        Web Team Design System
-                                </span>
+                                <span class='text-brand-grey font-[Roboto] text-[9px] md:text-[11px]'> Web Team Design System </span>
                         </div>
                         <img
                                 src='/img/na/overcoming-ds-1.png'
@@ -71,14 +69,18 @@ import Em from '@c/Em.astro';
                         />
                 </Box>
 
-<Box class='mb-2.5'>
+                <Box class='mb-2.5'>
                         <div class='px-2.5 pt-2.5 pb-2.5'>
                                 <h3 class='text-brand-pink text-[0.8125rem] leading-normal pb-1 text-sm'>Subscription</h3>
                                 <p class='text-brand-grey text-[0.8125rem] tracking-[-0.0075rem] text-sm'>
-Nearly a year into development of Native Access there was a top-down company-wide decision to roll out a subscription model. We were already falling behind on our ambitious roadmap.
-<br>
-<br>
-<Em>We delivered a 5000 user beta of subscription through Native Access, coordinating across twelve inter-disciplinary teams.</Em>
+                                        Nearly a year into development of Native Access there was a top-down company-wide decision to roll out a
+                                        subscription model. We were already falling behind on our ambitious roadmap.
+                                        <br />
+                                        <br />
+                                        <Em
+                                                >We delivered a 5000 user beta of subscription through Native Access, coordinating across twelve
+                                                inter-disciplinary teams.</Em
+                                        >
                                 </p>
                         </div>
                         <img
@@ -92,23 +94,24 @@ Nearly a year into development of Native Access there was a top-down company-wid
                         <div class='px-2.5 pt-2.5 pb-2.5'>
                                 <h3 class='text-brand-pink text-[0.8125rem] leading-normal pb-1 text-sm'>Single Journey of Truth - Subscription</h3>
                                 <p class='text-brand-grey text-[0.8125rem] tracking-[-0.0075rem] text-sm'>
-                                I fixed a gap in communication between teams. Company-wide the subscription project was becoming out of sync. Redundant meetings and wasted work ensued.
-                                <br><br>
-                                <Em>I solved this by creating a <u>board showcasing the latest</u> userflows across all touchpoints</Em> including lanes where each team kept updated notes on what they’re building and how.
-
+                                        I fixed a gap in communication between teams. Company-wide the subscription project was becoming out of sync.
+                                        Redundant meetings and wasted work ensued.
+                                        <br /><br />
+                                        <Em>I solved this by creating a <u>board showcasing the latest</u> userflows across all touchpoints</Em> including
+                                        lanes where each team kept updated notes on what they’re building and how.
                                 </p>
                         </div>
-                        <div class="relative py-3">
-                        <img
-                                src='/img/na/overcoming-subscription-2.png'
-                                alt=''
-                                class='rounded-xl'
-                        />
-                        <img
-                                src='/img/na/overcoming-subscription-2.png'
-                                alt=''
-                                class='absolute rounded-xl top-0 -left-7 min-w-[101vw]'
-                        />
+                        <div class='relative py-3'>
+                                <img
+                                        src='/img/na/overcoming-subscription-2.png'
+                                        alt=''
+                                        class='rounded-xl'
+                                />
+                                <img
+                                        src='/img/na/overcoming-subscription-2.png'
+                                        alt=''
+                                        class='absolute rounded-xl top-0 -left-7 min-w-[101vw]'
+                                />
                         </div>
                 </Box>
         </Container>

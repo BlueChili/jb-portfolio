@@ -1,0 +1,17 @@
+---
+import Indicator from './Indicator.astro';
+
+interface Props {
+        indicator: string | number;
+        class?: string;
+}
+---
+
+<div class='flex gap-2.5 items-center mb-[1.875rem]'>
+        <Indicator>{Astro.props.indicator}</Indicator>
+        <p
+                class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'
+                class:list={[Astro.props.class]}>
+                <slot />
+        </p>
+</div>

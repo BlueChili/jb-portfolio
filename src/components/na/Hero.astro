@@ -17,53 +17,58 @@ const outcomes = {
         text: `**Increased** Monthly Active Users **by 300% Resolved** 8 of the top 20 **company pain points** [across all teams and products] Today, **7.5% of attributed revenue** comes from Native Access’s touchpoint`,
 };
 
-const TOC = `
-1. 01 [Pains, Requirements & My Solutions](#pains)        
-1. 02 [Overcoming Challenges](#overcoming)        
-1. 03 [Building Wireframes](#building)        
-1. 04 [One Feedback Solution to Rule Them All](#one)        
-1. 05 [Design Patterns and artifacts](#design)        
-`;
+const TOC = [
+ { text: 'Pains, Requirements & My Solutions',
+ url: '#pains'},
+ { text: 'Overcoming Challenges',
+ url: '#overcoming' },
+ { text: 'Building Wireframes', url: '#building' },
+ { text: 'One Feedback Solution to Rule Them All', 
+ url: '#one'},
+ { text: 'Design Patterns and artifacts', url: '#design' },
+]
 ---
 
 <style>
         .outcomes {
-                @apply text-lg tracking-[-0.0225rem] text-brand-grey;
-        }
-        .outcomes strong {
-                @apply font-light text-black;
+                @apply text-lg tracking-[-0.0225rem] text-brand-grey lg:text-2xl 2xl:text-[32px];
         }
         .toc li {
                 @apply line-clamp-1;
         }
-        .toc a {
-                @apply text-brand-pink;
+        .toc {
+                @apply text-brand-pink !important;
+        }
+</style>
+<style is:global>
+        .outcomes strong {
+                color: black !important;
         }
 </style>
 <section>
         <Container class='mx-auto pb-14 2xl:pb-20 md:pb-14 lg:pb-16'>
-                <h1 class='text-5xl/[1.3] md:text-7xl/[1.3] xl:text-[112px]/[1.3] font-normal tracking-tight text-black pb-12 xl:pb-8 2xl:pb-14'>
+                <h1 class='text-5xl/[1.3] md:text-7xl/[1.3] lg:text-8xl xl:text-[112px]/[1.3] font-normal tracking-tight text-black pb-12 xl:pb-8 2xl:pb-14'>
                         <span>Native Access</span>
                 </h1>
-                <div class='flex flex-col leading-normal lg:flex-row gap-7 pb-14'>
+                <div class='flex flex-col leading-normal lg:flex-row gap-7 pb-14 text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
                         <div class='basis-2/5'>
-                                <h2 class='text-brand-grey text-[0.8125rem] pb-1 font-light md:text-sm'>Task</h2>
-                                <p class='text-[0.8125rem] font-light md:text-sm'>
+                                <h2 class='text-brand-grey pb-1'>Task</h2>
+                                <p>
                                         Design and build a product portal allowing users to download and install products the users own, and explore
                                         new products.
                                 </p>
                         </div>
                         <div class='lg:basis-[22%]'>
-                                <h2 class='text-brand-grey text-[0.8125rem] pb-1 font-light md:text-sm'>Company</h2>
-                                <p class='text-[0.8125rem] font-light md:text-sm'>Native Instruments - Soundwide</p>
+                                <h2 class='text-brand-grey pb-1'>Company</h2>
+                                <p>Native Instruments - Soundwide</p>
                         </div>
                         <div class='lg:flex-1'>
-                                <h2 class='text-[0.8125rem] text-brand-grey pb-1 font-light md:text-sm'>What I did</h2>
+                                <h2 class='text-brand-grey pb-1'>What I did</h2>
                                 <div class='flex'>
-                                        <p class='text-[0.8125rem] flex-1 font-light md:text-sm'>
+                                        <p class='flex-1'>
                                                 Entity Maps<br />Wireframes<br />Prototypes<br />User Tests<br />UI Design
                                         </p>
-                                        <p class='text-[0.8125rem] flex-1 font-light md:text-sm'>
+                                        <p class='flex-1'>
                                                 In-app Feedback<br /> Alpha / Beta Community<br /> B2B Design SDK<br /> Spec Writing
                                         </p>
                                 </div>
@@ -75,35 +80,41 @@ const TOC = `
                                 alt='Native Access window thumbnail'
                         />
                 </div>
-                <div class='flex flex-col gap-10 pb-10'>
-                        <div>
-                                <h2 class='text-brand-pink text-[0.8125rem] font-light md:text-sm'>{context.heading}</h2>
+                <div class='flex flex-col gap-10 pb-10 lg:flex-row text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
+                        <div class='flex-1'>
+                                <h2 class='text-brand-pink 2xl:pb-1'>{context.heading}</h2>
                                 <div
                                         set:html={marked.parse(context.text)}
-                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] font-light md:text-sm'
+                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] md:text-sm lg:text-base 2xl:text-xl'
                                 />
                         </div>
-                        <div>
-                                <h2 class='text-brand-pink text-[0.8125rem] md:text-sm'>{approach.heading}</h2>
+                        <div class='flex-1'>
+                                <h2 class='text-brand-pink 2xl:pb-1'>{approach.heading}</h2>
                                 <div
                                         set:html={marked.parse(approach.text)}
-                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] md:text-sm'
+                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] md:text-sm lg:text-base 2xl:text-xl'
                                 />
                         </div>
                 </div>
                 <div class='pb-10'>
-                        <h2 class='text-brand-pink text-[0.8125rem] tracking-[-0.015rem] md:text-sm'>{outcomes.heading}</h2>
+                        <h2 class='text-brand-pink text-[0.8125rem] tracking-[-0.015rem] md:text-sm lg:text-base 2xl:text-xl'>{outcomes.heading}</h2>
                         <div
                                 set:html={marked.parse(outcomes.text)}
                                 class='outcomes'
                         />
                 </div>
                 <div class='pb-20'>
-                        <h2 class='text-bran-pink text-[0.8125rem] tracking-[-0.015rem] text-brand-pink pb-3 md:text-sm'>Content</h2>
-                        <div
-                                set:html={marked.parse(TOC)}
-                                class='toc text-xl'
-                        />
+                        <h2 class='text-bran-pink text-[0.8125rem] tracking-[-0.015rem] text-brand-pink pb-3 md:text-sm lg:text-base 2xl:text-xl'>Content</h2>
+                        <ol
+                                        class='text-xl lg:text-2xl 2xl:text-[32px]'>
+                                {TOC.map((item, index) => (
+                                <li>
+                                        <a href={item.url} class='line-clamp-1 overflow-hidden'>
+                                        {index < 9 ? `0${index + 1}` : index}
+                                        <span class='text-brand-pink'>{item.text}</span></a>
+                                </li>
+                                ))}
+                                </ol>
                 </div>
         </Container>
 </section>

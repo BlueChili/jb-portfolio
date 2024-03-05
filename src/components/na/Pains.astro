@@ -4,19 +4,18 @@ import Container from '@c/Container.astro';
 import Icon from '@c/Icon.astro';
 import Indicator from '@c/na/Indicator.astro';
 import SpeechBubble from '@c/SpeechBubble.astro';
+import SectionHeading from '@c/na/SectionHeading.astro';
+import PainsHeading from './PainsHeading.astro';
 ---
 
 <section
         id='pains'
         class='pt-20 [background:linear-gradient(180deg,#EBEBEB_0%,#BCBCBC_12.5%,#C3C3C3_50%,#C3C3C3_87%,#EAEAEA_99%)]'>
-        <Container>
-                <h2 class='text-brand-pink text-4xl pb-10 relative'>Pains, Requirements & My Solutions
-                        <span class="absolute italic left-0 top-0 -translate-y-full text-base text-black">1</span>
-                </h2>
-                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem]'>
+        <Container class='mx-auto'>
+                <SectionHeading number='1'>Pains, Requirements & My Solutions</SectionHeading>
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
                         I designed solutions
-                        <span
-                                class='rounded-full bg-brand-emerald w-[22px] 2xl:w-11 h-[22px] 2xl:h-11 inline-flex justify-center items-center'
+                        <span class='rounded-full bg-brand-emerald w-[22px] 2xl:w-11 h-[22px] laptop:h-11 inline-flex justify-center items-center'
                                 ><Icon
                                         name='bulb'
                                         class='h-3.5 2xl:h-7 text-white'
@@ -25,13 +24,13 @@ import SpeechBubble from '@c/SpeechBubble.astro';
 
                         to put in front of users. On my plate were pre-existing <em class='not-italic text-black'>pain points</em>
                         <span
-                                class='rounded-full bg-brand-red w-[22px] 2xl:w-11 h-[22px] 2xl:h-11 inline-flex justify-center items-center text-white text-xs'
+                                class='rounded-full bg-brand-red w-[22px] 2xl:w-11 h-[22px] laptop:h-11 inline-flex justify-center items-center text-white text-xs'
                                 >#</span
                         >, <em class='not-italic text-black'>feature parity</em>, and the Director’s new requirements to <em
                                 class='not-italic text-black'
                                 >increase traffic to webstore
                                 <span
-                                        class='rounded-full bg-brand-blue w-[22px] 2xl:w-11 h-[22px] 2xl:h-11 inline-flex justify-center items-center'
+                                        class='rounded-full bg-brand-blue w-[22px] 2xl:w-11 h-[22px] laptop:h-11 inline-flex justify-center items-center'
                                         ><Icon
                                                 name='compass'
                                                 class='h-3.5 2xl:h-7 text-white'
@@ -39,18 +38,19 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                 >.</em
                         >
                 </p>
-                <div class='flex pb-14'>
+
+                <div class='flex pb-14 text-[0.8125rem] md:text-sm lg:text-base xl:text-lg laptop:text-xl'>
                         <div class='flex-1 md:basis-64 md:flex-grow-0 flex-shrink-0'>
-                                <h3 class='text-brand-grey text-[0.8125rem] md:text-sm'>Prototypes</h3>
-                                <ul class='text-[0.8125rem] md:text-sm'>
+                                <h3 class='text-brand-grey'>Prototypes</h3>
+                                <ul>
                                         <li>Dev build</li>
                                         <li>Figma Prototypes</li>
                                         <li>Mocks</li>
                                 </ul>
                         </div>
                         <div class='flex-1'>
-                                <h3 class='text-brand-grey text-[0.8125rem] md:text-sm'>User Test</h3>
-                                <ul class='text-[0.8125rem] md:text-sm'>
+                                <h3 class='text-brand-grey'>User Test</h3>
+                                <ul>
                                         <li>4 Newcomers</li>
                                         <li>2 Hobbyists</li>
                                         <li>2 Power users</li>
@@ -59,23 +59,18 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                 </div>
         </Container>
 
-        <Container>
+        <Container class='mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
-                        <div class='flex gap-2.5 items-center mb-[1.875rem]'>
-                                <Indicator>1</Indicator>
-                                <p class='text-[11px] text-brand-secondary-text max-w-[65%] font-[Roboto] md:text-[0.8125rem]'>
-                                        “I don’t understand product dependencies like KONTAKT Player and REAKTOR Player.”
-                                </p>
-                        </div>
-                        <div class='relative'>
+                        <PainsHeading indicator='1' class='max-w-[65%]'> “I don’t understand product dependencies like KONTAKT Player and REAKTOR Player.” </PainsHeading>
+                        <div class='relative mx-auto max-w-[1300px]'>
                                 <img
                                         src='/img/na/pains-1.png'
                                         alt='REAKTOR Player window thumbnail'
                                         class='w-full h-auto aspect-[6/4]'
                                 />
                                 <SpeechBubble
-                                        class='absolute -right-1 top-0 -translate-y-1/2'
+                                        class='absolute -right-1 top-0 -translate-y-1/2 md:top-[45%] lg:top-[45%] 2xl:-right-24'
                                         icon='bulb'
                                         direction='right'
                                         bubble='bottom-left'
@@ -83,7 +78,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         <div set:html={marked.parse(`**Icon** indicating **dependency**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-1 -bottom-2.5 -translate-y-12'
+                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[15%] 2xl:hidden'
                                         icon='bulb'
                                         direction='left'
                                         bubble='top-right'
@@ -95,19 +90,27 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                                 )}
                                         />
                                 </SpeechBubble>
+                                <SpeechBubble
+                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[15%] hidden 2xl:block 2xl:-left-8'
+                                        icon='bulb'
+                                        direction='left'
+                                        bubble='top-right'
+                                        iconBg='bg-brand-emerald'>
+                                        <div
+                                                class='pr-3'
+                                                set:html={marked.parse(
+                                                        `**Detect** if the user is attempting to install a product which <br>**requires a framework**`,
+                                                )}
+                                        />
+                                </SpeechBubble>
                         </div>
                 </div>
         </Container>
-        <Container class='-mt-6'>
+        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10">
-                        <div class='flex gap-2.5 items-center mb-[1.875rem]'>
-                                <Indicator>2</Indicator>
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[13px]'>
-                                        “I don’t understand my KOMPLETE bundle and its products.”
-                                </p>
-                        </div>
-                        <div class='pb-24'>
+                        <PainsHeading indicator='2'> “I don’t understand my KOMPLETE bundle and its products.” </PainsHeading>
+                        <div class='pb-24 relative mx-auto max-w-[1300px]'>
                                 <div class='relative'>
                                         <img
                                                 src='/img/na/pains-2-a.png'
@@ -125,7 +128,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                                 class='absolute w-[30%] left-[61%] rounded h-auto top-[117%]'
                                         />
                                         <SpeechBubble
-                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%]'
+                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%] sm:translate-y-0 sm:top-1'
                                                 icon='bulb'
                                                 direction='left'
                                                 bubble={null}
@@ -143,7 +146,8 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         src='/img/na/pains-2-d.png'
                                         alt=''
                                 />
-                                <span class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit'
+                                <span
+                                        class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit sm:text-[10px]'
                                         >NA DESKTOP APPLICATION</span
                                 >
                                 <SpeechBubble
@@ -160,7 +164,8 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         src='/img/na/pains-2-e.png'
                                         alt=''
                                 />
-                                <span class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit'
+                                <span
+                                        class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit sm:text-[10px]'
                                         >WEBSHOP</span
                                 >
                         </div>
@@ -169,11 +174,12 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                         src='/img/na/pains-2-f.png'
                                         alt=''
                                 />
-                                <span class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit'
+                                <span
+                                        class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit sm:text-[10px]'
                                         >UNIVERSAL BROWSER</span
                                 >
                         </div>
-                        <div class='relative'>
+                        <div class='relative mx-auto max-w-[1300px]'>
                                 <img
                                         src='/img/na/pains-exploration.png'
                                         alt=''
@@ -189,14 +195,11 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                         </div>
                 </div>
         </Container>
-        <Container class='-mt-6'>
+        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
-                        <div class='flex gap-2.5 items-center mb-[2.875rem]'>
-                                <Indicator>3</Indicator>
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[13px]'>“I want more info on the products I own.”</p>
-                        </div>
-                        <div class='relative'>
+                        <PainsHeading indicator='3'> “Installation of third-party products is confusing...” </PainsHeading>
+                                <div class='relative mx-auto max-w-[1000px]'>
                                 <img
                                         src='/img/na/pains-onboarding.png'
                                         alt=''
@@ -222,14 +225,13 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                 </div>
         </Container>
 
-        <Container class='-mt-6'>
+        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
-                        <div class='flex gap-2.5 items-center mb-[1.875rem]'>
-                                <Indicator>4</Indicator>
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[13px]'>“I want more info on the products I own.”</p>
-                        </div>
-                        <div class='relative'>
+                        <PainsHeading indicator='4'>
+                                        “I want more info on the products I own.”
+                        </PainsHeading>
+                        <div class='relative mx-auto max-w-[1050px]'>
                                 <img
                                         src='/img/na/pains-4.png'
                                         alt=''
@@ -279,14 +281,13 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                 </div>
         </Container>
 
-        <Container class='-mt-6'>
+        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10">
-                        <div class='flex gap-2.5 items-center mb-[1.875rem]'>
-                                <Indicator>5</Indicator>
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[13px]'>“No overview or progress of downloads”</p>
-                        </div>
-                        <div class='relative mb-12'>
+                        <PainsHeading indicator='5'>
+                                        “No overview or progress of downloads”
+                        </PainsHeading>
+                        <div class='relative mb-12 mx-auto max-w-[1440px]'>
                                 <img
                                         src='/img/na/pains-5.png'
                                         alt=''
@@ -320,7 +321,7 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                 </div>
         </Container>
 
-        <Container class='-mt-6'>
+        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-3xl p-2.5 pb-16">
                         <div class='flex gap-2.5 items-center mb-[2.875rem]'>
@@ -330,9 +331,11 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                                                 class='text-white'
                                         /></span
                                 >
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[13px]'>“No overview or progress of downloads”</p>
+                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'>
+                                        “I want to funnel users from the download portal to the online store.”
+                                </p>
                         </div>
-                        <div class='relative'>
+                        <div class='relative mx-auto max-w-[1440px]'>
                                 <img
                                         src='/img/na/pains-no-previews.png'
                                         alt=''
@@ -366,17 +369,16 @@ import SpeechBubble from '@c/SpeechBubble.astro';
                 </div>
         </Container>
 
-        <Container class='pt-8 pb-20'>
-                <p class='text-brand-grey text-xl tracking-[-0.05rem] pb-3'>
-                        <em class='not-italic text-black'>The solutions</em> were received very well.<br>
-                        <em class='not-italic text-black'>For each feature</em>...<br>
-                        <em class='not-italic text-black'>8+ out of 10</em> responded they <em class='not-italic text-black'>“would use.”</em><br>
+        <Container class='pt-8 pb-20 mx-auto'>
+                <p class='text-brand-grey text-xl tracking-[-0.05rem] pb-3 md:text-2xl lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        <em class='not-italic text-black'>The solutions</em> were received very well.<br />
+                        <em class='not-italic text-black'>For each feature</em>...<br />
+                        <em class='not-italic text-black'>8+ out of 10</em> responded they <em class='not-italic text-black'>“would use.”</em><br />
                         <em class='not-italic text-black'>7+ out of 10</em> responded they <em class='not-italic text-black'>“love it.”</em>
                 </p>
-                <p class="text-brand-grey tracking-[-0.0125rem] text-[11px] md:text-xs">
-                The designs were then broken into Epics and Stories and<br>
+                <p class='text-brand-grey tracking-[-0.0125rem] text-[11px] md:text-xs lg:text-base xl:text-lg laptop:text-xl'>
+                        The designs were then broken into Epics and Stories and<br />
                         <em class='not-italic text-black'>arranged by priority in the backlog.</em>
                 </p>
         </Container>
-        
 </section>
