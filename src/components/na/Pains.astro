@@ -78,7 +78,7 @@ import PainsHeading from './PainsHeading.astro';
                                         <div set:html={marked.parse(`**Icon** indicating **dependency**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[15%] 2xl:hidden'
+                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[28%] 2xl:hidden'
                                         icon='bulb'
                                         direction='left'
                                         bubble='top-right'
@@ -128,7 +128,7 @@ import PainsHeading from './PainsHeading.astro';
                                                 class='absolute w-[30%] left-[61%] rounded h-auto top-[117%]'
                                         />
                                         <SpeechBubble
-                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%] sm:translate-y-0 sm:top-1'
+                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%] sm:-translate-y-1/4 sm:top-0'
                                                 icon='bulb'
                                                 direction='left'
                                                 bubble={null}
@@ -199,14 +199,14 @@ import PainsHeading from './PainsHeading.astro';
                 <div
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
                         <PainsHeading indicator='3'> “Installation of third-party products is confusing...” </PainsHeading>
-                                <div class='relative mx-auto max-w-[1000px]'>
+                                <div class='relative mx-auto max-w-[1000px] '>
                                 <img
                                         src='/img/na/pains-onboarding.png'
                                         alt=''
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
                                 <SpeechBubble
-                                        class='absolute left-9 top-0 -translate-y-[20%]'
+                                        class='absolute left-9 top-0 -translate-y-[20%] sm:left-30 sm:top-0 sm:-translate-y-[20%] sm:left-50 md:top-0 md:-translate-y-[20%]'
                                         icon='bulb'
                                         direction='left'
                                         bubble='bottom-right'
@@ -302,7 +302,7 @@ import PainsHeading from './PainsHeading.astro';
                                         <div set:html={marked.parse(`**Download Manager**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-0 top-[60%]'
+                                        class='absolute right-0 top-[60%] sm:right-0 sm:top-[65%]'
                                         icon='bulb'
                                         direction='right'
                                         bubble='bottom-left'
@@ -377,8 +377,7 @@ import PainsHeading from './PainsHeading.astro';
                         <em class='not-italic text-black'>7+ out of 10</em> responded they <em class='not-italic text-black'>“love it.”</em>
                 </p>
                 <p class='text-brand-grey tracking-[-0.0125rem] text-[11px] md:text-xs lg:text-base xl:text-lg laptop:text-xl'>
-                        The designs were then broken into Epics and Stories and<br />
-                        <em class='not-italic text-black'>arranged by priority in the backlog.</em>
+                        The designs were then broken into Epics and Stories and <em class='not-italic text-black'>arranged by priority in the backlog.</em>
                 </p>
         </Container>
 </section>
