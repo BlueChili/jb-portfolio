@@ -1,0 +1,34 @@
+---
+interface Props {
+        class?: string;
+        url: string | null;
+        heading: 'string';
+        image: string;
+}
+---
+
+<div class='pb-5'>
+        {
+                Astro.props.url ? (
+                        <a
+                                href={Astro.props.url}
+                                target='_blank'>
+                                <img
+                                        src={Astro.props.image}
+                                        alt=''
+                                        class='rounded-lg mb-1 w-full h-auto aspect-video laptop:rounded-2xl'
+                                />
+                        </a>
+                ) : (
+                        <img
+                                src={Astro.props.image}
+                                alt=''
+                                class='rounded-lg mb-1 w-full h-auto aspect-video laptop:rounded-2xl'
+                        />
+                )
+        }
+        <div class='p-2'>
+                <h3 class='text-black font-normal'>{Astro.props.heading}</h3>
+                <p class='text-brand-grey'><slot /></p>
+        </div>
+</div>

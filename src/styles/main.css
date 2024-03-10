@@ -31,8 +31,17 @@
 @tailwind base;
 
 @layer base {
-    h1, h2, h3, p, span, div, a {
-        @apply font-light; 
-            
-    }
+        h1,
+        h2,
+        h3,
+        p,
+        span,
+        div,
+        a {
+                @apply font-light;
+        }
+
+        .body-text {
+                @apply text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl;
+        }
 }

@@ -120,12 +120,12 @@ const tools: string[] = ['FIgma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                                                                 class='rounded-[1.75rem] aspect-[5/4] overflow-hidden relative'
                                                                 class:list={[project.blueBg ? 'blueGradient' : 'pinkGradient']}>
                                                                 <a href={project.url}>
-                                                                <img
-                                                                        src={project.image}
-                                                                        alt={`${project.title} project thumbnail`}
-                                                                        class='w-full rounded-[1.75rem] object-cover h-full'
-                                                                        class:list={[project.imageClass]}
-                                                                />
+                                                                        <img
+                                                                                src={project.image}
+                                                                                alt={`${project.title} project thumbnail`}
+                                                                                class='w-full rounded-[1.75rem] object-cover h-full'
+                                                                                class:list={[project.imageClass]}
+                                                                        />
                                                                 </a>
                                                         </div>
                                                         {project.tags ? (
@@ -138,7 +138,9 @@ const tools: string[] = ['FIgma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                                                                 </ul>
                                                         ) : null}
                                                         <div class='px-5 pt-7 pb-1'>
-                                                                <h3 class='text-brand-pink'><a href={project.url}>{project.title}</a></h3>
+                                                                <h3 class='text-brand-pink'>
+                                                                        <a href={project.url}>{project.title}</a>
+                                                                </h3>
                                                                 <p class='md:text-lg'>{project.description}</p>
                                                         </div>
                                                 </div>

@@ -20,15 +20,12 @@ const outcomes = {
 };
 
 const TOC = [
- { text: 'Pains, Requirements & My Solutions',
- url: '#pains'},
- { text: 'Overcoming Challenges',
- url: '#overcoming' },
- { text: 'Building Wireframes', url: '#building' },
- { text: 'One Feedback Solution to Rule Them All', 
- url: '#one'},
- { text: 'Design Patterns and artifacts', url: '#design' },
-]
+        { text: 'Pains, Requirements & My Solutions', url: '#pains' },
+        { text: 'Overcoming Challenges', url: '#overcoming' },
+        { text: 'Building Wireframes', url: '#building' },
+        { text: 'One Feedback Solution to Rule Them All', url: '#one' },
+        { text: 'Design Patterns and artifacts', url: '#design' },
+];
 ---
 
 <style>
@@ -48,8 +45,9 @@ const TOC = [
         }
 </style>
 <section>
-        <Container class='mx-auto pb-0 2xl:pb-20 md:pb-14 lg:pb-16'>
-                <h1 class='text-5xl/[1.3] md:text-7xl/[1.3] lg:text-8xl xl:text-[112px]/[1.3] font-normal tracking-tight text-black pb-12 xl:pb-8 2xl:pb-14'>
+        <Container class='mx-auto pb-14 2xl:pb-20 md:pb-14 lg:pb-16'>
+                <h1
+                        class='text-5xl/[1.3] md:text-7xl/[1.3] lg:text-8xl xl:text-[112px]/[1.3] font-normal tracking-tight text-black pb-12 xl:pb-8 2xl:pb-14'>
                         <span>Native Access</span>
                 </h1>
                 <div class='flex flex-col leading-normal lg:flex-row gap-7 pb-14 text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
@@ -83,7 +81,7 @@ const TOC = [
                         />
                 </div>
                 <div class='flex flex-col gap-10 pb-10 lg:flex-row text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
-                        <div class='flex-1'>
+                        <div class='flex-1 laptop:basis-[39.1%] laptop:shrink-0 laptop:grow-0'>
                                 <h2 class='text-brand-pink 2xl:pb-1'>{context.heading}</h2>
                                 <div
                                         set:html={marked.parse(context.text)}
@@ -106,17 +104,23 @@ const TOC = [
                         />
                 </div>
                 <div class='pb-20'>
-                        <h2 class='text-bran-pink text-[0.8125rem] tracking-[-0.015rem] text-brand-pink pb-3 md:text-sm lg:text-base 2xl:text-xl'>Content</h2>
-                        <ol
-                                        class='text-xl lg:text-2xl 2xl:text-[32px]'>
-                                {TOC.map((item, index) => (
-                                <li>
-                                        <a href={item.url} class='line-clamp-1 overflow-hidden'>
-                                        {index < 9 ? `0${index + 1}` : index}
-                                        <span class='text-brand-pink'>{item.text}</span></a>
-                                </li>
-                                ))}
-                                </ol>
+                        <h2 class='text-bran-pink text-[0.8125rem] tracking-[-0.015rem] text-brand-pink pb-3 md:text-sm lg:text-base 2xl:text-xl'>
+                                Content
+                        </h2>
+                        <ol class='text-xl lg:text-2xl 2xl:text-[32px]'>
+                                {
+                                        TOC.map((item, index) => (
+                                                <li>
+                                                        <a
+                                                                href={item.url}
+                                                                class='line-clamp-1 overflow-hidden'>
+                                                                {index < 9 ? `0${index + 1}` : index}
+                                                                <span class='text-brand-pink'>{item.text}</span>
+                                                        </a>
+                                                </li>
+                                        ))
+                                }
+                        </ol>
                 </div>
         </Container>
 </section>

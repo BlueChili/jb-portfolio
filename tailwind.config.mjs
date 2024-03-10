@@ -29,5 +29,15 @@ export default {
                         },
                 },
         },
+        safelist: [
+            {
+                pattern: /flex-row/,
+                variants: ['sm', 'md', 'lg', 'xl', 'laptop', '2xl'],
+            },
+            {
+                pattern: /flex-row-reverse/,
+                variants: ['sm', 'md', 'lg', 'xl', 'laptop', '2xl'],
+            },
+        ],
         plugins: [],
 };

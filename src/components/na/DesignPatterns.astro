@@ -3,10 +3,11 @@ import Container from '@c/Container.astro';
 import Box from '@c/na/Box.astro';
 import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
+import FigmaArtifact from './FigmaArtifact.astro';
 ---
 
 <section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 bg-[#f5f5f5]'>
-        <Container>
+        <Container class='mx-auto'>
                 <SectionHeading number='5'>Design Patterns & Artifacts</SectionHeading>
 
                 <p class='text-brand-grey text-2xl pb-12'>
@@ -21,11 +22,11 @@ import SectionHeading from './SectionHeading.astro';
                                 class='rounded-lg mb-5'
                         />
                 </a>
-                
-                <div class='p-2 pb-5'>
-                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Patterns</h3>
 
-                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
+                <div class='p-2 pb-5 body-text'>
+                        <h3 class='text-black font-normal'>Patterns</h3>
+
+                        <p class='text-brand-grey'>
                                 Design Tokens make up Components; Components make up Modules; and Modules make up Patterns. Find the Native Access 2
                                 UI Patterns on Figma, here.
                         </p>
@@ -40,10 +41,10 @@ import SectionHeading from './SectionHeading.astro';
                         />
                 </a>
 
-                <div class='p-2 pb-6'>
-                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Lumen Design System</h3>
+                <div class='body-text p-2 pb-6'>
+                        <h3 class='text-black font-normal'>Lumen Design System</h3>
 
-                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>The design system I co-created and expanded to build this product.</p>
+                        <p class='text-brand-grey'>The design system I co-created and expanded to build this product.</p>
                 </div>
                 <a
                         href='/img/na/na-comp-analysis.pdf'
@@ -54,241 +55,121 @@ import SectionHeading from './SectionHeading.astro';
                                 class='rounded-lg mb-1'
                         />
                 </a>
-                <div class='p-2 pb-5'>
-                        <h3 class='text-black text-[0.8125rem]/[1.7]  font-normal'>Competitor Analysis</h3>
+                <div class='body-text p-2 pb-5'>
+                        <h3 class='text-black font-normal'>Competitor Analysis</h3>
 
-                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
+                        <p class='text-brand-grey'>
                                 A close look at what the competition was doing in order to ensure a clean funnel from Engagement through Purchase.
                         </p>
                 </div>
                 <a
                         href='/img/na/na-comp-analysis.pdf'
                         target='_blank'>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-4HBARAms?si=tVx_aWKjDAQHOmXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <div class='p-2 pb-5'>
-                                <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Video Walkthrough</h3>
-
-                                <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                        Sit back and enjoy a full video tour of the application and it’s features.
-                                </p>
-                        </div>
-
-                        <img
-                                src='/img/na/design-patterns-5.png'
-                                alt=''
-                                class='rounded-lg mb-1'
-                        />
-                        <div class='p-2 pb-10'>
-                                <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Native Access 2 Application</h3>
-
-                                <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                        Try the application yourself!<br />
-                                        Username flashblock.ni@gmail.com<br />
-                                        Password Flashblock2020
-                                </p>
-                        </div>
-
-                        <p class='text-brand-grey text-2xl pl-1 pb-12'>
-                                I invite you to look at select <Em>Figma artifacts</Em>...
-                        </p>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=2-4266&mode=design'
-                                target='_blank'>                               
-                                <img
-                                        src='/img/na/artifacts-1.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                </a>
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>KOMPLETE HDD Detection</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>HDD detection, registration and installation success.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/nmfuT9QqcvH1i4UllvrqRm/Broken-Installation-_-Relocate-All?type=design&node-id=29%3A3055&mode=design&t=WfwmGsC3BjZED4AI-1'
-                                target='_blank'>     
-                                                                <img
-                                        src='/img/na/artifacts-2.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Broken Installation</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Broken installation, (re)locating installers.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/Mh6QkO8LdDhsQ5z3hTX5y6/%F0%9F%A7%AA-Audio-Previews?type=design&node-id=5%3A6403&mode=design&t=cGNEkE7FkUNjjYdP-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-3.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Audio Previews</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Audio Preview concept.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/ffCSk2L3NM1gFdiy9h8sOW/NA-477-Product-Item-AX-MVP?type=design&node-id=0%3A1&mode=design&t=TQHGBDdtxvvczpzd-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-4.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Accessibility</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Keyboard navigation for VoiceOver prototypes.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/giqhNJ80D1MzV4KcRUssk8/NA-641-Pause-%26-Resume?type=design&node-id=0%3A1&mode=design&t=dPP0tthL5gwt9yCc-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-5.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Pause/Resume Download</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Queuing, Pausing and re-sorting Download items.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=56%3A6455&mode=design&t=LJNqsnbLpVa7DNlK-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-6.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Onboarding</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Quick and easy steps for onboarding users concept.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/qhjSNxrcN5ViMWS6DRmmAG/NA-420-Quit-Behavior?type=design&node-id=12%3A0&mode=design&t=7l0eeCBuriMV2qLT-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-7.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Quit Behavior</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                                One doesn't simply 'quit' a download agent running background tasks...
-                                        </p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/UZKbATr0HIb0GbX5zCvdfM/NA-137-_New_-Products-Tab?type=design&node-id=0%3A1&mode=design&t=b7CaJEp2HjMNfrvU-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-8.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>New Products Tab</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>Easily sort through your newly installed products.</p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/hWjVxqcLbUcwgLiEliBepx/NA-302-Update-Page?type=design&node-id=11%3A1795&mode=design&t=TndlGApxye96Fbgj-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-9.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Updates Page</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                                Find the latest deployed updates, the release notes, and install.
-                                        </p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/enNqzJPsN6OCSDqUeJaYwi/NA-364-Not-Enough-Space?type=design&node-id=1%3A1949&mode=design&t=ndAlJmo9pRuOtRT4-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-10.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Disk Space Error</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                                With the potential of harboring over 2 Terabytes of products on your harddrive, the usecase for 'not
-                                                enough disk space' is critical.
-                                        </p>
-                                </div>
-                        </div>
-
-                        <div class='pb-5'>
-                                <a
-                                href='https://www.figma.com/file/hcms5SFmKIBVGWxP7Ok8Wy/NA-664-Activation-Errors?type=design&node-id=114%3A6137&mode=design&t=lvWSGpLV5vBrjgRI-1'
-                                target='_blank'>     
-                                <img
-                                        src='/img/na/artifacts-11.png'
-                                        alt=''
-                                        class='rounded-lg mb-1'
-                                />
-                        </a>
-                        
-                                <div class='p-2'>
-                                        <h3 class='text-black text-[0.8125rem]/[1.7] font-normal'>Error Messaging</h3>
-                                        <p class='text-[0.8125rem]/[1.7] text-brand-grey'>
-                                                Toast notification to help users understand what’s going wrong
-                                        </p>
-                                </div>
-                        </div>
                 </a>
-                <section></section>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-4HBARAms?si=tVx_aWKjDAQHOmXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class='p-2 pb-5 body-text'>
+                        <h3 class='text-black font-normal'>Video Walkthrough</h3>
+
+                        <p class='text-brand-grey'>Sit back and enjoy a full video tour of the application and it’s features.</p>
+                </div>
+
+                <img
+                        src='/img/na/design-patterns-5.png'
+                        alt=''
+                        class='rounded-lg mb-1'
+                />
+                <div class='p-2 pb-10 body-text'>
+                        <h3 class='text-black font-normal'>Native Access 2 Application</h3>
+
+                        <p class='text-brand-grey'>
+                                Try the application yourself!<br />
+                                Username flashblock.ni@gmail.com<br />
+                                Password Flashblock2020
+                        </p>
+                </div>
+
+                <p class='text-brand-grey text-2xl pl-1 pb-12'>
+                        I invite you to look at select <Em>Figma artifacts</Em>...
+                </p>
+
+                <div class='body-text md:grid md:grid-cols-2 xl:grid-cols-3'>
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=2-4266&mode=design'
+                                image='/img/na/artifacts-1.png'
+                                heading='KOMPLETE HDD Detection'>
+                                HDD detection, registration and installation success.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/nmfuT9QqcvH1i4UllvrqRm/Broken-Installation-_-Relocate-All?type=design&node-id=29%3A3055&mode=design&t=WfwmGsC3BjZED4AI-1'
+                                image='/img/na/artifacts-2.png'
+                                heading='Broken Installation'>
+                                Broken installation, (re)locating installers.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/Mh6QkO8LdDhsQ5z3hTX5y6/%F0%9F%A7%AA-Audio-Previews?type=design&node-id=5%3A6403&mode=design&t=cGNEkE7FkUNjjYdP-1'
+                                image='/img/na/artifacts-3.png'
+                                heading='Audio Previews'>
+                                Audio Preview concept.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/ffCSk2L3NM1gFdiy9h8sOW/NA-477-Product-Item-AX-MVP?type=design&node-id=0%3A1&mode=design&t=TQHGBDdtxvvczpzd-1'
+                                image='/img/na/artifacts-4.png'
+                                heading='Accessibility'>
+                                Keyboard navigation for VoiceOver prototypes.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/giqhNJ80D1MzV4KcRUssk8/NA-641-Pause-%26-Resume?type=design&node-id=0%3A1&mode=design&t=dPP0tthL5gwt9yCc-1'
+                                image='/img/na/artifacts-5.png'
+                                heading='Pause/Resume Download'>
+                                Queuing, Pausing and re-sorting Download items.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=56%3A6455&mode=design&t=LJNqsnbLpVa7DNlK-1'
+                                image='/img/na/artifacts-6.png'
+                                heading='Onboarding'>
+                                Quick and easy steps for onboarding users concept.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/qhjSNxrcN5ViMWS6DRmmAG/NA-420-Quit-Behavior?type=design&node-id=12%3A0&mode=design&t=7l0eeCBuriMV2qLT-1'
+                                image='/img/na/artifacts-7.png'
+                                heading='Quit Behavior'>
+                                One doesn't simply 'quit' a download agent running background tasks...
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/UZKbATr0HIb0GbX5zCvdfM/NA-137-_New_-Products-Tab?type=design&node-id=0%3A1&mode=design&t=b7CaJEp2HjMNfrvU-1'
+                                image='/img/na/artifacts-8.png'
+                                heading='New Products Tab'>
+                                Easily sort through your newly installed products.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/hWjVxqcLbUcwgLiEliBepx/NA-302-Update-Page?type=design&node-id=11%3A1795&mode=design&t=TndlGApxye96Fbgj-1'
+                                image='/img/na/artifacts-9.png'
+                                heading='Updates Page'>
+                                Find the latest deployed updates, the release notes, and install.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/enNqzJPsN6OCSDqUeJaYwi/NA-364-Not-Enough-Space?type=design&node-id=1%3A1949&mode=design&t=ndAlJmo9pRuOtRT4-1'
+                                image='/img/na/artifacts-10.png'
+                                heading='Disk Space Error'>
+                                With the potential of harboring over 2 Terabytes of products on your harddrive, the usecase for 'not enough disk
+                                space' is critical.
+                        </FigmaArtifact>
+
+                        <FigmaArtifact
+                                url='https://www.figma.com/file/hcms5SFmKIBVGWxP7Ok8Wy/NA-664-Activation-Errors?type=design&node-id=114%3A6137&mode=design&t=lvWSGpLV5vBrjgRI-1'
+                                image='/img/na/artifacts-11.png'
+                                heading='Error Messaging'>
+                                Toast notification to help users understand what’s going wrong
+                        </FigmaArtifact>
+                </div>
         </Container>
 </section>

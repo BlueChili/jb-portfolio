@@ -1,6 +1,6 @@
 ---
 interface Props {
-        variant?: 'light' | 'dark'
+        variant?: 'light' | 'dark';
         class?: string;
 }
 
@@ -8,4 +8,9 @@ const variant = Astro.props.variant || 'light';
 
 const textColor = variant === 'light' ? 'text-black' : 'text-white';
 ---
-<em class='not-italic' class:list={[ textColor, Astro.props.class ]}><slot/></em>
+
+<em
+        class='not-italic'
+        class:list={[textColor, Astro.props.class]}
+        ><slot /></em
+>

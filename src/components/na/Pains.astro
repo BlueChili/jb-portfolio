@@ -2,10 +2,12 @@
 import { marked } from 'marked';
 import Container from '@c/Container.astro';
 import Icon from '@c/Icon.astro';
-import Indicator from '@c/na/Indicator.astro';
+import { Image } from 'astro:assets';
 import SpeechBubble from '@c/SpeechBubble.astro';
 import SectionHeading from '@c/na/SectionHeading.astro';
 import PainsHeading from './PainsHeading.astro';
+import dmBg from '@i/na/pains-dm-bg.png';
+import dmFg from '@i/na/pains-dm-fg.png';
 ---
 
 <section
@@ -61,13 +63,17 @@ import PainsHeading from './PainsHeading.astro';
 
         <Container class='mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
-                        <PainsHeading indicator='1' class='max-w-[65%]'> “I don’t understand product dependencies like KONTAKT Player and REAKTOR Player.” </PainsHeading>
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16 laptop:pt-6 laptop:px-6">
+                        <PainsHeading
+                                indicator='1'
+                                class='max-w-[65%]'>
+                                “I don’t understand product dependencies like KONTAKT Player and REAKTOR Player.”
+                        </PainsHeading>
                         <div class='relative mx-auto max-w-[1300px]'>
                                 <img
                                         src='/img/na/pains-1.png'
                                         alt='REAKTOR Player window thumbnail'
-                                        class='w-full h-auto aspect-[6/4]'
+                                        class='w-full h-auto aspect-[6/4] mx-auto'
                                 />
                                 <SpeechBubble
                                         class='absolute -right-1 top-0 -translate-y-1/2 md:top-[45%] lg:top-[45%] 2xl:top-[48%] 2xl:-right-24'
@@ -78,7 +84,8 @@ import PainsHeading from './PainsHeading.astro';
                                         <div set:html={marked.parse(`**Icon** indicating **dependency**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[28%] 2xl:hidden'
+                                        class='absolute left-1 -bottom-2.5 -translate-y-1/2 md:bottom-[10%] lg:bottom-[15%] 2xl:-left-10 2xl:bottom-[13%]'
+                                        innerClass=' 2xl:pr-16'
                                         icon='bulb'
                                         direction='left'
                                         bubble='top-right'
@@ -108,27 +115,38 @@ import PainsHeading from './PainsHeading.astro';
         </Container>
         <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10">
-                        <PainsHeading indicator='2'> “I don’t understand my KOMPLETE bundle and its products.” </PainsHeading>
-                        <div class='pb-24 relative mx-auto max-w-[1300px]'>
-                                <div class='relative'>
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10 laptop:pt-6 laptop:px-6">
+                        <PainsHeading indicator='2'>“I don’t understand my KOMPLETE bundle and its products.”</PainsHeading>
+                        <div class='pb-24 relative mx-auto max-w-[1300px] lg:pb-40'>
+                                <div class='relative xl:pb-8'>
                                         <img
                                                 src='/img/na/pains-2-a.png'
                                                 alt='Webshop product page'
-                                                class='w-full h-auto object-contain'
+                                                class='w-full h-auto object-contain xl:hidden'
+                                        />
+                                        <img
+                                                src='/img/na/pains-2-a-desktop.png'
+                                                alt='Webshop product page'
+                                                class='w-full h-auto object-contain hidden xl:block'
                                         />
                                         <img
                                                 src='/img/na/pains-2-b.png'
                                                 alt='Webshop product page'
-                                                class='absolute left-[57.5%] w-[40%] top-[29%] rounded h-auto [filter:drop-shadow(-3.5px_-3.25px_6.075px_rgba(0,0,0,0.26))_drop-shadow(6px_9.5px_11.95px_rgba(0,0,0,0.29))]'
+                                                class='absolute left-[57.5%] w-[40%] top-[29%] rounded h-auto [filter:drop-shadow(-3.5px_-3.25px_6.075px_rgba(0,0,0,0.26))_drop-shadow(6px_9.5px_11.95px_rgba(0,0,0,0.29))] xl:hidden'
+                                        />
+                                        <img
+                                                src='/img/na/pains-2-b-desktop.png'
+                                                alt='Webshop product page'
+                                                class='absolute left-[57.5%] w-[40%] top-[29%] rounded h-auto [filter:drop-shadow(-3.5px_-3.25px_6.075px_rgba(0,0,0,0.26))_drop-shadow(6px_9.5px_11.95px_rgba(0,0,0,0.29))] hidden xl:block'
                                         />
                                         <img
                                                 src='/img/na/pains-2-c.png'
                                                 alt='Webshop product page'
-                                                class='absolute w-[30%] left-[61%] rounded h-auto top-[117%]'
+                                                class='absolute w-[30%] left-[61%] rounded h-auto top-[117%] xl:hidden'
                                         />
                                         <SpeechBubble
-                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%] sm:-translate-y-1/4 sm:top-0'
+                                                class='absolute left-1.5 top-0 -translate-y-1/2 w-[70%] sm:translate-y-0 sm:top-1 2xl:-left-4 2xl:top-2'
+                                                innerClass='2xl:max-w-[27.5rem] 2xl:pr-3'
                                                 icon='bulb'
                                                 direction='left'
                                                 bubble={null}
@@ -141,13 +159,21 @@ import PainsHeading from './PainsHeading.astro';
                                         </SpeechBubble>
                                 </div>
                         </div>
-                        <div class='flex flex-col gap-1 relative pb-5'>
+                        <div class='flex flex-col gap-1 relative pb-5 xl:pb-24'>
+                                <img
+                                        alt='keywords'
+                                        src='/img/na/pains-2-d-desktop.png'
+                                        width='1300'
+                                        height='93'
+                                        class='hidden xl:block mx-auto'
+                                />
                                 <img
                                         src='/img/na/pains-2-d.png'
                                         alt=''
+                                        class='xl:hidden'
                                 />
                                 <span
-                                        class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit sm:text-[10px]'
+                                        class='ml-1.5 rounded-b-sm rounded-tr-sm bg-black/[0.34] text-white text-[6px] py-[2px] px-1.5 w-fit sm:text-[10px] xl:hidden'
                                         >NA DESKTOP APPLICATION</span
                                 >
                                 <SpeechBubble
@@ -159,7 +185,7 @@ import PainsHeading from './PainsHeading.astro';
                                         <div set:html={marked.parse(`Similarly, we **aligned category metadata across platforms**`)} />
                                 </SpeechBubble>
                         </div>
-                        <div class='flex flex-col gap-1 relative pb-5'>
+                        <div class='flex flex-col gap-1 relative pb-5 xl:hidden'>
                                 <img
                                         src='/img/na/pains-2-e.png'
                                         alt=''
@@ -169,7 +195,7 @@ import PainsHeading from './PainsHeading.astro';
                                         >WEBSHOP</span
                                 >
                         </div>
-                        <div class='flex flex-col gap-1 relative pb-14'>
+                        <div class='flex flex-col gap-1 relative pb-14 xl:hidden'>
                                 <img
                                         src='/img/na/pains-2-f.png'
                                         alt=''
@@ -179,15 +205,17 @@ import PainsHeading from './PainsHeading.astro';
                                         >UNIVERSAL BROWSER</span
                                 >
                         </div>
-                        <div class='relative mx-auto max-w-[1300px]'>
+                        <div class='relative mx-auto max-w-[1300px] pb-14 xl:pb-28'>
                                 <img
                                         src='/img/na/pains-exploration.png'
                                         alt=''
+                                        class='[filter:drop-shadow(0px_4.4px_99px_rgba(0,0,0,0.34))]'
                                 />
                                 <SpeechBubble
-                                        class='absolute left-1.5 top-0 -translate-y-[65%] w-[60%]'
+                                        class='absolute left-1.5 top-0 -translate-y-[65%] w-[60%] lg:left-[unset] lg:right-0 lg:w-auto xl:top-[24%]'
                                         icon='bulb'
-                                        direction='left'
+                                        direction='left lg:right'
+                                        innerClass='lg:pl-6 xl:pl-8'
                                         bubble={null}
                                         iconBg='bg-brand-emerald'>
                                         <div set:html={marked.parse(`**Exploration** page with swim lanes containing intelligent suggestions`)} />
@@ -197,11 +225,11 @@ import PainsHeading from './PainsHeading.astro';
         </Container>
         <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16 laptop:pt-6 laptop:px-6">
                         <PainsHeading indicator='3'> “Installation of third-party products is confusing...” </PainsHeading>
-                                <div class='relative mx-auto max-w-[1000px] '>
+                        <div class='relative mx-auto max-w-[1000px] laptop:pt-10 laptop:mb-16'>
                                 <img
-                                        src='/img/na/pains-onboarding.png'
+                                        src='/img/na/pains-3.png'
                                         alt=''
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
@@ -214,7 +242,7 @@ import PainsHeading from './PainsHeading.astro';
                                         <div set:html={marked.parse(`**Onboarding**`)} />
                                 </SpeechBubble>
                                 <SpeechBubble
-                                        class='absolute right-1.5 bottom-2 -translate-y-[65%]'
+                                        class='absolute right-1.5 bottom-2 -translate-y-[65%] laptop:right-0 laptop:translate-x-[40%]'
                                         icon='bulb'
                                         direction='right'
                                         bubble='top-left'
@@ -227,150 +255,174 @@ import PainsHeading from './PainsHeading.astro';
 
         <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16">
-                        <PainsHeading indicator='4'>
-                                        “I want more info on the products I own.”
-                        </PainsHeading>
-                        <div class='relative mx-auto max-w-[1050px]'>
-                                <img
-                                        src='/img/na/pains-4.png'
-                                        alt=''
-                                        class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
-                                />
-                                <SpeechBubble
-                                        class='absolute left-1.5 top-0 -translate-y-[10%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble={null}
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`A **Product Detail page** with...`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute right-2.5 top-[29%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='bottom-left'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Audio Previews**`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute left-5 top-[46.5%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='bottom-right'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**GUI Screenshots**`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute right-11 top-[60%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='top-right'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Resources**`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute left-[46.5%] top-[75%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='bottom-left'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Related Products**`)} />
-                                </SpeechBubble>
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-16 laptop:pt-6 laptop:px-6">
+                        <PainsHeading indicator='4'> “I want more info on the products I own.” </PainsHeading>
+                        <div class='mx-auto max-w-[1050px] laptop:pt-16 laptop:pb-16'>
+                                <div class='relative'>
+                                        <img
+                                                src='/img/na/pains-4.png'
+                                                alt=''
+                                                class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
+                                        />
+                                        <SpeechBubble
+                                                class='absolute left-1.5 top-0 -translate-y-[10%] laptop:top-[3.5%] laptop:-left-0 laptop:-translate-x-[24%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble={null}
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`A **Product Detail page** with...`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute right-2.5 top-[29%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='bottom-left'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Audio Previews**`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute left-5 top-[46.5%] laptop:top-[40%] laptop:left-[10%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='bottom-right'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**GUI Screenshots**`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute right-11 top-[60%] laptop:right-[17%] laptop:top-[59%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='top-right'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Resources**`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute left-[46.5%] top-[75%] laptop:left-[39%] laptop:top-[76%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='bottom-left'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Related Products**`)} />
+                                        </SpeechBubble>
+                                </div>
                         </div>
                 </div>
         </Container>
 
         <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10">
-                        <PainsHeading indicator='5'>
-                                        “No overview or progress of downloads”
-                        </PainsHeading>
-                        <div class='relative mb-12 mx-auto max-w-[1440px]'>
-                                <img
-                                        src='/img/na/pains-5.png'
-                                        alt=''
-                                        class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
-                                />
-                                <SpeechBubble
-                                        class='absolute right-60 top-0 -translate-y-[25%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble={null}
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Download Manager**`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute right-0 top-[60%] sm:right-0 sm:top-[65%]'
-                                        icon='bulb'
-                                        direction='right'
-                                        bubble='bottom-left'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Download progress drawer** in main app`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute left-1.5 bottom-0 translate-y-1/2'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='top-right'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`Ability to **sort** hundreds of **download items**`)} />
-                                </SpeechBubble>
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl p-2.5 pb-10 laptop:pt-6 laptop:px-6">
+                        <PainsHeading indicator='5'> “No overview or progress of downloads” </PainsHeading>
+                        <div class='mb-12 mx-auto max-w-[1440px] laptop:pt-12'>
+                                <div class='relative'>
+                                        <img
+                                                src='/img/na/pains-5.png'
+                                                alt=''
+                                                class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
+                                        />
+                                        <SpeechBubble
+                                                class='absolute right-60 top-0 -translate-y-[25%] laptop:-translate-y-1/2 laptop:right-[21.5%]'
+                                                icon='bulb'
+                                                innerClass='laptop:pl-8'
+                                                direction='left laptop:right'
+                                                bubble={null}
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Download Manager**`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute right-0 top-[60%] laptop:top-[63.3%] laptop:right-[14%]'
+                                                icon='bulb'
+                                                direction='right'
+                                                bubble='bottom-left'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Download progress drawer** in main app`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute left-1.5 bottom-0 translate-y-1/2 laptop:bottom-[unset] laptop:top-[31%] laptop:left-0 laptop:translate-x-[-15%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='top-right'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`Ability to **sort** hundreds of **download items**`)} />
+                                        </SpeechBubble>
+                                </div>
                         </div>
                 </div>
         </Container>
 
         <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
                 <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-3xl p-2.5 pb-16">
+                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-3xl p-2.5 pb-16 laptop:pt-6 laptop:px-6">
                         <div class='flex gap-2.5 items-center mb-[2.875rem]'>
-                                <span class='h-[30px] bg-brand-blue rounded-full w-[30px] flex items-center justify-center'
+                                <span
+                                        class='h-[30px] bg-brand-blue rounded-full w-[30px] flex items-center justify-center xl:h-10 xl:w-10 laptop:h-12 laptop:w-12'
                                         ><Icon
                                                 name='compass'
-                                                class='text-white'
+                                                class='text-white h-auto md:w-6 lg:w-7 xl:w-8'
                                         /></span
                                 >
-                                <p class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'>
+                                <p
+                                        class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'>
                                         “I want to funnel users from the download portal to the online store.”
                                 </p>
                         </div>
-                        <div class='relative mx-auto max-w-[1440px]'>
-                                <img
-                                        src='/img/na/pains-no-previews.png'
-                                        alt=''
-                                        class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
-                                />
-                                <SpeechBubble
-                                        class='absolute left-2 top-0 -translate-y-[85%]'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble='bottom-right'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Upsell notifications** for new releases and suggested content `)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute right-[17%] top-[41.5%]'
-                                        icon='bulb'
-                                        direction='right'
-                                        bubble='bottom-left'
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Go To Shop** link`)} />
-                                </SpeechBubble>
-                                <SpeechBubble
-                                        class='absolute left-2 bottom-0 translate-y-2/3'
-                                        icon='bulb'
-                                        direction='left'
-                                        bubble={null}
-                                        iconBg='bg-brand-emerald'>
-                                        <div set:html={marked.parse(`**Exploration Page** [shown above]`)} />
-                                </SpeechBubble>
+                        <div class='mx-auto max-w-[1440px] laptop:pt-4'>
+                                <div class='relative'>
+                                        <img
+                                                src='/img/na/pains-no-previews.png'
+                                                alt=''
+                                                class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))] lg:hidden'
+                                        />
+                                        <div
+                                                class='hidden lg:grid [grid-template-columns:51.5%_31.8%_16.6%] [grid-template-rows:41.5%_41.5%_17%] w-full h-auto'>
+                                                <Image
+                                                        src={dmBg}
+                                                        alt=''
+                                                        width='1050'
+                                                        height='920'
+                                                        class='w-full rounded-3xl'
+                                                        style='grid-area:1/1/3/3'
+                                                />
+                                                <Image
+                                                        src={dmFg}
+                                                        alt=''
+                                                        width='700'
+                                                        height='450'
+                                                        style='grid-area:2/2/4/4'
+                                                        class='w-full overflow-hidden rounded-3xl [filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
+                                                />
+                                        </div>
+                                        <SpeechBubble
+                                                class='absolute left-2 top-0 -translate-y-[85%] laptop:top-[29.5%] left-[8.5%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble='bottom-right'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Upsell notifications** for new releases and suggested content `)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute right-[17%] top-[41.5%] laptop:top-[45.5%] laptop:right-[21%]'
+                                                icon='bulb'
+                                                direction='right'
+                                                bubble='bottom-left'
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Go To Shop** link`)} />
+                                        </SpeechBubble>
+                                        <SpeechBubble
+                                                class='absolute left-2 bottom-0 translate-y-2/3 laptop:bottom-[7.5%] laptop:left-[6%]'
+                                                icon='bulb'
+                                                direction='left'
+                                                bubble={null}
+                                                iconBg='bg-brand-emerald'>
+                                                <div set:html={marked.parse(`**Exploration Page** [shown above]`)} />
+                                        </SpeechBubble>
+                                </div>
                         </div>
                 </div>
         </Container>
 
         <Container class='pt-8 pb-20 mx-auto'>
-                <p class='text-brand-grey text-xl tracking-[-0.05rem] pb-3 md:text-2xl lg:text-3xl xl:text-4xl laptop:text-5xl/[1.2]'>
+                <p class='text-brand-grey text-xl tracking-[-0.05rem] pb-3 md:text-2xl lg:text-3xl xl:text-4xl laptop:text-5xl'>
                         <em class='not-italic text-black'>The solutions</em> were received very well.<br />
                         <em class='not-italic text-black'>For each feature</em>...<br />
                         <em class='not-italic text-black'>8+ out of 10</em> responded they <em class='not-italic text-black'>“would use.”</em><br />
