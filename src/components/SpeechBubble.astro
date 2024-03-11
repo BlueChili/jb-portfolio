@@ -40,10 +40,10 @@ const iconBg = Astro.props.iconBg || 'bg-brand-emerald';
 </style>
 <div class:list={[Astro.props.class]}>
         <div
-                class='flex relative bg-white/60 min-h-10 rounded-[2rem] p-[9px] w-fit text-[8px] gap-2 2xl:gap-4 items-center backdrop-blur-md pod sm:text-[9px] md:text-[11px] lg:text-sm xl:text-base lg:h-15 xl:h-20 xl:rounded-[4rem]'
+                class='flex relative bg-white/60 min-h-10 rounded-[2rem] xl:pl-1 xl:pr-1 p-[9px] w-fit text-[8px] gap-2 2xl:gap-4 items-center backdrop-blur-md pod sm:text-[9px] md:text-[11px] lg:text-sm xl:text-base lg:h-15 xl:h-20 xl:rounded-[4rem]'
                 class:list={[directionClasses, Astro.props?.innerClass]}>
                 <div
-                        class='h-6 w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 laptop:h-12 laptop:w-12 flex justify-center items-center rounded-full flex-shrink-0'
+                        class='h-6 w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 laptop:h-14 laptop:w-14 flex justify-center items-center rounded-full flex-shrink-0'
                         class:list={[iconBg, Astro.props.direction === 'left' ? 'lg:ml-1 xl:ml-3' : 'lg:mr-1 xl:mr-3']}>
                         <Icon
                                 name={Astro.props.icon}
