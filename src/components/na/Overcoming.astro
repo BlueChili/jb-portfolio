@@ -1,8 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import Container from '@c/Container.astro';
 import Box from '@c/na/Box.astro';
 import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
+import ds1 from '@i/na/DS1.png';
+import ds2 from '@i/na/DS2.png';
+import ds3 from '@i/na/DS3.png';
 ---
 
 <section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 [background:linear-gradient(180deg,#DADADA_0%,#EBEAEA_54%,#D1D1D1_100%)]'>
@@ -12,8 +16,8 @@ import SectionHeading from './SectionHeading.astro';
                         Native Access is <Em>the client <span class='italic'>all</span> Native Instruments products depend on.</Em> This proved to be one
                         the <Em>most challenging projects in my design career. Here’s why...</Em>
                 </p>
-                <Box class='mb-2.5'>
-                        <div class='px-2.5 pt-2.5 pb-8'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-pink body-text'>Legacy</h3>
                                 <p class='text-brand-grey body-text'>
                                         The project started with the <Em
@@ -35,8 +39,8 @@ import SectionHeading from './SectionHeading.astro';
                         />
                 </Box>
 
-                <Box class='mb-2.5'>
-                        <div class='px-2.5 pt-2.5 pb-6'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10'>
+                        <div class='px-2.5 pt-2.5 pb-6 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-pink body-text'>Design System Conundrum</h3>
                                 <p class='text-brand-grey tracking-[-0.0075rem] body-text'>
                                         There was much debate over whether Native Access was part of the web experience or product experience. I was
@@ -46,7 +50,7 @@ import SectionHeading from './SectionHeading.astro';
                                         >
                                 </p>
                         </div>
-                        <div class='px-2.5'>
+                        <div class='px-2.5 laptop:hidden'>
                                 <span class='text-brand-grey font-[Roboto] text-[9px] w-[53%] inline-block md:text-[11px]'>
                                         Lumen Design System
                                 </span>
@@ -55,22 +59,37 @@ import SectionHeading from './SectionHeading.astro';
                         <img
                                 src='/img/na/overcoming-ds-1.png'
                                 alt=''
-                                class='rounded-xl mb-2'
+                                class='rounded-xl mb-2 laptop:hidden'
+                        />
+                        <Image
+                                class='hidden laptop:block pb-5'
+                                src={ds1}
+                                alt='Design System 1'
                         />
                         <img
                                 src='/img/na/overcoming-ds-2.png'
                                 alt=''
-                                class='rounded-xl mb-2'
+                                class='rounded-xl mb-2 laptop:hidden'
+                        />
+                        <Image
+                                class='hidden laptop:block pb-5'
+                                src={ds2}
+                                alt='Design System 2'
                         />
                         <img
                                 src='/img/na/overcoming-ds-3.png'
                                 alt=''
-                                class='rounded-xl'
+                                class='rounded-xl laptop:hidden'
+                        />
+                        <Image
+                                class='hidden laptop:block pb-5'
+                                src={ds3}
+                                alt='Design System 3'
                         />
                 </Box>
 
-                <Box class='mb-2.5'>
-                        <div class='px-2.5 pt-2.5 pb-2.5'>
+                <Box class='mb-2.5 xl:grid [grid-template-columns:1fr_1fr] [grid-template-rows:1fr_1fr] xl:pb-0 laptop:pb-0 lg:mb-5 laptop:mb-10 laptop:h-[595px]'>
+                        <div class='px-2.5 pt-2.5 pb-2.5 xl:[grid-area:1/2/2/3]'>
                                 <h3 class='text-brand-pink leading-normal pb-1 body-text'>Subscription</h3>
                                 <p class='text-brand-grey tracking-[-0.0075rem] body-text'>
                                         Nearly a year into development of Native Access there was a top-down company-wide decision to roll out a
@@ -86,12 +105,12 @@ import SectionHeading from './SectionHeading.astro';
                         <img
                                 src='/img/na/overcoming-subscription-1.png'
                                 alt=''
-                                class='rounded-xl'
+                                class='rounded-xl xl:[grid-area:1/1/4/4] xl:-translate-y-13 xl:-translate-x-5 laptop:-translate-y-24 laptop:-translate-x-13'
                         />
                 </Box>
 
                 <Box>
-                        <div class='px-2.5 pt-2.5 pb-2.5'>
+                        <div class='px-2.5 pt-2.5 pb-2.5 md:pb-5 lg:pb-10 xl:pb-12 laptop:pb-15'>
                                 <h3 class='text-brand-pink leading-normal pb-1 body-text'>Single Journey of Truth - Subscription</h3>
                                 <p class='text-brand-grey tracking-[-0.0075rem] body-text'>
                                         I fixed a gap in communication between teams. Company-wide the subscription project was becoming out of sync.
