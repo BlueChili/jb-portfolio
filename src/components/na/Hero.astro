@@ -85,14 +85,14 @@ const TOC = [
                                 <h2 class='text-brand-pink 2xl:pb-1'>{context.heading}</h2>
                                 <div
                                         set:html={marked.parse(context.text)}
-                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] md:text-sm lg:text-base 2xl:text-xl'
+                                        class='text-[0.8125rem] leading-normal md:text-sm lg:text-base 2xl:text-xl'
                                 />
                         </div>
                         <div class='flex-1'>
                                 <h2 class='text-brand-pink 2xl:pb-1'>{approach.heading}</h2>
                                 <div
                                         set:html={marked.parse(approach.text)}
-                                        class='text-[0.8125rem] leading-normal tracking-[-0.015rem] md:text-sm lg:text-base 2xl:text-xl'
+                                        class='text-[0.8125rem] leading-normal md:text-sm lg:text-base 2xl:text-xl'
                                 />
                         </div>
                 </div>
