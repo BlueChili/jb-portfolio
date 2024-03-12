@@ -30,13 +30,13 @@ const TOC = [
 
 <style>
         .outcomes {
-                @apply text-lg tracking-[-0.0225rem] text-brand-grey lg:text-2xl 2xl:text-[32px]/[1.2];
+                @apply text-lg tracking-[-0.01rem] text-brand-grey lg:text-[24pt]/[1.2];
         }
         .toc li {
                 @apply line-clamp-1;
         }
         .toc {
-                @apply text-brand-pink !important;
+                @apply !text-brand-pink;
         }
 </style>
 <style is:global>
@@ -107,7 +107,7 @@ const TOC = [
                         <h2 class='text-bran-pink text-[0.8125rem] tracking-[-0.015rem] text-brand-pink pb-3 md:text-sm lg:text-base 2xl:text-xl'>
                                 Content
                         </h2>
-                        <ol class='text-xl lg:text-2xl 2xl:text-[32px]'>
+                        <ol class='text-xl lg:text-[24pt]/[1.2] 2xl:text-[32px]'>
                                 {
                                         TOC.map((item, index) => (
                                                 <li>
