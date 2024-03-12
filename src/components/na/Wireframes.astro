@@ -2,23 +2,21 @@
 import Container from '@c/Container.astro';
 import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
+import WireframeRail from './WireframeRail.astro';
 ---
 
 <style>
-        .rail {
-                @apply pb-6;
-        }
-        .rail img {
+        .rails img {
                 width: 60vw;
                 box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.2);
-                @apply aspect-video h-auto rounded-lg border border-brand-grey;
+                @apply aspect-video h-auto rounded-lg border border-brand-grey lg:h-[16rem] lg:object-cover lg:[aspect-ratio:unset] laptop:h-[22.5rem];
         }
 </style>
 <section class='overflow-x-hidden pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16'>
         <Container class='py-20 mx-auto'>
                 <SectionHeading number='3'>Building Wireframes</SectionHeading>
 
-                <p class='text-brand-grey text-2xl pb-12'>
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl/[1.2]'>
                         With clear pain points and stakeholder requirements, it was easy to mock an <Em>MVP for the developers</Em> to start building.
                         Meanwhile the <Em>Alpha Group and I continued to explore features and refine solutions</Em>. And finally, <Em
                                 >I put on my Design System hat and began culling Components and Patterns</Em
@@ -46,11 +44,12 @@ import SectionHeading from './SectionHeading.astro';
                 </div>
         </Container>
 
-        <div class='w-full'>
-                <div class='rail flex gap-4 flex-nowrap whitespace-nowrap -translate-x-[87%]'>
+        <div class='w-full rails'>
+                <WireframeRail class='-translate-x-[87%] lg:-translate-x-[5%] laptop:-translate-x-0'>
                         <img
                                 src='/img/na/wireframe-1.png'
                                 alt=''
+                                class='h-auto w-full'
                         />
                         <img
                                 src='/img/na/wireframe-2.png'
@@ -60,8 +59,8 @@ import SectionHeading from './SectionHeading.astro';
                                 src='/img/na/wireframe-3.png'
                                 alt=''
                         />
-                </div>
-                <div class='rail flex gap-4 flex-nowrap whitespace-nowrap -translate-x-[130%]'>
+                </WireframeRail>
+                <WireframeRail class='-translate-x-[130%] lg:-translate-x-[19%]'>
                         <img
                                 src='/img/na/wireframe-4.png'
                                 alt=''
@@ -78,8 +77,8 @@ import SectionHeading from './SectionHeading.astro';
                                 src='/img/na/wireframe-7.png'
                                 alt=''
                         />
-                </div>
-                <div class='rail flex gap-4 flex-nowrap whitespace-nowrap -translate-x-[85%]'>
+                </WireframeRail>
+                <WireframeRail class='-translate-x-[85%] md:-translate-x-[39%] lg:-translate-x-[5%] laptop:-translate-x-0'>
                         <img
                                 src='/img/na/wireframe-8.png'
                                 alt=''
@@ -92,8 +91,8 @@ import SectionHeading from './SectionHeading.astro';
                                 src='/img/na/wireframe-10.png'
                                 alt=''
                         />
-                </div>
-                <div class='rail flex gap-4 flex-nowrap whitespace-nowrap -translate-x-[130%]'>
+                </WireframeRail>
+                <WireframeRail class='-translate-x-[130%] lg:-translate-x-[19%]'>
                         <img
                                 src='/img/na/wireframe-11.png'
                                 alt=''
@@ -110,8 +109,8 @@ import SectionHeading from './SectionHeading.astro';
                                 src='/img/na/wireframe-14.png'
                                 alt=''
                         />
-                </div>
-                <div class='rail flex gap-4 flex-nowrap whitespace-nowrap -translate-x-[10%]'>
+                </WireframeRail>
+                <WireframeRail class='-translate-x-[10%] lg:-translate-x-[5%] laptop:-translate-x-0'>
                         <img
                                 src='/img/na/wireframe-15.png'
                                 alt=''
@@ -124,6 +123,6 @@ import SectionHeading from './SectionHeading.astro';
                                 src='/img/na/wireframe-17.png'
                                 alt=''
                         />
-                </div>
+                </WireframeRail>
         </div>
 </section>

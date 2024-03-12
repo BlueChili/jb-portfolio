@@ -3,26 +3,35 @@ import Container from '@c/Container.astro';
 import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
 import FigmaArtifact from './FigmaArtifact.astro';
+import { Image } from 'astro:assets';
+
+import patternsImg from '@i/na/patterns-1-desktop.png';
 ---
 
 <section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 bg-[#f5f5f5]'>
         <Container class='mx-auto'>
                 <SectionHeading number='5'>Design Patterns & Artifacts</SectionHeading>
 
-                <p class='text-brand-grey text-2xl pb-12'>
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
                         My <Em>specifications, design components,</Em> and the app itself...
                 </p>
+
                 <a
                         href='https://www.figma.com/file/GabL83pcg8R6paUUnQSC17/06-Native-Access-2-Patterns?node-id=1353%3A12729&t=TATvib5uoS3Ie78P-1'
                         target='_blank'>
                         <img
                                 src='/img/na/design-patterns-1.png'
                                 alt=''
-                                class='rounded-lg mb-5'
+                                class='rounded-lg mb-5 lg:hidden'
+                        />
+                        <Image
+                                src={patternsImg}
+                                alt='Patterns'
+                                class='rounded-2xl laptop:rounded-3xl hidden lg:block mb-10'
                         />
                 </a>
 
-                <div class='p-2 pb-5 body-text'>
+                <div class='p-2 pb-5 body-text lg:pb-12 xl:pb-16 laptop:pb-24'>
                         <h3 class='text-black font-normal'>Patterns</h3>
 
                         <p class='text-brand-grey'>
@@ -30,68 +39,93 @@ import FigmaArtifact from './FigmaArtifact.astro';
                                 UI Patterns on Figma, here.
                         </p>
                 </div>
-                <a
-                        href='https://www.figma.com/proto/SJORvdfEAYwopC15FGlSn7/%E2%96%B6%EF%B8%8F-Portfolio?page-id=2644%3A4140&type=design&node-id=3834-11547&viewport=12246%2C9732%2C0.64&t=i3ENshV8BJaK9DXE-1&scaling=scale-down-width&starting-point-node-id=3097%3A28486&mode=design'
-                        target='_blank'>
-                        <img
-                                src='/img/na/design-patterns-2.png'
-                                alt=''
-                                class='rounded-lg mb-1'
-                        />
-                </a>
 
-                <div class='body-text p-2 pb-6'>
-                        <h3 class='text-black font-normal'>Lumen Design System</h3>
+                <div class='md:grid grid-cols-2 gap-6 lg:gap-8 laptop:gap-10'>
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a
+                                                href='https://www.figma.com/proto/SJORvdfEAYwopC15FGlSn7/%E2%96%B6%EF%B8%8F-Portfolio?page-id=2644%3A4140&type=design&node-id=3834-11547&viewport=12246%2C9732%2C0.64&t=i3ENshV8BJaK9DXE-1&scaling=scale-down-width&starting-point-node-id=3097%3A28486&mode=design'
+                                                target='_blank'>
+                                                <img
+                                                        src='/img/na/design-patterns-2.png'
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl'
+                                                />
+                                        </a>
+                                </div>
 
-                        <p class='text-brand-grey'>The design system I co-created and expanded to build this product.</p>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-black font-normal'>Lumen Design System</h3>
+
+                                        <p class='text-brand-grey'>The design system I co-created and expanded to build this product.</p>
+                                </div>
+                        </div>
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a
+                                                href='/img/na/na-comp-analysis.pdf'
+                                                target='_blank'>
+                                                <img
+                                                        src='/img/na/design-patterns-3.png'
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl'
+                                                />
+                                        </a>
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-black font-normal'>Competitor Analysis</h3>
+
+                                        <p class='text-brand-grey'>
+                                                A close look at what the competition was doing in order to ensure a clean funnel from Engagement
+                                                through Purchase.
+                                        </p>
+                                </div>
+                        </div>
+
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <img
+                                                src='/img/na/design-patterns-5.png'
+                                                alt=''
+                                                class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl'
+                                        />
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-black font-normal'>Native Access 2 Application</h3>
+
+                                        <p class='text-brand-grey'>
+                                                Try the application yourself!<br />
+                                                Username flashblock.ni@gmail.com<br />
+                                                Password Flashblock2020
+                                        </p>
+                                </div>
+                        </div>
+
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <iframe
+                                                src='https://www.youtube.com/embed/9r-4HBARAms?si=tVx_aWKjDAQHOmXi'
+                                                title='YouTube video player'
+                                                frameborder='0'
+                                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                                allowfullscreen
+                                                class='w-full h-full rounded-2xl laptop:rounded-3xl'
+                                        ></iframe>
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-black font-normal'>Video Walkthrough</h3>
+
+                                        <p class='text-brand-grey'>Sit back and enjoy a full video tour of the application and it’s features.</p>
+                                </div>
+                        </div>
                 </div>
-                <a
-                        href='/img/na/na-comp-analysis.pdf'
-                        target='_blank'>
-                        <img
-                                src='/img/na/design-patterns-3.png'
-                                alt=''
-                                class='rounded-lg mb-1'
-                        />
-                </a>
-                <div class='body-text p-2 pb-5'>
-                        <h3 class='text-black font-normal'>Competitor Analysis</h3>
 
-                        <p class='text-brand-grey'>
-                                A close look at what the competition was doing in order to ensure a clean funnel from Engagement through Purchase.
-                        </p>
-                </div>
-                <a
-                        href='/img/na/na-comp-analysis.pdf'
-                        target='_blank'>
-                </a>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9r-4HBARAms?si=tVx_aWKjDAQHOmXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class='p-2 pb-5 body-text'>
-                        <h3 class='text-black font-normal'>Video Walkthrough</h3>
-
-                        <p class='text-brand-grey'>Sit back and enjoy a full video tour of the application and it’s features.</p>
-                </div>
-
-                <img
-                        src='/img/na/design-patterns-5.png'
-                        alt=''
-                        class='rounded-lg mb-1'
-                />
-                <div class='p-2 pb-10 body-text'>
-                        <h3 class='text-black font-normal'>Native Access 2 Application</h3>
-
-                        <p class='text-brand-grey'>
-                                Try the application yourself!<br />
-                                Username flashblock.ni@gmail.com<br />
-                                Password Flashblock2020
-                        </p>
-                </div>
-
-                <p class='text-brand-grey text-2xl pl-1 pb-12'>
+                <p
+                        class='text-brand-grey text-2xl pl-1 pb-12 md:pl-4 lg:pl-8 laptop:pl-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
                         I invite you to look at select <Em>Figma artifacts</Em>...
                 </p>
 
-                <div class='body-text md:grid md:grid-cols-2 xl:grid-cols-3'>
+                <div class='body-text md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8 laptop:gap-12'>
                         <FigmaArtifact
                                 url='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=2-4266&mode=design'
                                 image='/img/na/artifacts-1.png'
