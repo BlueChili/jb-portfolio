@@ -34,10 +34,6 @@ const TOC = [
         }
         .toc li {
                 @apply line-clamp-1;
-                @media (min-width: 1024px) {
-                        font-size: 24px;
-                        line-height: 1.2;
-                }
         }
         .toc {
                 @apply !text-brand-pink;
@@ -117,7 +113,7 @@ const TOC = [
                                                 <li>
                                                         <a
                                                                 href={item.url}
-                                                                class='line-clamp-1 overflow-hidden'>
+                                                                class='hover:underline line-clamp-1 overflow-hidden'>
                                                                 {index < 9 ? `0${index + 1}` : index}
                                                                 <span class='text-brand-pink'>{item.text}</span>
                                                         </a>
