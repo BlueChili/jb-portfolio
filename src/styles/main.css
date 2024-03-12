@@ -1,7 +1,7 @@
 @font-face {
         font-family: 'Helvetica Neue'; /* Choose a name for your font */
         font-weight: 400;
-        src: url('/fonts/HelveticaNeueMedium.ttf') format('truetype');
+        src: url('/fonts/HelveticaNeueRegular.ttf') format('truetype');
 }
 
 @font-face {
@@ -38,7 +38,7 @@
         span,
         div,
         a {
-                @apply font-light;
+                @apply font-normal;
         }
 
         .body-text {
