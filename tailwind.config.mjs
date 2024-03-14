@@ -17,6 +17,7 @@ export default {
                                         emerald: '#00C09E',
                                         red: '#DE0000',
                                         blue: '#0059DE',
+                                        'browser-purple': '#7879F1',
                                         'secondary-text': '#4d4d4d',
                                 },
                         },

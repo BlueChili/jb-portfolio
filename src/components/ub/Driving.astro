@@ -1,0 +1,33 @@
+---
+import Container from '@c/Container.astro';
+import { Image } from 'astro:assets';
+import Em from '@c/Em.astro';
+import SectionHeading from '@c/ub/SectionHeading.astro';
+
+import sliderPlaceholder from '@i/ub/slider-placeholder.png';
+---
+
+<section
+        id='pains'
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16'>
+        <Container class='mx-auto'>
+                <SectionHeading
+                        number='1'
+                        variant='dark'
+                        >Driving with The C-Level</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        <Em variant='dark'> I regularly presented the story </Em>
+                        being told to a steering committee comprised of
+                        <Em variant='dark'> Director of Product, CTO, CPO </Em>
+                        and a rotation of stakeholders.
+                </p>
+
+                <div class='relative pb-12 md:pb-18 lg:pb-24 laptop:pb-32 2xl:pb-40'>
+                        <Image
+                                src={sliderPlaceholder}
+                                alt='Slider placeholder'
+                        />
+                </div>
+        </Container>
+</section>

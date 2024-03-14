@@ -3,6 +3,10 @@ import '../styles/main.css';
 
 import Header from '@c/Header.astro';
 import Footer from '@c/Footer.astro';
+
+interface Props {
+        class?: string;
+}
 ---
 
 <style></style>
@@ -37,7 +41,9 @@ import Footer from '@c/Footer.astro';
                         rel='stylesheet'
                 />
         </head>
-        <body class='overflow-x-hidden'>
+        <body
+                class='overflow-x-hidden'
+                class:list={[Astro.props?.class]}>
                 <Header />
                 <slot />
                 <Footer />

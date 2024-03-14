@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@c/Container.astro';
+import Box from '@c/na/Box.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import SummaryBadge from './SummaryBadge.astro';
+import bg from '@i/ub/toomany_bg.png';
+---
+
+<section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'>
+        <Image
+                class='absolute w-full h-full inset-0 object-cover'
+                src={bg}
+                alt='background image'
+        />
+        <Container class='mx-auto relative'>
+                <SectionHeading
+                        number='2'
+                        variant='dark'
+                        >Too Many Stakeholders in the Kitchen</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        These stakeholders were representing <Em variant='dark'>20 years of silo’d products, all fighting for budget.</Em> After some courtesy
+                        gourmet vegan sushi, we spent an entire afternoon workshop posting requirements and niceties on the wall. <Em variant='dark'
+                                >We mused over a future of aligned features</Em
+                        > rather than dwelling on past conflicts. As As a bonus, <Em variant='dark'
+                                >everyone seemed to get along better thereafter.</Em
+                        >
+                </p>
+        </Container>
+
+        <Container class='2xl:max-w-[1560px] mx-auto relative'>
+                <div class='flex gap-3 pb-12 laptop:gap-5'>
+                        <SummaryBadge
+                                number='3'
+                                text='Steerings'
+                        />
+                        <Box class='backdrop-blur-[15px] !p-3 md:!px-6 lg:!px-9 laptop:!px-16 flex-1 laptop:!py-8 text-right md:flex flex-col gap-2 hidden'>
+                                <span class='block text-[36px] !leading-[0.75] font-bold  lg:text-[56px] laptop:text-[85px]'>1</span>
+                                <span class='font-bold text-[9px] md:text-xs lg:text-base !leading-[1.1]'>Requirements Workshop</span>
+                        </Box>
+                        <SummaryBadge
+                                number='7'
+                                text='Stakeholders'
+                        />
+                        <SummaryBadge
+                                number='6'
+                                text='Frameworks'
+                        />
+                        <SummaryBadge
+                                number='25'
+                                text='Filetypes'
+                        />
+                </div>
+
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10' />
+        </Container>
+</section>
