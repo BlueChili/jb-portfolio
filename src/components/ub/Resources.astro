@@ -11,7 +11,8 @@ import kk from '@i/ub/resources/kk.png';
 import kt from '@i/ub/resources/kt.png';
 import gr from '@i/ub/resources/gr.png';
 import mx from '@i/ub/resources/mx.png';
-import specs from '@i/ub/resources/specs.png';
+import specsMobile from '@i/ub/resources/specs-1.png';
+import specsDesktop from '@i/ub/resources/specs-2.png';
 import bg from '@i/ub/resources/bg.png';
 ---
 
@@ -130,11 +131,16 @@ import bg from '@i/ub/resources/bg.png';
 
                 <a href='#'>
                         <Image
-                                src={specs}
+                                src={specsMobile}
                                 alt='Patterns'
-                                class='rounded-2xl laptop:rounded-3xl mb-4 lg:mb-10 object-cover object-left min-h-[60vw] max-h-[360px]'
+                                class='rounded-2xl lg:hidden laptop:rounded-3xl mb-4 lg:mb-10 object-cover object-left min-h-[60vw] max-h-[360px]'
                         />
-                        <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                        <Image
+                                src={specsDesktop}
+                                alt='Patterns'
+                                class='hidden lg:block rounded-2xl laptop:rounded-3xl mb-4 lg:mb-10 object-cover object-left min-h-[20vw] max-h-[360px]'
+                        />
+                        <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-12'>
                                 <h3 class='body-text text-brand-grey font-normal'>Specifications</h3>
 
                                 <p class='body-text text-white'>Find UX Acceptance Criteria and Behavior for JIRA tickets, here.</p>
