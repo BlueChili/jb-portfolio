@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@c/Container.astro';
+import Box from '@c/na/Box.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import fmw1Mobile from '@i/ub/frameworks-1-mobile.png';
+import fmw1Desktop from '@i/ub/frameworks-1-desktop.png';
+import fmw2Mobile from '@i/ub/frameworks-2-mobile.png';
+import fmw2Desktop from '@i/ub/frameworks-2-desktop.png';
+import ff1Mobile from '@i/ub/form-factors-mobile.png';
+import ff1Desktop from '@i/ub/form-factors-desktop.png';
+---
+
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
+        id='carry'>
+        <Container class='mx-auto relative'>
+                <SectionHeading
+                        number='3'
+                        variant='dark'
+                        >Carry The Legacy...While Leaving it Behind</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        <Em variant='dark'> I unified all eco-system frameworks and designed for a slew of form factors. </Em>
+                </p>
+        </Container>
+
+        <Container class='2xl:max-w-[1560px] mx-auto relative'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                                <h3 class='text-brand-browser-purple body-text'>Frameworks & Engines</h3>
+                                <p class='text-brand-grey body-text'>
+                                        While the Product Owners of <Em variant='dark'>each content team had requirements</Em>, there was also the
+                                        inherent <Em variant='dark'>feature parity of each framework/engine.</Em><br /> Additionally, Native-Instrument’s
+                                        product line <Em variant='dark'>includes C++ applications</Em> built from scratch which must be considered for
+                                        the new universal browsing experience.
+                                </p>
+                        </div>
+                        <div class='pb-4 xl:pb-8'>
+                                <Image
+                                        src={fmw1Mobile}
+                                        alt='frameworks 1'
+                                        class='xl:hidden'
+                                />
+                                <Image
+                                        src={fmw1Desktop}
+                                        alt='frameworks 1'
+                                        class='hidden xl:block'
+                                />
+                        </div>
+                        <div class='pb-4 xl:pb-8'>
+                                <Image
+                                        src={fmw2Mobile}
+                                        alt='frameworks 2'
+                                        class='xl:hidden'
+                                />
+                                <Image
+                                        src={fmw2Desktop}
+                                        alt='frameworks 2'
+                                        class='hidden xl:block'
+                                />
+                        </div>
+                </Box>
+
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                                <h3 class='text-brand-browser-purple body-text'>Form Factors</h3>
+                                <p class='text-brand-grey body-text'>
+                                        The couple hundred product UIs our new browser serves presented many different form factors and dimensions. We
+                                        created a UI experience which felt natural as users navigated through Presets.
+                                </p>
+                        </div>
+                        <div class='pb-4 xl:pb-8 relative'>
+                                <Image
+                                        src={ff1Mobile}
+                                        alt='Form factors'
+                                        class='max-w-[100vw] -translate-x-[19px] lg:hidden sm:-translate-x-[calc(((100vw-624px)/2)+10px)] md:max-w-[100%] md:translate-x-0'
+                                />
+                                <Image
+                                        src={ff1Desktop}
+                                        alt='Form factors'
+                                        class='hidden lg:block max-w-[105%] -translate-x-[2.5%] -translate-y-[1.5%] h-auto'
+                                />
+                        </div>
+                </Box>
+        </Container>
+</section>

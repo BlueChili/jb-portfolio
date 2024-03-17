@@ -6,11 +6,15 @@ import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
 import SummaryBadge from './SummaryBadge.astro';
 import bg from '@i/ub/toomany_bg.png';
+import wksMobile from '@i/ub/workshop-reports-mobile.png';
+import wksDesktop from '@i/ub/workshop-reports-desktop.png';
 ---
 
-<section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'>
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
+        id='too'>
         <Image
-                class='absolute w-full h-full inset-0 object-cover'
+                class='absolute w-full h-full inset-0 object-cover object-left'
                 src={bg}
                 alt='background image'
         />
@@ -36,8 +40,9 @@ import bg from '@i/ub/toomany_bg.png';
                                 number='3'
                                 text='Steerings'
                         />
-                        <Box class='backdrop-blur-[15px] !p-3 md:!px-6 lg:!px-9 laptop:!px-16 flex-1 laptop:!py-8 text-right md:flex flex-col gap-2 hidden'>
-                                <span class='block text-[36px] !leading-[0.75] font-bold  lg:text-[56px] laptop:text-[85px]'>1</span>
+                        <Box
+                                class='backdrop-blur-[15px] !p-3 md:!px-6 lg:!px-9 laptop:!px-16 flex-1 laptop:!py-8 text-right md:flex flex-col gap-2 hidden'>
+                                <span class='block text-[36px] !leading-[0.75] font-bold lg:text-[56px] laptop:text-[85px]'>1</span>
                                 <span class='font-bold text-[9px] md:text-xs lg:text-base !leading-[1.1]'>Requirements Workshop</span>
                         </Box>
                         <SummaryBadge
@@ -54,6 +59,25 @@ import bg from '@i/ub/toomany_bg.png';
                         />
                 </div>
 
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10' />
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                                <h3 class='text-brand-pink body-text'>Legacy</h3>
+                                <p class='text-brand-white body-text'>
+                                        I facilitated an afternoon workshop with all stakeholders and had them rank features most important to them.
+                                        All requests, requirements and priorities had to be delicately taken into consideration. I maintained regular
+                                        weekly syncs from then on.
+                                </p>
+                        </div>
+                        <Image
+                                src={wksMobile}
+                                alt='workshop results'
+                                class='lg:hidden'
+                        />
+                        <Image
+                                src={wksDesktop}
+                                alt='workshop results'
+                                class='hidden lg:block'
+                        />
+                </Box>
         </Container>
 </section>

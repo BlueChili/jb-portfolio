@@ -1,15 +1,21 @@
 {
-    "extends": "astro/tsconfigs/strict",
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@c/*": ["src/components/*"],
-            "@i/*": ["src/img/*"]
-        },
-        "plugins": [
-            {
-                "name": "@astrojs/ts-plugin"
-            }
-        ]
-    }
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@c/*": [
+        "src/components/*"
+      ],
+      "@i/*": [
+        "src/img/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  }
 }

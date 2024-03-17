@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@c/Container.astro';
+import Box from '@c/na/Box.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import ftMobile from '@i/ub/much-data-1-mobile.png';
+import ftDesktop from '@i/ub/much-data-1-desktop.png';
+import dbMobile from '@i/ub/much-data-2-mobile.png';
+import dbDesktop from '@i/ub/much-data-2-desktop.png';
+---
+
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
+        id='much'>
+        <Container class='mx-auto relative'>
+                <SectionHeading
+                        number='4'
+                        variant='dark'
+                        >Much Data, One Browser</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        <Em variant='dark'>
+                                I managed to factor all the requirements, filetypes and previous tagging systems into one <span class='underline'
+                                        >shiny new browser.</span
+                                ></Em
+                        >
+                </p>
+        </Container>
+
+        <Container class='2xl:max-w-[1560px] mx-auto relative'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                                <h3 class='text-brand-browser-purple body-text'>Enough Filetypes</h3>
+                                <p class='text-brand-grey body-text'>
+                                        If fulfilling the needs of several teams combined with the needs of several frameworks wasn't enough of a
+                                        challenge, these frameworks represented <Em variant='dark'>over 35 filetypes</Em>, all needing consistent XD
+                                        within the browsing experience. <Em variant='dark'>I did a full audit and prioritized with stakeholders.</Em>
+                                </p>
+                        </div>
+                        <div class='pb-4 xl:pb-8'>
+                                <Image
+                                        src={ftMobile}
+                                        alt='frameworks 1'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={ftDesktop}
+                                        alt='frameworks 1'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                </Box>
+
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                                <h3 class='text-brand-browser-purple body-text'>Two Databases</h3>
+                                <p class='text-brand-grey body-text'>
+                                        We had to transcribe <Em variant='dark'>two old data models</Em> for the old tagging system<Em variant='dark'>
+                                                to fit the new. I created the rubric</Em
+                                        > for how this would work.
+                                </p>
+                        </div>
+
+                        <div class='pb-4 xl:pb-8'>
+                                <Image
+                                        src={dbMobile}
+                                        alt='frameworks 2'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={dbDesktop}
+                                        alt='frameworks 2'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                </Box>
+        </Container>
+</section>

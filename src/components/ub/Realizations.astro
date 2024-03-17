@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@c/Container.astro';
+import Box from '@c/na/Box.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import ftMobile from '@i/ub/much-data-1-mobile.png';
+import ftDesktop from '@i/ub/much-data-1-desktop.png';
+import bgImage from '@i/ub/realizations-bg.png';
+import TabSwitcher from './Realizations/TabSwitcher';
+---
+
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
+        id='realizations'>
+        <Image
+                src={bgImage}
+                alt=''
+                class='absolute inset-0 h-full w-full object-cover'
+        />
+        <Container class='mx-auto relative'>
+                <SectionHeading
+                        number='5'
+                        variant='dark'
+                        >Realizations</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        Find below the many
+                        <Em variant='dark'> manifestations</Em> of our
+                        <Em variant='dark'> new design</Em> and
+                        <Em variant='dark'> data model</Em>.
+                </p>
+                <div class='flex flex-col leading-normal lg:flex-row gap-7 pb-14 text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
+                        <div class='basis-3/5'>
+                                <p class='font-light'>Click a Browser thumbnail to watch a full walkthrough.</p>
+                        </div>
+                        <div class='lg:flex-1'>
+                                <div class='flex'>
+                                        <p class='flex-1 font-light'>
+                                                Filetypes
+                                                <br />Search
+                                                <br />Filters
+                                                <br />Tags
+                                                <br />User Tags
+                                                <br />Color Tags / Favorites
+                                                <br />List Sorting
+                                                <br />Results List
+                                        </p>
+                                        <p class='flex-1 font-light'>
+                                                Visual Tile Browser
+                                                <br />Pinning
+                                                <br />Audio Preview
+                                                <br />Info Panel
+                                                <br />Custom Metadata
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </Container>
+
+        <Container class='2xl:max-w-[1560px] mx-auto relative'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <TabSwitcher client:visible />
+                </Box>
+        </Container>
+</section>
