@@ -64,6 +64,7 @@ const images = [
         .carousel {
                 --swiper-pagination-bullet-inactive-color: #676767;
                 --swiper-pagination-color: #999;
+                --swiper-navigation-color: #999;
         }
 </style>
 <swiper-container
@@ -72,6 +73,9 @@ const images = [
         loop='true'
         autoplay-delay='4000'
         pagination='true'
+        controls='true'
+        navigation='true'
+        pagination-clickable='true'
         init='false'>
         {
                 images.map((x) => (
