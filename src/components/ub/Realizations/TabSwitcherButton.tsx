@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from 'preact/compat';
 
-import type { CurrentSlide } from './TabSwitcher';
+export type CurrentSlide = 'guitar-rig-7' | 'kontakt-7' | 'komplete-kontrol' | 'massive-x';
 
-type Props = PropsWithChildren<{
+export type Props = PropsWithChildren<{
         currentSlide: string;
         option: CurrentSlide;
         text: string;

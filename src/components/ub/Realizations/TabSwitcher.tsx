@@ -9,38 +9,39 @@ import ktThumb from '@i/ub/kontakt-7-thumbnail.png';
 import mxThumb from '@i/ub/massive-x-thumbnail.png';
 import { useState } from 'preact/hooks';
 
-export type CurrentSlide = 'guitar-rig-7' | 'kontakt-7' | 'komplete-kontrol' | 'massive-x';
+
+import type { Props as ButtonProps } from '@c/ub/Realizations/TabSwitcherButton';
 
 export default function TabSwitcher() {
-        const [currentSlide, setCurrentSlide] = useState<CurrentSlide>('komplete-kontrol');
+        const [currentSlide, setCurrentSlide] = useState<ButtonProps["option"]>('komplete-kontrol');
 
-        const options: { text: string; option: CurrentSlide; image: any }[] = [
+        const options: Pick<ButtonProps, 'text' | 'option' | 'logo' | 'thumbnail' | 'textWrap' >[] = [
                 {
                         text: 'GUITAR RIG 7',
                         option: 'guitar-rig-7',
-                        logo: gr7,
-                        thumbnail: grThumb,
+                        logo: gr7.src,
+                        thumbnail: grThumb.src,
                         textWrap: false,
                 },
                 {
                         text: 'KONTAKT 7',
                         option: 'kontakt-7',
-                        logo: kt7,
-                        thumbnail: ktThumb,
+                        logo: kt7.src,
+                        thumbnail: ktThumb.src,
                         textWrap: false,
                 },
                 {
                         text: 'KOMPLETE KONTROL',
                         option: 'komplete-kontrol',
-                        logo: kk7,
-                        thumbnail: kkThumb,
+                        logo: kk7.src,
+                        thumbnail: kkThumb.src,
                         textWrap: true,
                 },
                 {
                         text: 'MASSIVE X',
                         option: 'massive-x',
-                        logo: mx,
-                        thumbnail: mxThumb,
+                        logo: mx.src,
+                        thumbnail: mxThumb.src,
                         textWrap: false,
                 },
         ];
@@ -50,14 +51,14 @@ export default function TabSwitcher() {
                                 {options.map((x) => (
                                         <RealizationButton
                                                 currentSlide={currentSlide}
-                                                logo={x.logo.src}
+                                                logo={x.logo}
                                                 onClick={() => {
                                                         setCurrentSlide(x.option);
                                                 }}
                                                 option={x.option}
                                                 text={x.text}
                                                 textWrap={x.textWrap}
-                                                thumbnail={x.thumbnail.src}
+                                                thumbnail={x.thumbnail}
                                         />
                                 ))}
                         </div>
