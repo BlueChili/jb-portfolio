@@ -3,6 +3,7 @@ import Container from '@c/Container.astro';
 import { Image } from 'astro:assets';
 import Em from '@c/Em.astro';
 import SectionHeading from '@c/ub/SectionHeading.astro';
+import DrivingCarousel from '@c/ub/DrivingCarousel.astro';
 
 import sliderPlaceholder from '@i/ub/slider-placeholder.png';
 ---
@@ -24,10 +25,7 @@ import sliderPlaceholder from '@i/ub/slider-placeholder.png';
                 </p>
 
                 <div class='relative pb-12 md:pb-18 lg:pb-24 laptop:pb-32 2xl:pb-40'>
-                        <Image
-                                src={sliderPlaceholder}
-                                alt='Slider placeholder'
-                        />
+                        <DrivingCarousel />
                 </div>
         </Container>
 </section>

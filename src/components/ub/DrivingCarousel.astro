@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+
+import Intro from '@i/ub/driving/00-Intro.png';
+import Pony from '@i/ub/driving/01-Pony.png';
+import Pony1 from '@i/ub/driving/02-Pony-1.png';
+import Pony2 from '@i/ub/driving/03-Pony-2.png';
+import Shell0 from '@i/ub/driving/04-Shell-0.png';
+import Shell1 from '@i/ub/driving/05-Shell-1.png';
+import Shell2 from '@i/ub/driving/06-Shell-2.png';
+import Shell3 from '@i/ub/driving/07-Shell-3.png';
+import Shell4 from '@i/ub/driving/08-Shell-4.png';
+import Battery0 from '@i/ub/driving/09-Battery-0.png';
+import Battery1 from '@i/ub/driving/10-Battery-1.png';
+import Battery2 from '@i/ub/driving/11-Battery-2.png';
+import Battery3 from '@i/ub/driving/12-Battery-3.png';
+import Battery4 from '@i/ub/driving/13-Battery-4.png';
+import Battery5 from '@i/ub/driving/14-Battery-5.png';
+import Battery6 from '@i/ub/driving/15-Battery-6.png';
+import Battery7 from '@i/ub/driving/16-Battery-7.png';
+import GuitarRig0 from '@i/ub/driving/17-Guitar-Rig-0.png';
+import GuitarRig1 from '@i/ub/driving/18-Guitar-Rig-1.png';
+import GuitarRig2 from '@i/ub/driving/19-Guitar-Rig-2.png';
+import GuitarRig3 from '@i/ub/driving/20-Guitar-Rig-3.png';
+import GuitarRig4 from '@i/ub/driving/21-Guitar-Rig-4.png';
+import GuitarRig5 from '@i/ub/driving/22-Guitar-Rig-5.png';
+import GuitarRig6 from '@i/ub/driving/23-Guitar-Rig-6.png';
+import GuitarRig7 from '@i/ub/driving/24-Guitar-Rig-7.png';
+import GuitarRig8 from '@i/ub/driving/25-Guitar-Rig-8.png';
+import GuitarRig9 from '@i/ub/driving/26-Guitar-Rig-9.png';
+
+const images = [
+        Intro,
+        Pony,
+        Pony1,
+        Pony2,
+        Shell0,
+        Shell1,
+        Shell2,
+        Shell3,
+        Shell4,
+        Battery0,
+        Battery1,
+        Battery2,
+        Battery3,
+        Battery4,
+        Battery5,
+        Battery6,
+        Battery7,
+        GuitarRig0,
+        GuitarRig1,
+        GuitarRig2,
+        GuitarRig3,
+        GuitarRig4,
+        GuitarRig5,
+        GuitarRig6,
+        GuitarRig7,
+        GuitarRig8,
+        GuitarRig9,
+];
+---
+
+<style>
+        .carousel {
+                --swiper-pagination-bullet-inactive-color: #676767;
+                --swiper-pagination-color: #999;
+        }
+</style>
+<swiper-container
+        class='carousel'
+        css-mode='true'
+        loop='true'
+        autoplay-delay='4000'
+        pagination='true'
+        init='false'>
+        {
+                images.map((x) => (
+                        <swiper-slide>
+                                <Image
+                                        src={x}
+                                        alt=''
+                                />
+                        </swiper-slide>
+                ))
+        }
+</swiper-container>
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'></script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const swiperEl = document.querySelector('swiper-container');
+
+                const params = {
+                        injectStyles: [
+                                `
+                                  .swiper-wrapper {
+                                        margin-bottom: 56px;
+                                  }
+                                  `,
+                        ],
+                };
+
+                Object.assign(swiperEl, params);
+                swiperEl.initialize();
+        });
+</script>
