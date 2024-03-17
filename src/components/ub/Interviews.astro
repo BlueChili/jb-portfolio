@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@c/Container.astro';
+import Box from '@c/na/Box.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import i1Mobile from '@i/ub/interviews/1-mobile.png';
+import i2Mobile from '@i/ub/interviews/2-mobile.png';
+import i3Mobile from '@i/ub/interviews/3-mobile.png';
+import i4Mobile from '@i/ub/interviews/4-mobile.png';
+import i1Desktop from '@i/ub/interviews/1-desktop.png';
+import i2Desktop from '@i/ub/interviews/2-desktop.png';
+import i3Desktop from '@i/ub/interviews/3-desktop.png';
+import i4Desktop from '@i/ub/interviews/4-desktop.png';
+---
+
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
+        id='interviews'>
+        <Container class='mx-auto relative'>
+                <SectionHeading
+                        number='5'
+                        variant='dark'
+                        >User Interviews</SectionHeading
+                >
+                <p class='text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        “More and better ways to organize my content” was the message. It was
+                        <Em variant='dark'> apparent on the forums, in previous research </Em> and
+                        <Em variant='dark'>
+                                confirmed by a user survey. Musicians, producers, composers, engineers, editors and sound designers alike wanted
+                                better ways to organize their favorite Presets</Em
+                        >. Especially those who wear all the above hats.
+                </p>
+
+                <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
+                        <p class='text-brand-grey body-text'>
+                                <Em variant='dark'>I conducted user interviews with 8 users</Em> who were familiar with the old browsing experience and
+                                closely studied their reactions to the new prototype. When did they squint? When did they smile? How did they navigate
+                                the new behavior?
+                        </p>
+                </div>
+        </Container>
+
+        <Container class='2xl:max-w-[1560px] mx-auto relative'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                        <div class='pb-8 xl:pb-14'>
+                                <Image
+                                        src={i1Mobile}
+                                        alt='frameworks 1'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={i1Desktop}
+                                        alt='frameworks 1'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                        <div class='pb-8 xl:pb-14'>
+                                <Image
+                                        src={i2Mobile}
+                                        alt='frameworks 1'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={i2Desktop}
+                                        alt='frameworks 1'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                        <div class='pb-8 xl:pb-14'>
+                                <Image
+                                        src={i3Mobile}
+                                        alt='frameworks 1'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={i3Desktop}
+                                        alt='frameworks 1'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                        <div class='pb-2 xl:pb-0'>
+                                <Image
+                                        src={i4Mobile}
+                                        alt='frameworks 1'
+                                        class='lg:hidden'
+                                />
+                                <Image
+                                        src={i4Desktop}
+                                        alt='frameworks 1'
+                                        class='hidden lg:block'
+                                />
+                        </div>
+                </Box>
+        </Container>
+</section>

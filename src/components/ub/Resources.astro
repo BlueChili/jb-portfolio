@@ -1,0 +1,136 @@
+---
+import Container from '@c/Container.astro';
+import Em from '@c/Em.astro';
+import SectionHeading from './SectionHeading.astro';
+import FigmaArtifact from '@c/na/FigmaArtifact.astro';
+import { Image } from 'astro:assets';
+
+import patternsImg from '@i/na/patterns-1-desktop.png';
+
+import kk from '@i/ub/resources/kk.png';
+import kt from '@i/ub/resources/kt.png';
+import gr from '@i/ub/resources/gr.png';
+import mx from '@i/ub/resources/mx.png';
+import specs from '@i/ub/resources/specs.png';
+import bg from '@i/ub/resources/bg.png';
+---
+
+<section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'>
+        <Image
+                src={bg}
+                alt=''
+                class='absolute inset-0 w-full h-full object-cover object-right-top'
+        />
+
+        <Container class='relative mx-auto'>
+                <SectionHeading
+                        number='6'
+                        variant='dark'
+                        >Resources & Artifacts</SectionHeading
+                >
+
+                <p class='xl:pb-16 laptop:pb-24 text-brand-grey text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl'>
+                        Find below the
+                        <Em variant='dark'> related applications, JIRA specifications </Em>
+                        and select
+                        <Em variant='dark'> user stories... </Em>
+                </p>
+
+                <div class='md:grid grid-cols-2 gap-6 lg:gap-8 laptop:gap-10'>
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a
+                                                href='https://www.native-instruments.com/en/products/komplete/synths/massive-x/'
+                                                target='_blank'>
+                                                <Image
+                                                        src={mx}
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl object-cover'
+                                                />
+                                        </a>
+                                </div>
+
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-brand-grey font-normal'>Massive X</h3>
+
+                                        <p class='text-white'>
+                                                The sequel to Massive, the best-selling software synthesizer in the industry -- spawning entire genres
+                                                -- acted as the second host to our new Shared Browser. Learn more here and download via Native Access
+                                        </p>
+                                </div>
+                        </div>
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a href='#'>
+                                                <Image
+                                                        src={kt}
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl object-cover'
+                                                />
+                                        </a>
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-brand-grey font-normal'>KONTAKT 7</h3>
+
+                                        <p class='text-white'>
+                                                KONTAKT 7 is the world’s largest virtual instrument platform. Download and install KONTAKT Player and
+                                                KONTAKT products via Native Access.
+                                        </p>
+                                </div>
+                        </div>
+
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a href='#'>
+                                                <Image
+                                                        src={kk}
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl object-cover'
+                                                />
+                                        </a>
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-brand-grey font-normal'>KOMPLETE KONTROL</h3>
+
+                                        <p class='text-white'>
+                                                Download KOMPLETE KONTROL to experience the most extensive use of the universal browser’s design and
+                                                function.
+                                        </p>
+                                </div>
+                        </div>
+
+                        <div class='body-text'>
+                                <div class='w-full h-auto [aspect-ratio:19/13] overflow-hidden relative'>
+                                        <a href='#'>
+                                                <Image
+                                                        src={gr}
+                                                        alt=''
+                                                        class='rounded-lg w-full h-full lg:rounded-2xl laptop:rounded-3xl object-cover'
+                                                />
+                                        </a>
+                                </div>
+                                <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                        <h3 class='text-brand-grey font-normal'>Guitar Rig 7</h3>
+
+                                        <p class='text-white'>
+                                                Find the original shipment of the universal browser in the #1 software guitar effects rack, Guitar Rig
+                                                7.
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+
+                <a href='#'>
+                        <Image
+                                src={specs}
+                                alt='Patterns'
+                                class='rounded-2xl laptop:rounded-3xl mb-4 lg:mb-10 object-cover object-left min-h-[60vw] max-h-[360px]'
+                        />
+                        <div class='p-2 pb-5 md:px-4 md:py-6 lg:px-6 lg:py-10 2xl:pb-24'>
+                                <h3 class='body-text text-brand-grey font-normal'>Specifications</h3>
+
+                                <p class='body-text text-white'>Find UX Acceptance Criteria and Behavior for JIRA tickets, here.</p>
+                        </div>
+                </a>
+        </Container>
+</section>

@@ -3,6 +3,10 @@ import kk7 from '@i/kk-7.png';
 import kt7 from '@i/kt-7.png';
 import gr7 from '@i/gr-7.png';
 import mx from '@i/mx.png';
+import kkThumb from '@i/ub/komplete-kontrol-7-thumbnail.png';
+import grThumb from '@i/ub/guitar-rig-thumbnail.png';
+import ktThumb from '@i/ub/kontakt-7-thumbnail.png';
+import mxThumb from '@i/ub/massive-x-thumbnail.png';
 import { useState } from 'preact/hooks';
 
 export type CurrentSlide = 'guitar-rig-7' | 'kontakt-7' | 'komplete-kontrol' | 'massive-x';
@@ -14,41 +18,47 @@ export default function TabSwitcher() {
                 {
                         text: 'GUITAR RIG 7',
                         option: 'guitar-rig-7',
-                        image: gr7,
+                        logo: gr7,
+                        thumbnail: grThumb,
+                        textWrap: false,
                 },
                 {
                         text: 'KONTAKT 7',
                         option: 'kontakt-7',
-                        image: kt7,
+                        logo: kt7,
+                        thumbnail: ktThumb,
+                        textWrap: false,
                 },
                 {
                         text: 'KOMPLETE KONTROL',
                         option: 'komplete-kontrol',
-                        image: kk7,
+                        logo: kk7,
+                        thumbnail: kkThumb,
+                        textWrap: true,
                 },
                 {
                         text: 'MASSIVE X',
                         option: 'massive-x',
-                        image: mx,
+                        logo: mx,
+                        thumbnail: mxThumb,
+                        textWrap: false,
                 },
         ];
         return (
                 <>
-                        <div className='lg-gap-7 grid grid-cols-4 items-stretch gap-1'>
+                        <div className='lg-gap-7 grid grid-cols-4 items-stretch gap-1 pb-6 md:gap-4 lg:gap-7'>
                                 {options.map((x) => (
                                         <RealizationButton
-                                                text={x.text}
-                                                option={x.option}
                                                 currentSlide={currentSlide}
+                                                logo={x.logo.src}
                                                 onClick={() => {
                                                         setCurrentSlide(x.option);
-                                                }}>
-                                                <img
-                                                        src={x.image.src}
-                                                        alt='Komplete Kontrol application icon'
-                                                        className='h-[22px] w-[22px]'
-                                                />
-                                        </RealizationButton>
+                                                }}
+                                                option={x.option}
+                                                text={x.text}
+                                                textWrap={x.textWrap}
+                                                thumbnail={x.thumbnail.src}
+                                        />
                                 ))}
                         </div>
 

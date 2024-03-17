@@ -7,6 +7,9 @@ type Props = PropsWithChildren<{
         option: CurrentSlide;
         text: string;
         onClick: () => void;
+        thumbnail: string;
+        logo: string;
+        textWrap?: boolean;
 }>;
 
 export default function RealizationButton(props: Props) {
@@ -15,13 +18,27 @@ export default function RealizationButton(props: Props) {
                         type='button'
                         onClick={props.onClick}
                         className={[
-                                'grow-1 box-border flex shrink-0 flex-col items-center justify-center gap-2 rounded-xl p-3.5 backdrop-blur-[15px]',
+                                'grow-1 box-border flex shrink-0 flex-col items-center justify-center gap-2 rounded-xl p-3.5 backdrop-blur-[15px] lg:justify-between',
                                 props.currentSlide === props.option
                                         ? 'border-2 border-[#7879F1] bg-[#D9D9D90D]'
                                         : '!bg-gradient-to-b from-[#000000D6] to-[#00000036]',
                         ].join(' ')}>
-                        {props.children}
-                        <p className='whitespace-nowrap text-[10px] font-bold'>{props.text}</p>
+                        <img
+                                src={props.thumbnail}
+                                alt={`${props.text} application thumbnail`}
+                                className={[
+                                        'hidden w-full transition-all duration-150 md:block lg:mb-auto lg:mt-auto',
+                                        props.currentSlide === props.option ? 'w-5/6' : '',
+                                ].join(' ')}
+                        />
+                        <div className='flex flex-col items-center gap-2 lg:flex-row'>
+                                <img
+                                        src={props.logo}
+                                        alt={`${props.text} application icon`}
+                                        className='h-[22px] w-[22px]'
+                                />
+                                <p className={[props.textWrap ? '' : 'whitespace-nowrap', 'text-[10px] font-bold'].join(' ')}>{props.text}</p>
+                        </div>
                 </button>
         );
 }
