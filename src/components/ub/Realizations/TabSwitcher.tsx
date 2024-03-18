@@ -66,35 +66,70 @@ export default function TabSwitcher() {
                         {currentSlide === 'komplete-kontrol' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>Enough Filetypes</h3>
+                                                <h3 className='body-text font-bold text-white'>KOMPLETE KONTROL</h3>
                                                 <p className='body-text text-white'>
-                                                        The 200+ product UIs our new browser will serve present many different form factors and
-                                                        dimensions. We had to create a UI experience which felt natural as users navigated through
-                                                        Presets.
+                                                The most recent realization of the new browsing experience appears in KOMPLETE KONTROL, the software counterpart to the <a href="https://www.native-instruments.com/de/products/komplete/keyboards/kontrol-s49-s61-s88/"><ul>award-winning keyboard hardware.</ul></a>                                      
                                                 </p>
-                                                <p className='text-5xl text-red-500'>youtube-embed</p>
+                                                <p className='pt-10'>
+                                                        <iframe
+                                                                src='https://youtu.be/-Jlpo82Jc6M?si=EGgs2Hex7Yfw7CMz&t=598'
+                                                                title='YouTube video player'
+                                                                frameborder='0'
+                                                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                                                class='w-full h-auto aspect-video rounded-2xl'
+                                                        ></iframe>
+                                                </p>
                                         </div>
                                 </div>
                         ) : currentSlide === 'guitar-rig-7' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>Guitar Rig text heading</h3>
-                                                <p className='body-text text-white'>Presets.</p>
+                                                <h3 className='body-text font-bold text-white'>Guitar Rig</h3>
+                                                <p className='body-text text-white'>We piloted the new browsing experience in the award-winning modular guitar effects software, Guitar Rig.</p>
+                                                <p className='pt-10'>
+                                                        <iframe
+                                                                src='https://youtu.be/RRcTI_xrM3Q?si=7rJltRZGD7ngVKs6&t=77'
+                                                                title='YouTube video player'
+                                                                frameborder='0'
+                                                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                                                class='w-full h-auto aspect-video rounded-2xl'
+                                                        ></iframe>
+                                                </p>
                                         </div>
                                 </div>
                         ) : currentSlide === 'kontakt-7' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>Kontakt 7 text heading</h3>
-                                                <p className='body-text text-white'>Presets.</p>
+                                                <h3 className='body-text font-bold text-white'>KONTAKT</h3>
+                                                <p className='body-text text-white'>                                                KONTAKT 7 is the world’s largest virtual instrument platform. Download and install KONTAKT Player and KONTAKT products via Native Access.</p> 
+                                                <p className='pt-10'>
+                                                        <iframe
+                                                                src='https://youtu.be/RRcTI_xrM3Q?si=7rJltRZGD7ngVKs6&t=77'
+                                                                title='YouTube video player'
+                                                                frameborder='0'
+                                                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                                                class='w-full h-auto aspect-video rounded-2xl'
+                                                        ></iframe>
+                                                </p>
                                         </div>
                                 </div>
                         ) : currentSlide === 'massive-x' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>Massive X text heading</h3>
-                                                <p className='body-text text-white'>Presets.</p>
+                                                <h3 className='body-text font-bold text-white'>Massive X</h3>
+                                                <p className='body-text text-white'>The second realization of the new browsing experience was in Massive X, the world's best-selling software synthesizer.</p>
+                                                <p className='pt-10'>
+                                                        <iframe
+                                                                src='https://www.youtube.com/watch?v=T4mfM73egsQ&ab_channel=NativeInstruments'
+                                                                title='YouTube video player'
+                                                                frameborder='0'
+                                                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                                                class='w-full h-auto aspect-video rounded-2xl'
+                                                        ></iframe>
+                                                </p>
                                         </div>
+
+                                        
                                 </div>
                         ) : null}
                 </>
