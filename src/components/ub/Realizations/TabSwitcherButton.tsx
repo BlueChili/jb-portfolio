@@ -20,8 +20,9 @@ export default function RealizationButton(props: Props) {
                         className={[
                                 'grow-1 box-border flex shrink-0 flex-col items-center justify-center gap-2 rounded-xl p-3.5 backdrop-blur-[15px] lg:justify-between',
                                 props.currentSlide === props.option
-                                        ? 'border-2 border-[#7879F1] bg-[#D9D9D90D]'
-                                        : '!bg-gradient-to-b from-[#000000D6] to-[#00000036]',
+                                        ? 'border-2 border-[#7879F1] bg-[#D9D9D90D] shadow-[0px_0px_2vw_2vw_rgba(0,0,0,0.2)]'
+                                        
+                                        : '!bg-gradient-to-b from-[#000000D6] to-[#00000036 shadow-[0px_0px_1.5vw_1.5vw_rgba(0,0,0,0.0.8)]',
                         ].join(' ')}>
                         <img
                                 src={props.thumbnail}

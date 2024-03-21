@@ -66,8 +66,8 @@ export default function TabSwitcher() {
                         {currentSlide === 'komplete-kontrol' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>KOMPLETE KONTROL</h3>
-                                                <p className='body-text text-white'>
+                                                <h3 className='body-text font-bold text-white pb-1'>KOMPLETE KONTROL</h3>
+                                                <p className='body-text text-brand-grey'>
                                                         The most recent realization of the new browsing experience appears in KOMPLETE KONTROL, the software counterpart to the <a href="https://www.native-instruments.com/de/products/komplete/keyboards/kontrol-s49-s61-s88/"><u>award-winning keyboard hardware.</u></a>                                      
                                                 </p>
                                                 <p className='pt-12'>
@@ -84,8 +84,8 @@ export default function TabSwitcher() {
                         ) : currentSlide === 'kontakt-7' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>KONTAKT</h3>
-                                                <p className='body-text text-white'>                                                KONTAKT 7 is the world’s largest virtual instrument platform. Download and install KONTAKT Player and KONTAKT products via Native Access.</p> 
+                                                <h3 className='body-text font-bold text-white pb-1'>KONTAKT</h3>
+                                                <p className='body-text text-brand-grey'>                                                KONTAKT 7 is the world’s largest virtual instrument platform. Check out the most elaborate realization of the new browser features here.</p> 
                                                 <p className='pt-10'>
                                                         <iframe
                                                                 src='https://www.youtube.com/embed/cANXrimv8C8?si=7Mu4K28s-rCmxFK2&amp;start=947'
@@ -101,7 +101,7 @@ export default function TabSwitcher() {
                                                 <div>
                                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
                                                                 <h3 className='body-text font-bold text-white'>Guitar Rig</h3>
-                                                                <p className='body-text text-white'>We piloted the new browsing experience in the award-winning modular guitar effects software, Guitar Rig.</p>
+                                                                <p className='body-text text-brand-grey pb-1'>We piloted the new browsing experience in the award-winning modular guitar effects software, Guitar Rig.</p>
                                                                 <p className='pt-10'>
                                                                         <iframe
                                                                                 src='https://www.youtube.com/embed/RRcTI_xrM3Q?si=5LEX6Kf8k_SkBt80&amp;start=77'
@@ -116,8 +116,8 @@ export default function TabSwitcher() {
                         ) : currentSlide === 'massive-x' ? (
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
-                                                <h3 className='body-text font-bold text-white'>Massive X</h3>
-                                                <p className='body-text text-white'>The second realization of the new browsing experience was in Massive X, the world's best-selling software synthesizer.</p>
+                                                <h3 className='body-text font-bold text-white pb-1'>Massive X</h3>
+                                                <p className='body-text text-brand-grey'>The second realization of the new browsing experience was in Massive X, the world's best-selling software synthesizer.</p>
                                                 <p className='pt-10'>
                                                         <iframe
                                                                 src='https://www.youtube.com/embed/T4mfM73egsQ?si=_t9cj_AzK652s63N'
