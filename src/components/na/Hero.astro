@@ -42,6 +42,7 @@ const TOC = [
 <style is:global>
         .outcomes strong {
                 color: black !important;
+                font-weight: 400;
         }
 </style>
 <section>
@@ -80,8 +81,8 @@ const TOC = [
                                 alt='Native Access window thumbnail'
                         />
                 </div>
-                <div class='flex flex-col gap-10 pb-10 lg:flex-row text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl'>
-                        <div class='flex-1 laptop:basis-[39.1%] laptop:shrink-0 laptop:grow-0'>
+                <div class='flex flex-col gap-10 pb-10 lg:flex-row text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl laptop:gap-20'>
+                        <div class='flex-1 laptop:basis-[45.1%] laptop:shrink-0 laptop:grow-0'>
                                 <h2 class='text-brand-pink 2xl:pb-1'>{context.heading}</h2>
                                 <div
                                         set:html={marked.parse(context.text)}

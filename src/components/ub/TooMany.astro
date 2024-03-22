@@ -13,6 +13,12 @@ import wksDesktop from '@i/ub/workshop-reports-desktop.png';
 <section
         class='pt-[80px] md:pt-[120px] lg:pt-[180px] pb-[80px] md:pb-[120px] lg:pb-[180px] relative'
         id='too'>
+<style is:global>
+        .toomanybox {
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.23) 100%);
+                box-shadow: -4px 4px 38px 0px rgba(0, 0, 0, 0.25), 1px -1px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset;
+        }
+</style>
         <Image
                 class='absolute w-full h-full inset-0 object-cover object-left'
                 src={bg}
@@ -59,7 +65,7 @@ import wksDesktop from '@i/ub/workshop-reports-desktop.png';
                         />
                 </div>
 
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[30px] shadow-[10px_0px_40px_40px_rgba(0,0,0,0.7)]'>
+                <Box class='toomanybox mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[30px] border-none'>
                         <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-browser-purple body-text'>Legacy</h3>
                                 <p class='text-brand-white body-text'>

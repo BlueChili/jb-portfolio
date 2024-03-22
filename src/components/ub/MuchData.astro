@@ -10,9 +10,29 @@ import dbMobile from '@i/ub/much-data-2-mobile.png';
 import dbDesktop from '@i/ub/much-data-2-desktop.png';
 ---
 
+<style is:global>
+        .muchbox {
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.03) 100%);
+                box-shadow: -4px 4px 38px 0px rgba(0, 0, 0, 0.25), 1px -1px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset;
+                backdrop-filter: blur(40px);
+        }
+</style>
 <section
         class='pt-[80px] md:pt-[120px] lg:pt-[180px] pb-[80px] md:pb-[120px] lg:pb-[180px] relative'
         id='much'>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="1593" height="3835" viewBox="0 0 1593 3835" fill="none" class='h-[1900px] w-auto absolute top-[45%] left-1/2 rotate-6 translate-x-24'>
+  <g filter="url(#filter0_f_4841_21169)">
+    <path d="M1903.79 1719.58C1820.18 2300.28 1802.32 2871.9 1521.77 2831.51C1356.11 2807.65 1063.31 2691.81 1007.16 2424.44C968.219 2239.04 1130.96 1944.7 1165.2 1706.92C1248.81 1126.22 1931.13 967.507 2211.67 1007.9C2492.21 1048.29 1987.4 1138.88 1903.79 1719.58Z" fill="#FF56DF" fill-opacity="0.08"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_4841_21169" x="0.179016" y="0.968948" width="3296.53" height="3833.56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="500.5" result="effect1_foregroundBlur_4841_21169"/>
+    </filter>
+  </defs>
+</svg>
         <Container class='mx-auto relative'>
                 <SectionHeading
                         number='4'
@@ -28,7 +48,7 @@ import dbDesktop from '@i/ub/much-data-2-desktop.png';
         </Container>
 
         <Container class='2xl:max-w-[1560px] mx-auto relative'>
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 muchbox border-none'>
                         <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-browser-purple body-text'>Enough Filetypes</h3>
                                 <p class='text-brand-grey body-text'>
@@ -51,7 +71,7 @@ import dbDesktop from '@i/ub/much-data-2-desktop.png';
                         </div>
                 </Box>
 
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 muchbox border-none'>
                         <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-browser-purple body-text'>Two Databases</h3>
                                 <p class='text-brand-grey body-text'>

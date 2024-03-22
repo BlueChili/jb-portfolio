@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Container from '@c/Container.astro';
 import Box from '@c/na/Box.astro';
 import Em from '@c/Em.astro';
+import CarrySplotches from '@c/ub/CarrySplotches.astro';
 import SectionHeading from './SectionHeading.astro';
 import fmw1Mobile from '@i/ub/frameworks-1-mobile.png';
 import fmw1Desktop from '@i/ub/frameworks-1-desktop.png';
@@ -12,9 +13,17 @@ import ff1Mobile from '@i/ub/form-factors-mobile.png';
 import ff1Desktop from '@i/ub/form-factors-desktop.png';
 ---
 
+<style is:global>
+        .carrybox {
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.04) 100%);
+                box-shadow: -4px 4px 38px 0px rgba(0, 0, 0, 0.25), 1px -1px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset;
+                backdrop-filter: blur(40px);
+        }
+</style>
 <section
         class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 relative'
         id='carry'>
+        <CarrySplotches />
         <Container class='mx-auto relative'>
                 <SectionHeading
                         number='3'
@@ -27,7 +36,7 @@ import ff1Desktop from '@i/ub/form-factors-desktop.png';
         </Container>
 
         <Container class='2xl:max-w-[1560px] mx-auto relative'>
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 carrybox border-none'>
                         <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-browser-purple body-text'>Frameworks & Engines</h3>
                                 <p class='text-brand-grey body-text'>
@@ -63,7 +72,7 @@ import ff1Desktop from '@i/ub/form-factors-desktop.png';
                         </div>
                 </Box>
 
-                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 backdrop-blur-[15px]'>
+                <Box class='mb-2.5 lg:mb-5 laptop:mb-10 carrybox border-none'>
                         <div class='px-2.5 pt-2.5 pb-8 md:pb-12 lg:pb-16 laptop:pb-20'>
                                 <h3 class='text-brand-browser-purple body-text'>Form Factors</h3>
                                 <p class='text-brand-grey body-text'>
