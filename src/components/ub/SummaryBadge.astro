@@ -6,10 +6,14 @@ interface Props {
         text: string;
 }
 ---
+
 <style>
         .box {
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 0, 229, 0.06) 100%);
-                box-shadow: -4px 4px 38px 0px rgba(0, 0, 0, 0.25), 1px -1px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset;
+                box-shadow:
+                        -4px 4px 38px 0px rgba(0, 0, 0, 0.25),
+                        1px -1px 0px 0px rgba(255, 255, 255, 0.2) inset,
+                        -1px 1px 0px 0px rgba(255, 255, 255, 0.34) inset;
         }
 </style>
 <Box class='box backdrop-blur-[40px] !p-3 md:!px-6 lg:!px-9 laptop:!px-16 laptop:!py-8 flex-1 text-right flex flex-col gap-2 laptop:gap-3'>
