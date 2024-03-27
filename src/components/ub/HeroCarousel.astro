@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+
+import Browser1 from '@i/ub/driving/Browser1.png';
+import Browser2 from '@i/ub/driving/Browser2.png';
+import Browser3 from '@i/ub/driving/Browser3.png';
+import Browser4 from '@i/ub/driving/Browser4.png';
+
+
+const images = [
+        Browser1,
+        Browser2,
+        Browser3,
+        Browser4,
+];
+---
+
+<style>
+        .carousel {
+                --swiper-pagination-bullet-inactive-color: #676767;
+                --swiper-pagination-color: #999;
+                --swiper-navigation-color: #999;
+        }
+</style>
+<swiper-container
+        class='carousel'
+        css-mode='true'
+        loop='true'
+        autoplay-delay='4000'
+        pagination='true'
+        controls='true'
+        navigation='true'
+        pagination-clickable='true'
+        init='false'>
+        {
+                images.map((x) => (
+                        <swiper-slide>
+                                <Image
+                                        src={x}
+                                        alt=''
+                                />
+                        </swiper-slide>
+                ))
+        }
+</swiper-container>
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'></script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const swiperEl = document.querySelector('swiper-container');
+
+                const params = {
+                        injectStyles: [
+                                `
+                                  .swiper-wrapper {
+                                        margin-bottom: 56px;
+                                  }
+                                  `,
+                        ],
+                };
+
+                // @ts-ignore
+                Object.assign(swiperEl, params);
+                // @ts-ignore
+                swiperEl.initialize();
+        });
+</script>
