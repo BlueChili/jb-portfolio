@@ -28,6 +28,9 @@ export default {
                                 18: '4.5rem',
                                 19: '4.75rem',
                         },
+                        logocolors:  {
+                                'white': '#fff',             
+                        },
                 },
         },
         safelist: [
