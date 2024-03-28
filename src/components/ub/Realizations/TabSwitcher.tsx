@@ -16,13 +16,6 @@ export default function TabSwitcher() {
 
         const options: Pick<ButtonProps, 'text' | 'option' | 'logo' | 'thumbnail' | 'textWrap'>[] = [
                 {
-                        text: 'GUITAR RIG 7',
-                        option: 'guitar-rig-7',
-                        logo: gr7.src,
-                        thumbnail: grThumb.src,
-                        textWrap: false,
-                },
-                {
                         text: 'KONTAKT 7',
                         option: 'kontakt-7',
                         logo: kt7.src,
@@ -35,6 +28,13 @@ export default function TabSwitcher() {
                         logo: kk7.src,
                         thumbnail: kkThumb.src,
                         textWrap: true,
+                },
+                {
+                        text: 'GUITAR RIG 7',
+                        option: 'guitar-rig-7',
+                        logo: gr7.src,
+                        thumbnail: grThumb.src,
+                        textWrap: false,
                 },
                 {
                         text: 'MASSIVE X',

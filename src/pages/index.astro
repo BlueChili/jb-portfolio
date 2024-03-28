@@ -42,6 +42,13 @@ const projects: Project[] = [
                 blueBg: true,
         },
         {
+                title: 'Lumen Design System',
+                description: 'The first and only design system at the company. Co-created by me. ',
+                image: '/img/LUMEN-thumbnail.png',
+                tags: null,
+                url: '/lumen',
+        },
+        {
                 title: 'Next Generation Hardware',
                 description: 'Researching and delivering the next generation of the world’s best-selling integrated MIDI keyboard.',
                 image: '/img/NGH-thumbnail.png',
@@ -52,14 +59,9 @@ const projects: Project[] = [
                 description: 'Making the classic open-platform visual programming language for digital synthesis more accessible to users.',
                 image: '/img/R6-thumbnail.png',
                 tags: null,
-                url: '/lumen',
+                url: 'https://www.native-instruments.com/en/products/komplete/synths/reaktor-6/blocks/',
         },
-        {
-                title: 'Machine Plus',
-                description: 'Creating workflows for the first standalone hardware device Native Instruments has manufactured.',
-                image: '/img/MP-thumbnail.png',
-                tags: null,
-        },
+
 ];
 
 const content = `I'm a lifelong designer who was born to build. The heart of my design career was an eight year tenure with Native Instruments as a Product Designer. I collaborated across tech and business teams, delivering award-winning integrated hardware and software experiences to a massive customer base. My users performed in high-pressure situations for huge audiences like Glastonbury festival, often with discerning collaborators like Hans Zimmer, so they demanded rewarding and flawless experiences.
@@ -154,7 +156,7 @@ const tools: string[] = ['Figma', 'Sketch / Abstract', 'Adobe Creative Suite', '
 
         <section>
                 <Container
-                        class='px-4 md:px-8 2xl:px-0 pb-8 2xl:pb-20 md:pb-12 lg:pb-16 grid gap-10 md:gap-16 laptop:gap-40 mx-auto md:grid-cols-[2fr_1fr] laptop:grid-cols-[860px_1fr]'>
+                        class='px-4 md:px-16 2xl:px-0 pb-8 2xl:pb-20 md:pb-12 lg:pb-16 grid gap-10 md:gap-16 laptop:gap-40 mx-auto md:grid-cols-[2fr_1fr] laptop:grid-cols-[860px_1fr]'>
                         <div
                                 set:html={marked.parse(content)}
                                 class='flex flex-col gap-6 md:text-lg 2xl:text-3xl'
