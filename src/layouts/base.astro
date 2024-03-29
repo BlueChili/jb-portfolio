@@ -3,9 +3,11 @@ import '../styles/main.css';
 
 import Header from '@c/Header.astro';
 import Footer from '@c/Footer.astro';
+import type { Code, Debug } from 'astro:components';
 
 interface Props {
         class?: string;
+        logocolors?: string;
 }
 ---
 
@@ -44,8 +46,8 @@ interface Props {
         <body
                 class='overflow-x-hidden'
                 class:list={[Astro.props?.class]}>
-                <Header />
+                <Header {...Astro.props?.logocolors ? {logocolors:Astro.props?.logocolors} : {}}/>
                 <slot />
-                <Footer />
+                <Footer {...Astro.props?.logocolors ? {logocolors:Astro.props?.logocolors} : {}}/>
         </body>
 </html>
