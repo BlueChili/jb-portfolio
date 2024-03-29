@@ -23,7 +23,7 @@ const images = [
         }
 </style>
 <swiper-container
-        class='carousel'
+        class='carousel hero-swiper-container'
         css-mode='true'
         loop='true'
         autoplay-delay='6000'
@@ -46,7 +46,7 @@ const images = [
 <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'></script>
 <script>
         document.addEventListener('DOMContentLoaded', () => {
-                const swiperEl = document.querySelector('swiper-container');
+                const swiperEl = document.querySelector('.hero-swiper-container');
 
                 const params = {
                         injectStyles: [
