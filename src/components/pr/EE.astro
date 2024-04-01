@@ -1,0 +1,36 @@
+---
+import { marked } from 'marked';
+import Container from '@c/Container.astro';
+import Em from '@c/Em.astro';
+import Icon from '@c/Icon.astro';
+import { Image } from 'astro:assets';
+import SectionHeading from '@c/pr/SectionHeading.astro';
+import image_1 from '@i/pr/ee-1.png';
+import image_2 from '@i/pr/ee-2.png';
+---
+
+<section
+        id='pains'
+        class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20'>
+        <Container class='mx-auto'>
+                <SectionHeading number='1' variant='dark'>Everything Everywhere</SectionHeading>
+                        <p class='text-white/60 text-2xl pb-12 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl leading-loose'>
+                Praction offers visibility into your GTM engine and provides action steps to take so goals will match reality, powered by the <Em variant='dark'>Dashboard</Em> and <Em variant='dark'>Revenue Guide.</Em>
+                </p>
+
+        </Container>
+
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative'>
+                <div class="absolute inset-0 w-full h-full bg-[radial-gradient(50%_50%_at_50%_50%,#7B61FF_0%,rgba(123,97,255,0)_100%)]"></div>
+                <Image src={image_1} alt='Praction marketing homescreen' class='relative max-w-[85%] h-auto mx-auto'/>
+        </Container>
+</section>
+
+<section class='bg-[linear-gradient(180deg,rgba(7,0,25,0)_0%,#070019_74.5%)]'>
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative'>
+                <Image src={image_2} alt='Praction marketing details screen' class='relative max-w-[85%] h-auto mx-auto'/>
+        </Container>
+
+
+
+</section>

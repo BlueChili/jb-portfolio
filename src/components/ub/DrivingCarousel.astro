@@ -69,6 +69,7 @@ const images = [
 </style>
 <swiper-container
         class='carousel'
+        id='ub-driving-swiper'
         css-mode='true'
         loop='true'
         autoplay-delay='4000'
@@ -91,7 +92,7 @@ const images = [
 <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'></script>
 <script>
         document.addEventListener('DOMContentLoaded', () => {
-                const swiperEl = document.querySelector('swiper-container');
+                const swiperEl = document.querySelector('#ub-driving-swiper');
 
                 const params = {
                         injectStyles: [
