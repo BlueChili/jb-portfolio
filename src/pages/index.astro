@@ -64,7 +64,7 @@ const projects: Project[] = [
 
 ];
 
-const content = `I'm a lifelong designer who was born to build. The heart of my design career was an eight year tenure with Native Instruments as a Product Designer. I collaborated across tech and business teams, delivering award-winning integrated hardware and software experiences to a massive customer base. My users performed in high-pressure situations for huge audiences like Glastonbury festival, often with discerning collaborators like Hans Zimmer, so they demanded rewarding and flawless experiences.
+const content = `The heart of my design career was an eight year tenure with Native Instruments as a Product Designer. I collaborated across tech and business teams, delivering award-winning integrated hardware and software experiences to a massive customer base. My users performed in high-pressure situations for huge audiences like Glastonbury festival, often with discerning collaborators like Hans Zimmer, so they demanded rewarding and flawless experiences.
 
 Crafting interfaces for such high-stake scenarios—akin to the precision of car consoles or defense systems, but with significantly smaller budgets—honed my emphasis on meticulous vision, extensive user research, and clear specification writing. I've always held that nurturing engineers with clear direction and inspiration is as crucial as enchanting end-users. This approach emphasizes innovation and ensured we consistently pushed the boundaries of what's possible.
 
@@ -159,18 +159,18 @@ const tools: string[] = ['Figma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                         class='px-4 md:px-16 2xl:px-0 pb-8 2xl:pb-20 md:pb-12 lg:pb-16 grid gap-10 md:gap-16 laptop:gap-40 mx-auto md:grid-cols-[2fr_1fr] laptop:grid-cols-[860px_1fr]'>
                         <div
                                 set:html={marked.parse(content)}
-                                class='flex flex-col gap-6 md:text-lg 2xl:text-3xl'
+                                class='flex flex-col gap-6 sm:text-2xl/[1.5] lg:text-[20pt]/[1.5] 2xl:text-3xl/[1.5]'
                         />
                         <div class='flex flex-row gap-6 lg:gap-10 md:flex-col'>
                                 <div class='flex-1'>
-                                        <h2 class='text-sm/[1.5] text-brand-grey'>My Skills</h2>
-                                        <ul class='text-sm/[1.5]'>
+                                        <h2 class='sm:text-sm md:text-lg/[1.5] text-brand-grey'>My Skills</h2>
+                                        <ul class='sm:text-sm md:text-lg/[1.5]'>
                                                 {skills.map((skill) => <li>{skill}</li>)}
                                         </ul>
                                 </div>
                                 <div class='flex-1'>
-                                        <h2 class='text-sm/[1.5] text-brand-grey'>My Tools</h2>
-                                        <ul class='text-sm/[1.5]'>
+                                        <h2 class='sm:text-sm md:text-lg/[1.5] text-brand-grey'>My Tools</h2>
+                                        <ul class='sm:text-sm md:text-lg/[1.5]'>
                                                 {tools.map((skill) => <li>{skill}</li>)}
                                         </ul>
                                 </div>
