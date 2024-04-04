@@ -122,13 +122,13 @@ const tools: string[] = ['Figma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                                         projects.map((project) => (
                                                 <div class='relative'>
                                                         <div
-                                                                class='rounded-[1.75rem] aspect-[5/4] overflow-hidden relative hover:bg-black'
+                                                                class='rounded-[1.75rem] aspect-[5/4] overflow-hidden relative'
                                                                 class:list={[project.blueBg ? 'blueGradient' : 'greyGradient']}>
                                                                 <a href={project.url}>
                                                                         <img
                                                                                 src={project.image}
                                                                                 alt={`${project.title} project thumbnail`}
-                                                                                class='w-full rounded-[1.75rem] object-cover h-full hover:opacity-85'
+                                                                                class='w-full rounded-[1.75rem] object-cover h-full hover:opacity-100'
                                                                                 class:list={[project.imageClass]}
                                                                         />
                                                                 </a>
