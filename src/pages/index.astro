@@ -4,6 +4,7 @@ import Layout from 'src/layouts/base.astro';
 import Tag from '@c/Tag.astro';
 import { marked } from 'marked';
 
+
 type Project = {
         tags: string[] | null;
         image: string;
@@ -121,13 +122,13 @@ const tools: string[] = ['Figma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                                         projects.map((project) => (
                                                 <div class='relative'>
                                                         <div
-                                                                class='rounded-[1.75rem] aspect-[5/4] overflow-hidden relative'
+                                                                class='rounded-[1.75rem] aspect-[5/4] overflow-hidden relative hover:bg-black'
                                                                 class:list={[project.blueBg ? 'blueGradient' : 'greyGradient']}>
                                                                 <a href={project.url}>
                                                                         <img
                                                                                 src={project.image}
                                                                                 alt={`${project.title} project thumbnail`}
-                                                                                class='w-full rounded-[1.75rem] object-cover h-full'
+                                                                                class='w-full rounded-[1.75rem] object-cover h-full hover:opacity-85'
                                                                                 class:list={[project.imageClass]}
                                                                         />
                                                                 </a>
@@ -142,7 +143,7 @@ const tools: string[] = ['Figma', 'Sketch / Abstract', 'Adobe Creative Suite', '
                                                                 </ul>
                                                         ) : null}
                                                         <div class='px-5 pt-7 pb-1'>
-                                                                <h3 class='text-brand-pink'>
+                                                                <h3 class='text-brand-pink md:text-lg'>
                                                                         <a href={project.url}>{project.title}</a>
                                                                 </h3>
                                                                 <p class='md:text-lg'>{project.description}</p>
