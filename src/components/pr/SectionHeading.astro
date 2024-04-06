@@ -1,13 +1,14 @@
 ---
 interface Props {
-        number: string;
+        number?: string;
         variant?: 'light' | 'dark';
+        class?: string;
 }
 
 const variant = Astro.props.variant ?? 'light';
 ---
 
-<h2 class='text-white text-4xl md:text-5xl lg:text-6xl 2xl:text-[80px] pb-10 relative'>
+<h2 class='text-white text-4xl md:text-5xl lg:text-6xl 2xl:text-[80px] pb-10 relative' class:list={[Astro.props.class]}>
         <slot />
         <span
                 class='absolute italic left-0 top-0 -translate-y-full text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-[28px]'

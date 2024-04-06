@@ -1,0 +1,32 @@
+---
+import Container from '@c/Container.astro';
+import Em from '@c/Em.astro';
+import { Image } from 'astro:assets';
+import SectionHeading from '@c/pr/SectionHeading.astro';
+import image_1 from '@i/pr/flow-1.png';
+import image_2 from '@i/pr/flow-2.png';
+---
+
+<section
+        id='pains'
+        class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20 bg-[#CFF6FF]'>
+        <Container class='mx-auto relative'>
+                <Image src={image_2} alt='Praction marketing details screen' class='hidden absolute h-auto w-1/2 md:block -top-40 right-0 -translate-y-[13%] 2xl:translate-x-[14%]'/>
+                <SectionHeading class='!text-[#241449] relative'>Tasks, The Flow</SectionHeading>
+                        <p class='text-[#241449] body-text pb-12 lg:pb-24 laptop:pb-40 2xl:leading-loose relative md:max-w-[50%] 2xl:max-w-[40rem]'>
+                        Tasks are at the center of this breakthrough product. Playbooks are broken into themes
+                </p>
+
+        </Container>
+
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-2 px-1.5'>
+                <div class="relative backdrop-blur-[87px] bg-[#00000032] p-5 md:p-8 lg:p-12 xl:p-16 laptop:p-20 pb-2 rounded-lg md:rounded-[2rem] lg:rounded-[4rem] laptop:rounded-[6rem]">
+                        <Image src={image_1} alt='Praction marketing homescreen' class='relative w-full h-auto mx-auto'/>
+                </div>
+        </Container>
+</section>
+
+
+
+
+</section>
