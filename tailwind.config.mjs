@@ -14,6 +14,7 @@ export default {
                                 brand: {
                                         pink: '#D3008C',
                                         grey: '#7E7E7E',
+                                        lightgrey: '#D3D3D3',
                                         emerald: '#00C09E',
                                         red: '#DE0000',
                                         blue: '#0059DE',

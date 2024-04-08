@@ -66,7 +66,7 @@ export default function TabSwitcher() {
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
                                                 <h3 className='body-text pb-1 font-bold text-white'>KOMPLETE KONTROL</h3>
-                                                <p className='body-text text-brand-grey'>
+                                                <p className='body-text text-brand-lightgrey'>
                                                         The most recent realization of the new browsing experience appears in KOMPLETE KONTROL, the
                                                         software counterpart to the{' '}
                                                         <a href='https://www.native-instruments.com/de/products/komplete/keyboards/kontrol-s49-s61-s88/'>
@@ -87,7 +87,7 @@ export default function TabSwitcher() {
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
                                                 <h3 className='body-text pb-1 font-bold text-white'>KONTAKT</h3>
-                                                <p className='body-text text-brand-grey'>
+                                                <p className='body-text text-brand-lightgrey'>
                                                         {' '}
                                                         KONTAKT 7 is the world’s largest virtual instrument platform. Check out the most elaborate
                                                         realization of the new browser features here.
@@ -106,7 +106,7 @@ export default function TabSwitcher() {
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
                                                 <h3 className='body-text font-bold text-white'>Guitar Rig</h3>
-                                                <p className='body-text pb-1 text-brand-grey'>
+                                                <p className='body-text pb-1 text-brand-lightgrey'>
                                                         We piloted the new browsing experience in the award-winning modular guitar effects software,
                                                         Guitar Rig.
                                                 </p>
@@ -124,7 +124,7 @@ export default function TabSwitcher() {
                                 <div>
                                         <div className='px-2.5 pb-8 pt-2.5 md:pb-12 lg:pb-16 laptop:pb-20'>
                                                 <h3 className='body-text pb-1 font-bold text-white'>Massive X</h3>
-                                                <p className='body-text text-brand-grey'>
+                                                <p className='body-text text-brand-lightgrey'>
                                                         The second realization of the new browsing experience was in Massive X, the world's
                                                         best-selling software synthesizer.
                                                 </p>
