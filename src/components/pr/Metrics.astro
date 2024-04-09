@@ -5,6 +5,7 @@ import SectionHeading from '@c/pr/SectionHeading.astro';
 import Em from '@c/Em.astro';
 import image_1 from '@i/pr/notified-1.png';
 import image_2 from '@i/pr/notified-2.png';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 ---
 
 <style>
@@ -39,6 +40,7 @@ import image_2 from '@i/pr/notified-2.png';
 
                 <div class='pb-8 md:pb-12 lg:pb-16'>
                         <Image
+                                {...defaultImageSizes(image_1)}
                                 src={image_1}
                                 alt='Praction marketing homescreen'
                                 class='relative max-w-[87%] h-auto mx-auto img-1 rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl laptop:rounded-3xl'
@@ -47,6 +49,7 @@ import image_2 from '@i/pr/notified-2.png';
 
                 <div class='pb-20 md:pb-28 lg:pb-36 xl:pb-40'>
                         <Image
+                                {...defaultImageSizes(image_2)}
                                 src={image_2}
                                 alt='Praction marketing homescreen'
                                 class='relative max-w-[87%] h-auto mx-auto img-2 rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl laptop:rounded-3xl'

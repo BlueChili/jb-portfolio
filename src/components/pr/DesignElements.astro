@@ -7,6 +7,7 @@ import image_1_desktop from '@i/pr/design-elements-1-desktop.png';
 import bg from '@i/pr/praction-bg.png';
 import image_2 from '@i/pr/design-elements-2.png';
 import image_3 from '@i/pr/design-elements-3.png';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 ---
 
 <section
@@ -22,11 +23,13 @@ import image_3 from '@i/pr/design-elements-3.png';
 
         <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative 2xl:max-w-[1486px]'>
                 <Image
+                        {...defaultImageSizes(image_1_mobile)}
                         src={image_1_mobile}
                         alt='Praction marketing homescreen'
                         class='relative max-w-full h-auto mx-auto lg:hidden'
                 />
                 <Image
+                        {...defaultImageSizes(image_1_desktop)}
                         src={image_1_desktop}
                         alt='Praction marketing homescreen'
                         class='relative h-auto mx-auto hidden lg:block'
@@ -46,9 +49,11 @@ import image_3 from '@i/pr/design-elements-3.png';
                         drop-shadow(0px 367px 103px rgba(0, 0, 0, 0));
         }
 </style>
+
 <section class='relative overflow-hidden pt-10 md:pt-20 lg:pt-28 xl:pt-36 laptop:pt-50'>
         <Image
                 src={bg}
+                {...defaultImageSizes(bg)}
                 alt=''
                 class='absolute left-0 top-0 w-full h-full object-cover object-center opacity-10'
         />
@@ -57,6 +62,7 @@ import image_3 from '@i/pr/design-elements-3.png';
                 <div class='relative pb-15 md:pb-20 lg:pb-28 xl:pb-36 lapbop:pb-44'>
                         <Image
                                 src={image_2}
+                                {...defaultImageSizes(image_2)}
                                 alt='Praction marketing homescreen'
                                 class='relative w-full h-auto mx-auto laptop-1'
                         />
@@ -64,6 +70,7 @@ import image_3 from '@i/pr/design-elements-3.png';
                 <div class='relative'>
                         <Image
                                 src={image_3}
+                                {...defaultImageSizes(image_3)}
                                 alt='Praction marketing homescreen'
                                 class='relative w-full h-auto mx-auto laptop-2'
                         />

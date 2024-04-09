@@ -5,28 +5,36 @@ import { Image } from 'astro:assets';
 import SectionHeading from '@c/pr/SectionHeading.astro';
 import image_1 from '@i/pr/flow-1.png';
 import image_2 from '@i/pr/flow-2.png';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 ---
 
 <section
         id='pains'
         class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20 bg-[#CFF6FF]'>
         <Container class='mx-auto relative'>
-                <Image src={image_2} alt='Praction marketing details screen' class='hidden absolute h-auto w-1/2 md:block -top-40 right-0 -translate-y-[13%] 2xl:translate-x-[14%]'/>
+                <Image
+                        src={image_2}
+                        alt='Praction marketing details screen'
+                        class='hidden absolute h-auto w-1/2 md:block -top-40 right-0 -translate-y-[13%] 2xl:translate-x-[14%]'
+                        {...defaultImageSizes(image_2)}
+                />
                 <SectionHeading class='!text-[#241449] relative'>Tasks, The Flow</SectionHeading>
-                        <p class='text-[#241449] body-text pb-12 lg:pb-24 laptop:pb-40 2xl:leading-loose relative md:max-w-[50%] 2xl:max-w-[40rem]'>
-                                I restructured the flow of the site to put Tasks at the forefront. Praction combines the science of data-based assessments with the art of proven playbooks to show you exactly where your teams are functioning properly — and where they are off track. Tasks are at the heart of Playbooks. And, therefore, the heart of the product.
+                <p class='text-[#241449] body-text pb-12 lg:pb-24 laptop:pb-40 2xl:leading-loose relative md:max-w-[50%] 2xl:max-w-[40rem]'>
+                        I restructured the flow of the site to put Tasks at the forefront. Praction combines the science of data-based assessments
+                        with the art of proven playbooks to show you exactly where your teams are functioning properly — and where they are off track.
+                        Tasks are at the heart of Playbooks. And, therefore, the heart of the product.
                 </p>
-
         </Container>
 
         <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-2 px-1.5'>
-                <div class="relative backdrop-blur-[87px] bg-[#00000032] p-5 md:p-8 lg:p-12 xl:p-16 laptop:p-20 pb-2 rounded-lg md:rounded-[2rem] lg:rounded-[4rem] laptop:rounded-[6rem]">
-                        <Image src={image_1} alt='Praction marketing homescreen' class='relative w-full h-auto mx-auto'/>
+                <div
+                        class='relative backdrop-blur-[87px] bg-[#00000032] p-5 md:p-8 lg:p-12 xl:p-16 laptop:p-20 pb-2 rounded-lg md:rounded-[2rem] lg:rounded-[4rem] laptop:rounded-[6rem]'>
+                        <Image
+                                src={image_1}
+                                alt='Praction marketing homescreen'
+                                class='relative w-full h-auto mx-auto'
+                                {...defaultImageSizes(image_1)}
+                        />
                 </div>
         </Container>
-</section>
-
-
-
-
 </section>

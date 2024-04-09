@@ -6,12 +6,14 @@ import image_1 from '@i/pr/praction-1.png';
 import image_2 from '@i/pr/praction-2.png';
 import image_3 from '@i/pr/praction-3.png';
 import image_4 from '@i/pr/praction-4.png';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 ---
 
 <section
         id='marketing'
         class='py-10 md:py-20 lg:py-28 xl:py-36 laptop:py-50 relative overflow-hidden'>
         <Image
+                {...defaultImageSizes(bg)}
                 src={bg}
                 alt=''
                 class='absolute left-0 bottom-0 md:-bottom-[106%] w-full h-auto object-bottom'
@@ -21,21 +23,25 @@ import image_4 from '@i/pr/praction-4.png';
                         src={image_1}
                         alt=''
                         class='w-full h-auto'
+                        {...defaultImageSizes(image_1)}
                 />
                 <Image
                         src={image_2}
                         alt=''
                         class='w-full h-auto'
+                        {...defaultImageSizes(image_2)}
                 />
                 <Image
                         src={image_3}
                         alt=''
                         class='w-full h-auto'
+                        {...defaultImageSizes(image_3)}
                 />
                 <Image
                         src={image_4}
                         alt=''
                         class='w-full h-auto'
+                        {...defaultImageSizes(image_4)}
                 />
         </Container>
 </section>
