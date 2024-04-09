@@ -1,0 +1,56 @@
+---
+import Container from '@c/Container.astro';
+import { Image } from 'astro:assets';
+import SectionHeading from '@c/pr/SectionHeading.astro';
+import Em from '@c/Em.astro';
+import image_1 from '@i/pr/notified-1.png';
+import image_2 from '@i/pr/notified-2.png';
+---
+
+<style>
+        .img-1 {
+                box-shadow:
+                        0px -305px 85px 0px rgba(0, 0, 0, 0),
+                        0px -195px 78px 0px rgba(0, 0, 0, 0),
+                        0px -110px 66px 0px rgba(0, 0, 0, 0.02),
+                        0px -49px 49px 0px rgba(0, 0, 0, 0.03),
+                        0px -12px 27px 0px rgba(0, 0, 0, 0.03);
+        }
+        .img-2 {
+                box-shadow:
+                        0px 651px 182px 0px rgba(0, 0, 0, 0),
+                        0px 417px 167px 0px rgba(0, 0, 0, 0),
+                        0px 234px 141px 0px rgba(0, 0, 0, 0.02),
+                        0px 104px 104px 0px rgba(0, 0, 0, 0.03),
+                        0px 26px 57px 0px rgba(0, 0, 0, 0.03);
+        }
+</style>
+<section
+        id='goals'
+        class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20 bg-[#DEE5EF]'>
+        <Container class='mx-auto'>
+                <SectionHeading class='!text-[#241449]'>Get Notified When Metrics Dip</SectionHeading>
+
+                <p
+                        class='text-black/55 text-2xl pb-12 md:pb-16 lg:pb-20 xl:pb-24 laptop:pb-32 tracking-[-0.06rem] lg:text-3xl xl:text-4xl laptop:text-5xl leading-normal laptop:leading-loose'>
+                        Praction’s <Em>Alerts Dashboard lets you know if certain teams haven’t taken action on their playbooks</Em>, or when the data
+                        doesn’t look good — so you can <Em>take decisive action without delay</Em>.
+                </p>
+
+                <div class='pb-8 md:pb-12 lg:pb-16'>
+                        <Image
+                                src={image_1}
+                                alt='Praction marketing homescreen'
+                                class='relative max-w-[87%] h-auto mx-auto img-1 rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl laptop:rounded-3xl'
+                        />
+                </div>
+
+                <div class='pb-20 md:pb-28 lg:pb-36 xl:pb-40'>
+                        <Image
+                                src={image_2}
+                                alt='Praction marketing homescreen'
+                                class='relative max-w-[87%] h-auto mx-auto img-2 rounded-md sm:rounded-lg md:rounded-xl xl:rounded-2xl laptop:rounded-3xl'
+                        />
+                </div>
+        </Container>
+</section>
