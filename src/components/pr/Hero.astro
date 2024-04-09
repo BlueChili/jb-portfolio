@@ -1,37 +1,9 @@
 ---
 import Container from '@c/Container.astro';
-import { marked } from 'marked';
 import { Image } from 'astro:assets';
 
 import image_1 from '@i/pr/hero-1.png';
 import image_2 from '@i/pr/hero-2.png';
-
-const context = {
-        heading: 'Context',
-        text: 'Vice President of software, Tim Adnitt, sensed that if 20 years of silos weren’t brought together, there’d be little hope in Native Instrument’s (NI) future. The hundreds of NI products plus the many third-party partner products require Preset browsing. Presets make up 90% of the usecases for all instruments and effects. Users want to be able to sort through the hundreds of products and their Presets with ease. Users also demand quick and easy ways to organize the Presets they create themselves. A unified browsing experience would allow users to quickly find the sound they need across hundreds of products and thousands of Presets, keeping them inspired and in their creative flow.',
-};
-
-const approach = {
-        heading: 'My Approach',
-        text: `With this project I hit the ground running, facilitating a stakeholders workshop in the first week. Except the ground was molting hot lava. These weren’t just any stakeholders but representatives of 20 years of silo’d products, all fighting for budget. After some courtesy gourmet vegan sushi, we spent the entire afternoon posting requirements and niceties on the wall. They got along. I set up regular syncs with each stakeholder thereafter. Meanwhile I got to work auditing all filetypes `,
-};
-
-//const outcomes = {
-//        heading: 'Outcomes',
-//        text: `**Increased** Monthly Active Users **by 300% <br>
-//        Resolved** 8 of the top 20 **company pain points** [across all teams and products] <br>
-//        Today, **7.5% of attributed revenue** comes from Native Access’s touchpoint`,
-//};
-
-const TOC = [
-        { text: 'Driving with the C-levels', url: '#driving' },
-        { text: 'Too Many Stakeholders in the Kitchen', url: '#too' },
-        { text: 'Carry The Legacy... While Leaving it Behind', url: '#carry' },
-        { text: 'Much Data, One Browser', url: '#much' },
-        { text: 'Realizations', url: '#realizations' },
-        { text: 'User Interviews', url: '#interviews' },
-        { text: 'Resources & Artifacts', url: '#resources' },
-];
 ---
 
 <section>
@@ -62,12 +34,16 @@ const TOC = [
                 </div>
         </Container>
 
-        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative'>
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20'>
+                <div class="relative">
                 <div class="absolute inset-0 w-full h-full bg-[radial-gradient(50%_50%_at_50%_50%,#7B61FF_0%,rgba(123,97,255,0)_100%)]"></div>
                 <Image src={image_1} alt='Praction marketing homescreen' class='relative max-w-[85%] h-auto mx-auto'/>
+                </div>
         </Container>
-        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative'>
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20'>
+                <div class="relative">
                 <div class="absolute inset-0 w-full h-full bg-[radial-gradient(50%_50%_at_50%_50%,#7B61FF_0%,rgba(123,97,255,0)_100%)]"></div>
                 <Image src={image_2} alt='Praction marketing details screen' class='relative max-w-[85%] h-auto mx-auto'/>
+                </div>
         </Container>
 </section>

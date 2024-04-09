@@ -1,0 +1,72 @@
+---
+import Container from '@c/Container.astro';
+import { Image } from 'astro:assets';
+import SectionHeading from '@c/pr/SectionHeading.astro';
+import image_1_mobile from '@i/pr/design-elements-1-mobile.png';
+import image_1_desktop from '@i/pr/design-elements-1-desktop.png';
+import bg from '@i/pr/praction-bg.png';
+import image_2 from '@i/pr/design-elements-2.png';
+import image_3 from '@i/pr/design-elements-3.png';
+---
+
+<section
+        id='design-elements'
+        class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20'>
+        <Container class='mx-auto'>
+                <SectionHeading class='!text-[#F3FFD2]'>Design Elements</SectionHeading>
+                <p class='text-white pb-12 md:pb-16 lg:pb-20 xl:pb-24 laptop:pb-32 tracking-[-0.06rem] body-text max-w-screen-[820px]'>
+                        After blowing the team away with a redesign I worked closely with the CPO to refine the elements so all of Praction’s design
+                        needs would be met as they muscled through their milestones.
+                </p>
+        </Container>
+
+        <Container class='mx-auto pb-14 md:pb-14 lg:pb-16 2xl:pb-20 relative 2xl:max-w-[1486px]'>
+                <Image
+                        src={image_1_mobile}
+                        alt='Praction marketing homescreen'
+                        class='relative max-w-full h-auto mx-auto lg:hidden'
+                />
+                <Image
+                        src={image_1_desktop}
+                        alt='Praction marketing homescreen'
+                        class='relative h-auto mx-auto hidden lg:block'
+                />
+        </Container>
+</section>
+
+<style>
+        .laptop-1 {
+                filter: drop-shadow(0px 15px 33px rgba(0, 0, 0, 0.15)) drop-shadow(0px 60px 60px rgba(0, 0, 0, 0.13))
+                        drop-shadow(0px 136px 82px rgba(0, 0, 0, 0.08)) drop-shadow(0px 242px 97px rgba(0, 0, 0, 0.02))
+                        drop-shadow(0px 378px 106px rgba(0, 0, 0, 0));
+        }
+        .laptop-2 {
+                filter: drop-shadow(0px 15px 32px rgba(0, 0, 0, 0.15)) drop-shadow(0px 59px 59px rgba(0, 0, 0, 0.13))
+                        drop-shadow(0px 132px 79px rgba(0, 0, 0, 0.08)) drop-shadow(0px 235px 94px rgba(0, 0, 0, 0.02))
+                        drop-shadow(0px 367px 103px rgba(0, 0, 0, 0));
+        }
+</style>
+<section class='relative overflow-hidden pt-10 md:pt-20 lg:pt-28 xl:pt-36 laptop:pt-50'>
+        <Image
+                src={bg}
+                alt=''
+                class='absolute left-0 top-0 w-full h-full object-cover object-center opacity-10'
+        />
+
+        <Container class='mx-auto pb-10 md:pb-20 lg:pb-28 xl:pb-36 lapbop:pb-50 relative'>
+                <div class='relative pb-15 md:pb-20 lg:pb-28 xl:pb-36 lapbop:pb-44'>
+                        <Image
+                                src={image_2}
+                                alt='Praction marketing homescreen'
+                                class='relative w-full h-auto mx-auto laptop-1'
+                        />
+                </div>
+                <div class='relative'>
+                        <Image
+                                src={image_3}
+                                alt='Praction marketing homescreen'
+                                class='relative w-full h-auto mx-auto laptop-2'
+                        />
+                </div>
+        </Container>
+</section>
