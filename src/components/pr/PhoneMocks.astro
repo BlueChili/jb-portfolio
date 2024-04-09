@@ -5,20 +5,25 @@ import image_1 from '@i/pr/phone-mocks.png';
 import logo from '@i/pr/logo.png';
 ---
 
+<style>
+        .background {
+                background: radial-gradient(36.26% 37.09% at 65.36% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0.03) 86.5%);
+        }
+</style>
 <section
         id='phone'
-        class='pt-20 md:pt-40 pb-1 md:pb-10 lg:pb-0 2xl:pb-20 overflow-hidden'>
-        <Container class='mx-auto flex items-center min-h-[500px] h-[100vw] lg:h-screen lg:-min-h-[      bbnnnnnnn1200px] relative'>
+        class='overflow-hidden min-h-[500px] h-[100vw] lg:h-[1157px] xl:h-[1400px] 2xl:h-[1600px] background'>
+        <Container class='mx-auto flex items-center relative h-full'>
                 <Image
                         src={image_1}
                         alt='Praction marketing homescreen'
-                                class='absolute top-0 h-auto w-full md:w-auto md:h-full right-0 object-contain object-right translate-x-20'
+                        class='absolute top-0 h-auto w-full md:w-auto md:h-full right-0 object-contain object-right translate-x-20 lg:translate-x-[28%]'
                 />
                 <Image
                         src={logo}
                         alt='Praction marketing homescreen'
-                                class='relative w-1/2 max-w-96 h-auto md:translate-y-full'
+                        class='relative w-1/2 max-w-96 h-auto md:translate-y-full lg:translate-y-0 max-lg:[filter:drop-shadow(0_0_4px_#000000ff)]'
                 />
         </Container>
-
 </section>
