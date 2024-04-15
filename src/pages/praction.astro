@@ -9,6 +9,7 @@ import Marketing from '@c/pr/Marketing.astro';
 import Metrics from '@c/pr/Metrics.astro';
 import DesignElements from '@c/pr/DesignElements.astro';
 const logocolors='text-brand-white fill-[#433197]';
+import { ScrollTopArrow } from '../utils/ScrollTopArrow.tsx';
 ---
 
 <Layout class='bg-[#21145A] text-white' logocolors={logocolors}>
@@ -20,4 +21,5 @@ const logocolors='text-brand-white fill-[#433197]';
         <Marketing />
         <Metrics />
         <DesignElements />
+        <ScrollTopArrow client:only='preact' />
 </Layout>
