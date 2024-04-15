@@ -6,6 +6,7 @@ import Overcoming from '@c/na/Overcoming.astro';
 import Wireframes from '@c/na/Wireframes.astro';
 import Feedback from '@c/na/Feedback.astro';
 import DesignPatterns from '@c/na/DesignPatterns.astro';
+import { ScrollTopArrow } from '../utils/ScrollTopArrow.tsx';
 ---
 
 <Layout class='bg-[#F5F5F5]'>
@@ -15,4 +16,5 @@ import DesignPatterns from '@c/na/DesignPatterns.astro';
         <Wireframes />
         <Feedback />
         <DesignPatterns />
+        <ScrollTopArrow client:only='preact' />
 </Layout>
