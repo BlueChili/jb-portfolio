@@ -1,0 +1,38 @@
+
+
+
+.scrollTop {
+  background: #fff;
+  position: fixed;
+  width: 200px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  padding: 24px;
+  font-family: Helvetica Neue;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23.12px;
+  text-align: center;
+  color: #313131;
+  border-radius: 35px;
+  box-shadow: 0px 4px 35px 0px #00000017;
+}
+
+  
+  
+  .scrollTop:hover{
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
