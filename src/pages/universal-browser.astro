@@ -9,6 +9,7 @@ import Realizations from '@c/ub/Realizations.astro';
 import Interviews from '@c/ub/Interviews.astro';
 import Resources from '@c/ub/Resources.astro';
 const logocolors='text-black fill-white';
+import { ScrollTopArrow } from '../utils/ScrollTopArrow.tsx';
 ---
 
 <Layout class='bg-[#0A0D13] text-white' logocolors={logocolors}>
@@ -20,4 +21,5 @@ const logocolors='text-black fill-white';
         <Realizations />
         <Interviews />
         <Resources />
+        <ScrollTopArrow client:only='preact' />
 </Layout>
