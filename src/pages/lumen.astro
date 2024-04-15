@@ -3,6 +3,7 @@ import Layout from 'src/layouts/base.astro';
 import Hero from '@c/lumen/Hero.astro';
 import Body from '@c/lumen/Body.astro';
 const logocolors='text-black fill-white';
+import { ScrollTopArrow } from '../utils/ScrollTopArrow.tsx';
 
 
 ---
@@ -10,5 +11,5 @@ const logocolors='text-black fill-white';
 <Layout class='bg-[#181818] text-white' logocolors={logocolors}>
         <Hero />
         <Body />
-
+        <ScrollTopArrow client:only='preact' />
 </Layout>
