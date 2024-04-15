@@ -3,7 +3,31 @@ interface Props {
         class?: string;
 }
 ---
+<style>        
+  .marquee-slides {
+    display: flex;
+    animation: marquee-slide 800s linear infinite;
+  }
+  .marquee-slides-alter {
+    display: flex;
+    animation: marquee-slides-alter 800s linear infinite;
+  }
 
+  @keyframes marquee-slide {
+    0% {      
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee-slides-alter {
+    0% {      
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+</style>
 <div
         class='flex gap-4 pb-6 flex-nowrap whitespace-nowrap lg:gap-9'
         class:list={[Astro.props?.class]}>
