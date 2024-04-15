@@ -22,6 +22,10 @@ export default {
                                         'secondary-text': '#4d4d4d',
                                 },
                         },
+                        boxShadow: {
+                                'inner-pink': '-1px 1px 0px 0px rgba(255, 255, 255, 0.4) inset, 1px -1px 0px 0px rgba(255, 255, 255, 0.1) inset',
+                                'outer-shadow': '-4px 4px 38px 0px rgba(0, 0, 0, 0.4)',
+                              },
                         spacing: {
                                 13: '3.25rem',
                                 15: '3.75rem',
