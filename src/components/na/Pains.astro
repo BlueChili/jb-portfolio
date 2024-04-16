@@ -3,11 +3,27 @@ import { marked } from 'marked';
 import Container from '@c/Container.astro';
 import Icon from '@c/Icon.astro';
 import { Image } from 'astro:assets';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 import SpeechBubble from '@c/SpeechBubble.astro';
 import SectionHeading from '@c/na/SectionHeading.astro';
 import PainsHeading from './PainsHeading.astro';
 import dmBg from '@i/na/pains-dm-bg.png';
 import dmFg from '@i/na/pains-dm-fg.png';
+import pains_1 from '@i/na/pains-1.png';
+import pains_2_a from '@i/na/pains-2-a.png';
+import pains_2_a_desktop from '@i/na/pains-2-a-desktop.png';
+import pains_2_b from '@i/na/pains-2-b.png';
+import pains_2_b_desktop from '@i/na/pains-2-b-desktop.png';
+import pains_2_c from '@i/na/pains-2-c.png';
+import pains_2_d_desktop from '@i/na/pains-2-d-desktop.png';
+import pains_2_d from '@i/na/pains-2-d.png';
+import pains_2_e from '@i/na/pains-2-e.png';
+import pains_2_f from '@i/na/pains-2-f.png';
+import pains_exploration from '@i/na/pains-exploration.png';
+import pains_3 from '@i/na/pains-3.png';
+import pains_4 from '@i/na/pains-4.png';
+import pains_5 from '@i/na/pains-5.png';
+import pains_no_previews from '@i/na/pains-no-previews.png';
 ---
 
 <section
@@ -71,8 +87,9 @@ import dmFg from '@i/na/pains-dm-fg.png';
                                 “I don’t understand product dependencies like KONTAKT Player and REAKTOR Player.”
                         </PainsHeading>
                         <div class='relative mx-auto max-w-[1300px]'>
-                                <img
-                                        src='/img/na/pains-1.png'
+                                <Image
+                                        src={pains_1}
+                                        {...defaultImageSizes(pains_1)}
                                         alt='REAKTOR Player window thumbnail'
                                         class='w-full h-auto aspect-[6/4] mx-auto'
                                 />
@@ -107,28 +124,33 @@ import dmFg from '@i/na/pains-dm-fg.png';
                         <PainsHeading indicator='2'>“I don’t understand my KOMPLETE bundle and its products.”</PainsHeading>
                         <div class='pb-24 relative mx-auto max-w-[1300px] lg:pb-40'>
                                 <div class='relative xl:pb-8'>
-                                        <img
-                                                src='/img/na/pains-2-a.png'
+                                        <Image
+                                                src={pains_2_a}
+                                                {...defaultImageSizes(pains_2_a)}
                                                 alt='Webshop product page'
                                                 class='w-full h-auto object-contain xl:hidden'
                                         />
-                                        <img
-                                                src='/img/na/pains-2-a-desktop.png'
+                                        <Image
+                                                {...defaultImageSizes(pains_2_a_desktop)}
+                                                src={pains_2_a_desktop}
                                                 alt='Webshop product page'
                                                 class='w-full h-auto object-contain hidden xl:block'
                                         />
-                                        <img
-                                                src='/img/na/pains-2-b.png'
+                                        <Image
+                                                src={pains_2_b}
+                                                {...defaultImageSizes(pains_2_b)}
                                                 alt='Webshop product page'
                                                 class='absolute left-[57.5%] w-[40%] top-[29%] rounded h-auto [filter:drop-shadow(-3.5px_-3.25px_6.075px_rgba(0,0,0,0.26))_drop-shadow(6px_9.5px_11.95px_rgba(0,0,0,0.29))] xl:hidden'
                                         />
-                                        <img
-                                                src='/img/na/pains-2-b-desktop.png'
+                                        <Image
+                                                src={pains_2_b_desktop}
+                                                {...defaultImageSizes(pains_2_b_desktop)}
                                                 alt='Webshop product page'
                                                 class='absolute left-[57.5%] w-[40%] top-[29%] rounded h-auto [filter:drop-shadow(-3.5px_-3.25px_6.075px_rgba(0,0,0,0.26))_drop-shadow(6px_9.5px_11.95px_rgba(0,0,0,0.29))] hidden xl:block'
                                         />
-                                        <img
-                                                src='/img/na/pains-2-c.png'
+                                        <Image
+                                        {...defaultImageSizes(pains_2_c)}
+                                                src={pains_2_c}
                                                 alt='Webshop product page'
                                                 class='absolute w-[30%] left-[61%] rounded h-auto top-[117%] xl:hidden'
                                         />
@@ -148,15 +170,17 @@ import dmFg from '@i/na/pains-dm-fg.png';
                                 </div>
                         </div>
                         <div class='flex flex-col gap-1 relative pb-5 xl:pb-24'>
-                                <img
+                                <Image
                                         alt='keywords'
-                                        src='/img/na/pains-2-d-desktop.png'
+                                        src={pains_2_d_desktop}
+                                        {...defaultImageSizes(pains_2_d_desktop)}
                                         width='1300'
                                         height='93'
                                         class='hidden xl:block mx-auto'
                                 />
-                                <img
-                                        src='/img/na/pains-2-d.png'
+                                <Image
+                                        src={pains_2_d}
+                                        {...defaultImageSizes(pains_2_d)}
                                         alt='DESKTOP APPLICATION'
                                         class='xl:hidden'
                                 />
@@ -171,20 +195,23 @@ import dmFg from '@i/na/pains-dm-fg.png';
                                 </SpeechBubble>
                         </div>
                         <div class='flex flex-col gap-1 relative pb-5 xl:hidden'>
-                                <img
-                                        src='/img/na/pains-2-e.png'
+                                <Image
+                                        src={pains_2_e}
+                                        {...defaultImageSizes(pains_2_e)}
                                         alt='WEBSHOP'
                                 />
                         </div>
                         <div class='flex flex-col gap-1 relative pb-14 xl:hidden'>
-                                <img
-                                        src='/img/na/pains-2-f.png'
+                                <Image
+                                        src={pains_2_f}
+                                        {...defaultImageSizes(pains_2_f)}
                                         alt='UNIVERSAL BROWSER'
                                 />
                         </div>
                         <div class='relative mx-auto max-w-[1300px] pb-14 xl:pb-28'>
-                                <img
-                                        src='/img/na/pains-exploration.png'
+                                <Image
+                                        src={pains_exploration}
+                                        {...defaultImageSizes(pains_exploration)}
                                         alt=''
                                         class='[filter:drop-shadow(0px_4.4px_99px_rgba(0,0,0,0.34))]'
                                 />
@@ -205,8 +232,9 @@ import dmFg from '@i/na/pains-dm-fg.png';
                         class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-t-3xl xl:rounded-t-[2rem] laptop:rounded-t-[3rem] p-2.5 pb-16 laptop:pt-6 laptop:px-6">
                         <PainsHeading indicator='3'> “Installation of third-party products is confusing...” </PainsHeading>
                         <div class='relative mx-auto max-w-[1000px] laptop:pt-10 laptop:mb-16'>
-                                <img
-                                        src='/img/na/pains-3.png'
+                                <Image
+                                        src={pains_3}
+                                        {...defaultImageSizes(pains_3)}
                                         alt=''
                                         class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                 />
@@ -236,8 +264,9 @@ import dmFg from '@i/na/pains-dm-fg.png';
                         <PainsHeading indicator='4'> “I want more info on the products I own.” </PainsHeading>
                         <div class='mx-auto max-w-[1050px] laptop:pt-16 laptop:pb-16'>
                                 <div class='relative'>
-                                        <img
-                                                src='/img/na/pains-4.png'
+                                        <Image
+                                                src={pains_4}
+                                        {...defaultImageSizes(pains_4)}
                                                 alt=''
                                                 class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
                                         />
@@ -292,62 +321,64 @@ import dmFg from '@i/na/pains-dm-fg.png';
                         <PainsHeading indicator='5'> “No overview or progress of downloads” </PainsHeading>
                         <div class='mb-12 mx-auto max-w-[1440px] laptop:pt-12'>
                                 <div class='relative'>
-                                        <img
-                                                src='/img/na/pains-5.png'
-                                                alt=''
-                                                class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
-                                        />
-                                        <SpeechBubble
-                                                class='absolute right-60 top-0 -translate-y-[25%] laptop:-translate-y-1/2 laptop:right-[21.5%]'
-                                                icon='bulb'
-                                                innerClass='laptop:pl-8'
-                                                direction='left laptop:right'
-                                                bubble={null}
-                                                iconBg='bg-brand-emerald'>
-                                                <div set:html={marked.parse(`**Download Manager**`)} />
-                                        </SpeechBubble>
-                                        <SpeechBubble
-                                                class='absolute right-0 top-[60%] laptop:top-[63.3%] laptop:right-[14%]'
-                                                icon='bulb'
-                                                direction='right'
-                                                bubble='bottom-left'
-                                                iconBg='bg-brand-emerald'>
-                                                <div set:html={marked.parse(`**Download progress drawer** in main app`)} />
-                                        </SpeechBubble>
-                                        <SpeechBubble
-                                                class='absolute left-1.5 bottom-0 translate-y-1/2 laptop:bottom-[unset] laptop:top-[31%] laptop:left-0 laptop:translate-x-[-15%]'
-                                                icon='bulb'
-                                                direction='left'
-                                                bubble='top-right'
-                                                iconBg='bg-brand-emerald'>
-                                                <div set:html={marked.parse(`Ability to **sort** hundreds of **download items**`)} />
-                                        </SpeechBubble>
-                                </div>
+                                <Image
+                                        src={pains_5}
+                                {...defaultImageSizes(pains_5)}
+                                        alt=''
+                                        class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))]'
+                                />
+                                <SpeechBubble
+                                        class='absolute right-60 top-0 -translate-y-[25%] laptop:-translate-y-1/2 laptop:right-[21.5%]'
+                                        icon='bulb'
+                                        innerClass='laptop:pl-8'
+                                        direction='left laptop:right'
+                                        bubble={null}
+                                        iconBg='bg-brand-emerald'>
+                                        <div set:html={marked.parse(`**Download Manager**`)} />
+                                </SpeechBubble>
+                                <SpeechBubble
+                                        class='absolute right-0 top-[60%] laptop:top-[63.3%] laptop:right-[14%]'
+                                        icon='bulb'
+                                        direction='right'
+                                        bubble='bottom-left'
+                                        iconBg='bg-brand-emerald'>
+                                        <div set:html={marked.parse(`**Download progress drawer** in main app`)} />
+                                </SpeechBubble>
+                                <SpeechBubble
+                                        class='absolute left-1.5 bottom-0 translate-y-1/2 laptop:bottom-[unset] laptop:top-[31%] laptop:left-0 laptop:translate-x-[-15%]'
+                                        icon='bulb'
+                                        direction='left'
+                                        bubble='top-right'
+                                        iconBg='bg-brand-emerald'>
+                                        <div set:html={marked.parse(`Ability to **sort** hundreds of **download items**`)} />
+                                </SpeechBubble>
                         </div>
                 </div>
-        </Container>
+        </div>
+</Container>
 
-        <Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
-                <div
-                        class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-b-3xl rounded-t-3xl xl:rounded-t-[2rem] xl:rounded-b-[2rem] laptop:rounded-t-[3rem] laptop:rounded-b-[3rem] p-2.5 pb-24 laptop:pt-6 laptop:px-6">
-                        <div class='flex gap-2.5 items-center mb-[2.875rem]'>
-                                <span
-                                        class='h-[30px] bg-brand-blue rounded-full w-[30px] flex items-center justify-center xl:h-10 xl:w-10 laptop:h-12 laptop:w-12'
-                                        ><Icon
-                                                name='compass'
-                                                class='text-white h-auto md:w-6 lg:w-7 xl:w-8'
-                                        /></span
-                                >
-                                <p
-                                        id='webshop'
-                                        class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'>
-                                        “I want to funnel users from the download portal to the online store.”
-                                </p>
-                        </div>
-                        <div class='mx-auto max-w-[1440px] laptop:pt-4'>
-                                <div class='relative'>
-                                        <img
-                                                src='/img/na/pains-no-previews.png'
+<Container class='-mt-6 mx-auto 2xl:max-w-[1560px]'>
+        <div
+                class="[background:url('/img/na/texture.png')_repeat,linear-gradient(180deg,#E7E7E7_0%,#E7E7E7_0.01%,#BFBFBF_100%)] rounded-b-3xl rounded-t-3xl xl:rounded-t-[2rem] xl:rounded-b-[2rem] laptop:rounded-t-[3rem] laptop:rounded-b-[3rem] p-2.5 pb-24 laptop:pt-6 laptop:px-6">
+                <div class='flex gap-2.5 items-center mb-[2.875rem]'>
+                        <span
+                                class='h-[30px] bg-brand-blue rounded-full w-[30px] flex items-center justify-center xl:h-10 xl:w-10 laptop:h-12 laptop:w-12'
+                                ><Icon
+                                        name='compass'
+                                        class='text-white h-auto md:w-6 lg:w-7 xl:w-8'
+                                /></span
+                        >
+                        <p
+                                id='webshop'
+                                class='text-[11px] text-brand-secondary-text font-[Roboto] md:text-[0.8125rem] lg:text-base xl:text-lg laptop:text-xl'>
+                                “I want to funnel users from the download portal to the online store.”
+                        </p>
+                </div>
+                <div class='mx-auto max-w-[1440px] laptop:pt-4'>
+                        <div class='relative'>
+                                <Image
+                                                src={pains_no_previews}
+                                        {...defaultImageSizes(pains_no_previews)}
                                                 alt=''
                                                 class='[filter:drop-shadow(0_2vw_4vw_rgba(0,0,0,0.3))] lg:hidden'
                                         />

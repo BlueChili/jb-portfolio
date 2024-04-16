@@ -1,9 +1,13 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
+
 interface Props {
         class?: string;
         url: string | null;
         heading?: string;
-        image: string;
+        image: ImageMetadata;
         variant?: 'dark';
 }
 ---
@@ -14,15 +18,17 @@ interface Props {
                         <a
                                 href={Astro.props.url}
                                 target='_blank'>
-                                <img
+                                <Image
                                         src={Astro.props.image}
+                                        {...defaultImageSizes(Astro.props.image)}
                                         alt=''
                                         class='rounded-xl mb-1 w-full h-auto aspect-video laptop:rounded-2xl'
                                 />
                         </a>
                 ) : (
-                        <img
+                        <Image
                                 src={Astro.props.image}
+                                {...defaultImageSizes(Astro.props.image)}
                                 alt=''
                                 class='rounded-xl mb-1 w-full h-auto aspect-video laptop:rounded-2xl'
                         />

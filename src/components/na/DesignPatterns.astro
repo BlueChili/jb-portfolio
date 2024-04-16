@@ -4,13 +4,29 @@ import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
 import FigmaArtifact from './FigmaArtifact.astro';
 import { Image } from 'astro:assets';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
 
 import patternsImg from '@i/na/patterns-1-desktop.png';
+import design_patterns_1 from '@i/na/design-patterns-1.png';
+import design_patterns_2 from '@i/na/design-patterns-2.png';
+import design_patterns_3 from '@i/na/design-patterns-3.png';
+import design_patterns_5 from '@i/na/design-patterns-5.png';
+import artifacts_1 from '@i/na/artifacts-1.png';
+import artifacts_2 from '@i/na/artifacts-2.png';
+import artifacts_3 from '@i/na/artifacts-3.png';
+import artifacts_4 from '@i/na/artifacts-4.png';
+import artifacts_5 from '@i/na/artifacts-5.png';
+import artifacts_6 from '@i/na/artifacts-6.png';
+import artifacts_7 from '@i/na/artifacts-7.png';
+import artifacts_8 from '@i/na/artifacts-8.png';
+import artifacts_9 from '@i/na/artifacts-9.png';
+import artifacts_10 from '@i/na/artifacts-10.png';
+import artifacts_11 from '@i/na/artifacts-11.png';
 ---
 
-<section class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 bg-[#f5f5f5]'
-        id="design"
-        >
+<section
+        class='pt-20 md:pt-40 pb-0 2xl:pb-20 md:pb-14 lg:pb-16 bg-[#f5f5f5]'
+        id='design'>
         <Container class='mx-auto'>
                 <SectionHeading number='5'>Design Patterns & Artifacts</SectionHeading>
 
@@ -21,8 +37,9 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
                 <a
                         href='https://www.figma.com/file/GabL83pcg8R6paUUnQSC17/06-Native-Access-2-Patterns?node-id=1353%3A12729&t=TATvib5uoS3Ie78P-1'
                         target='_blank'>
-                        <img
-                                src='/img/na/design-patterns-1.png'
+                        <Image
+                                src={design_patterns_1}
+                                {...defaultImageSizes(design_patterns_1)}
                                 alt=''
                                 class='rounded-2xl mb-1 lg:hidden'
                         />
@@ -48,8 +65,9 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
                                         <a
                                                 href='https://www.figma.com/proto/SJORvdfEAYwopC15FGlSn7/%E2%96%B6%EF%B8%8F-Portfolio?page-id=2644%3A4140&type=design&node-id=3834-11547&viewport=12246%2C9732%2C0.64&t=i3ENshV8BJaK9DXE-1&scaling=scale-down-width&starting-point-node-id=3097%3A28486&mode=design'
                                                 target='_blank'>
-                                                <img
-                                                        src='/img/na/design-patterns-2.png'
+                                                <Image
+                                                        src={design_patterns_2}
+                                                        {...defaultImageSizes(design_patterns_2)}
                                                         alt=''
                                                         class='rounded-2xl w-full h-full lg:rounded-2xl laptop:rounded-3xl'
                                                 />
@@ -67,8 +85,9 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
                                         <a
                                                 href='/img/na/na-companalysis.jpg'
                                                 target='_blank'>
-                                                <img
-                                                        src='/img/na/design-patterns-3.png'
+                                                <Image
+                                                        src={design_patterns_3}
+                                                        {...defaultImageSizes(design_patterns_3)}
                                                         alt=''
                                                         class='rounded-2xl w-full h-full lg:rounded-2xl laptop:rounded-3xl'
                                                 />
@@ -89,8 +108,9 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
                                         <a
                                                 href='https://www.native-instruments.com/en/specials/native-access-2/'
                                                 target='_blank'>
-                                                <img
-                                                        src='/img/na/design-patterns-5.png'
+                                                <Image
+                                                        src={design_patterns_5}
+                                                        {...defaultImageSizes(design_patterns_5)}
                                                         alt=''
                                                         class='rounded-2xl w-full h-full lg:rounded-2xl laptop:rounded-3xl'
                                                 />
@@ -134,70 +154,70 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
                 <div class='body-text md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8 laptop:gap-12'>
                         <FigmaArtifact
                                 url='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=2-4266&mode=design'
-                                image='/img/na/artifacts-1.png'
+                                image={artifacts_1}
                                 heading='KOMPLETE HDD Detection'>
                                 HDD detection, registration and installation success.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/nmfuT9QqcvH1i4UllvrqRm/Broken-Installation-_-Relocate-All?type=design&node-id=29%3A3055&mode=design&t=WfwmGsC3BjZED4AI-1'
-                                image='/img/na/artifacts-2.png'
+                                image={artifacts_2}
                                 heading='Broken Installation'>
                                 Broken installation, (re)locating installers.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/Mh6QkO8LdDhsQ5z3hTX5y6/%F0%9F%A7%AA-Audio-Previews?type=design&node-id=5%3A6403&mode=design&t=cGNEkE7FkUNjjYdP-1'
-                                image='/img/na/artifacts-3.png'
+                                image={artifacts_3}
                                 heading='Audio Previews'>
                                 Audio Preview concept.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/ffCSk2L3NM1gFdiy9h8sOW/NA-477-Product-Item-AX-MVP?type=design&node-id=0%3A1&mode=design&t=TQHGBDdtxvvczpzd-1'
-                                image='/img/na/artifacts-4.png'
+                                image={artifacts_4}
                                 heading='Accessibility'>
                                 Keyboard navigation for VoiceOver prototypes.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/giqhNJ80D1MzV4KcRUssk8/NA-641-Pause-%26-Resume?type=design&node-id=0%3A1&mode=design&t=dPP0tthL5gwt9yCc-1'
-                                image='/img/na/artifacts-5.png'
+                                image={artifacts_5}
                                 heading='Pause/Resume Download'>
                                 Queuing, Pausing and re-sorting Download items.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/bbVDu1dKASmNvpXmt3C0PG/%F0%9F%A7%AA-Onboarding?type=design&node-id=56%3A6455&mode=design&t=LJNqsnbLpVa7DNlK-1'
-                                image='/img/na/artifacts-6.png'
+                                image={artifacts_6}
                                 heading='Onboarding'>
                                 Quick and easy steps for onboarding users concept.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/qhjSNxrcN5ViMWS6DRmmAG/NA-420-Quit-Behavior?type=design&node-id=12%3A0&mode=design&t=7l0eeCBuriMV2qLT-1'
-                                image='/img/na/artifacts-7.png'
+                                image={artifacts_7}
                                 heading='Quit Behavior'>
                                 One doesn't simply 'quit' a download agent running background tasks...
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/UZKbATr0HIb0GbX5zCvdfM/NA-137-_New_-Products-Tab?type=design&node-id=0%3A1&mode=design&t=b7CaJEp2HjMNfrvU-1'
-                                image='/img/na/artifacts-8.png'
+                                image={artifacts_8}
                                 heading='New Products Tab'>
                                 Easily sort through your newly installed products.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/hWjVxqcLbUcwgLiEliBepx/NA-302-Update-Page?type=design&node-id=11%3A1795&mode=design&t=TndlGApxye96Fbgj-1'
-                                image='/img/na/artifacts-9.png'
+                                image={artifacts_9}
                                 heading='Updates Page'>
                                 Find the latest deployed updates, the release notes, and install.
                         </FigmaArtifact>
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/enNqzJPsN6OCSDqUeJaYwi/NA-364-Not-Enough-Space?type=design&node-id=1%3A1949&mode=design&t=ndAlJmo9pRuOtRT4-1'
-                                image='/img/na/artifacts-10.png'
+                                image={artifacts_10}
                                 heading='Disk Space Error'>
                                 With the potential of harboring over 2 Terabytes of products on your harddrive, the usecase for 'not enough disk
                                 space' is critical.
@@ -205,7 +225,7 @@ import patternsImg from '@i/na/patterns-1-desktop.png';
 
                         <FigmaArtifact
                                 url='https://www.figma.com/file/hcms5SFmKIBVGWxP7Ok8Wy/NA-664-Activation-Errors?type=design&node-id=114%3A6137&mode=design&t=lvWSGpLV5vBrjgRI-1'
-                                image='/img/na/artifacts-11.png'
+                                image={artifacts_11}
                                 heading='Error Messaging'>
                                 Toast notification to help users understand what’s going wrong
                         </FigmaArtifact>

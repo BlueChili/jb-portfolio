@@ -3,6 +3,10 @@ import Container from '@c/Container.astro';
 import Box from '@c/na/Box.astro';
 import Em from '@c/Em.astro';
 import SectionHeading from './SectionHeading.astro';
+import { Image } from 'astro:assets';
+import defaultImageSizes from 'src/utils/defaultImageSizes';
+import feedback_1 from '@i/na/feedback-1.png';
+import feedback_2 from '@i/na/feedback-2.png';
 ---
 
 <section class='pt-[80px] md:pt-[120px] lg:pt-[180px] pb-[80px] md:pb-[120px] lg:pb-[180px] relative bg-black'
@@ -38,8 +42,9 @@ import SectionHeading from './SectionHeading.astro';
                                         </p>
                                 </div>
 
-                                <img
-                                        src='/img/na/feedback-1.png'
+                                <Image
+                                        src={feedback_1}
+                                        {...defaultImageSizes(feedback_1)}
                                         alt=''
                                         class='rounded-lg mb-5'
                                 />
@@ -57,8 +62,9 @@ import SectionHeading from './SectionHeading.astro';
                                                 >
                                         </p>
                                 </div>
-                                <img
-                                        src='/img/na/feedback-2.png'
+                                <Image
+                                        src={feedback_2}
+                                        {...defaultImageSizes(feedback_2)}
                                         alt=''
                                         class='rounded-lg mb-1'
                                 />
