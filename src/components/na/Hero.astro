@@ -5,6 +5,7 @@ import defaultImageSizes from 'src/utils/defaultImageSizes';
 import Container from '@c/Container.astro';
 import { marked } from 'marked';
 import heroImage from '@i/na/hero.png';
+
 const context = {
         heading: 'Context',
         text: 'Native Instruments offers a catalog of over 200 products with many different Bundle offerings. Additionally, NI is an eco-system company which provides the frameworks for other virtual instruments companies to build their products. In order to compliment this we wanted to offer download-portal-as-a-service to third party companies. Finally, there was an incoming company rebrand. A revamp of the download portal was overdue.',
@@ -83,6 +84,8 @@ const TOC = [
                                 src={heroImage}
                                 {...defaultImageSizes(heroImage)}
                                 alt='Native Access window thumbnail'
+                                loading='eager'
+                                decoding='sync'
                         />
                 </div>
                 <div class='flex flex-col gap-10 pb-10 lg:flex-row text-[0.8125rem] md:text-sm lg:text-base 2xl:text-xl laptop:gap-20'>
