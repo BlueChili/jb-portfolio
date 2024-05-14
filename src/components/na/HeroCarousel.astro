@@ -1,15 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 
-import Browser1 from '@i/ub/hero/Browser1.png';
-import Browser2 from '@i/ub/hero/Browser2.png';
-import Browser4 from '@i/ub/hero/Browser4.png';
+import Hero1 from '@i/na/hero1.png';
+import Hero2 from '@i/na/hero2.png';
+import Hero3 from '@i/na/hero3.png';
 
 
 const images = [
-        Browser1,
-        Browser2,
-        Browser4,
+        Hero1,
+        Hero2,
+        Hero3
 ];
 ---
 
@@ -22,13 +22,13 @@ const images = [
 </style>
 <swiper-container
                 class='carousel'
-                id='ub-hero-swiper'
+                id='na-hero-swiper'
         css-mode='true'
         loop='true'
-        autoplay-delay='3600'
+        autoplay-delay='3200'
         pagination='true'
         controls='false'
-        navigation='true'
+        navigation='false'
         pagination-clickable='true'
         init='false'>
         {
@@ -45,13 +45,13 @@ const images = [
 <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'></script>
 <script>
         document.addEventListener('DOMContentLoaded', () => {
-                const swiperEl = document.querySelector('#ub-hero-swiper');
+                const swiperEl = document.querySelector('#na-hero-swiper');
 
                 const params = {
                         injectStyles: [
                                 `
                                   .swiper-wrapper {
-                                        ma  : 2px;
+                                        margin-bottom: 1px;
                                   }
                                   `,
                         ],
